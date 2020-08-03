@@ -1,0 +1,1318 @@
+{
+  "restaurants": {
+    "aragosta": {
+      "img": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Faragosta-420.jpg?alt=media&token=9a686ffb-6ca8-4118-bb43-9d1f8fa6c116",
+      "title": "Ristorante L'Aragosta",
+      "phone": "0789 738373",
+      "address": "Via Amendola 30, La Maddalena",
+      "default_language": "it"
+    }
+  },
+  "menus": {
+    "aragosta": {
+      "translations": {
+        "it": {
+          "antipasti": {
+            "section": "Antipasti",
+            "products": {
+              "bruschette": {
+                "name": "Bruschette",
+                "description": "Pane tostato con pomodoro fresco."
+              },
+              "insalatadimare": {
+                "name": "Insalata di mare",
+                "description": null
+              },
+              "insalatadipolpo": {
+                "name": "Insalata di polpo",
+                "description": null
+              },
+              "salumimisti": {
+                "name": "Salumi misti",
+                "description": null
+              },
+              "prosciuttocrudo": {
+                "name": "Prosciutto crudo",
+                "description": null
+              },
+              "crudomozzarella": {
+                "name": "Crudo & mozzarella",
+                "description": null
+              },
+              "caprese": {
+                "name": "Insalata caprese",
+                "description": null
+              },
+              "crudomelone": {
+                "name": "Crudo & melone",
+                "description": null
+              },
+              "cocktailgamberi": {
+                "name": "Cocktail di gamberi",
+                "description": null
+              },
+              "razzacatalana": {
+                "name": "Razza alla catalana",
+                "description": null
+              },
+              "spadaaffumicato": {
+                "name": "Spada affumicato & radicchio rosso",
+                "description": null
+              },
+              "archipelago": {
+                "name": "Archipelago di antipasti",
+                "description": null
+              }
+            }
+          },
+          "specialita": {
+            "section": "Specialità della casa",
+            "products": {
+              "spacartoccio": {
+                "name": "Spaghetti al cartoccio",
+                "description": null
+              },
+              "spapescatora": {
+                "name": "Spaghetti alla pescatora",
+                "description": null
+              },
+              "gnocchispada": {
+                "name": "Gnochetti al pesce spada",
+                "description": null
+              },
+              "risonero": {
+                "name": "Riso al nero di seppia",
+                "description": null
+              },
+              "risopescatora": {
+                "name": "Riso alla pescatora",
+                "description": null
+              },
+              "raviolisardi": {
+                "name": "Ravioli Sardi",
+                "description": null
+              },
+              "tagliatelleisola": {
+                "name": "Tagliatelle Isolane",
+                "description": null
+              },
+              "kulurgiones": {
+                "name": "Kulurgiones",
+                "description": null
+              },
+              "fregolavongole": {
+                "name": "Fregola vongole & bottarga",
+                "description": null
+              }
+            }
+          },
+          "primi": {
+            "section": "Primi Piatti",
+            "products": {
+              "spapomodoro": {
+                "name": "Spaghetti al pomodoro",
+                "description": null
+              },
+              "sparagu": {
+                "name": "Spaghetti al ragú",
+                "description": null
+              },
+              "spacarbonara": {
+                "name": "Spaghetti alla carbonara",
+                "description": null
+              },
+              "spacozzevongole": {
+                "name": "Spaghetti alle cozze & vongole",
+                "description": null
+              },
+              "spabottarga": {
+                "name": "Spaghetti alla bottarga",
+                "description": null
+              },
+              "pennesalmone": {
+                "name": "Penne al salmone",
+                "description": null
+              },
+              "gnosardi": {
+                "name": "Gnochetti sardi",
+                "description": null
+              }
+            }
+          },
+          "pesce": {
+            "section": "Secondi di pesce",
+            "products": {
+              "calagriglia": {
+                "name": "Calamari alla griglia",
+                "description": null
+              },
+              "calafritti": {
+                "name": "Calamari fritti",
+                "description": null
+              },
+              "frittomisto": {
+                "name": "Fritto misto",
+                "description": null
+              },
+              "gamberoni": {
+                "name": "Gamberoni alla griglia",
+                "description": null
+              },
+              "scampi": {
+                "name": "Scampi alla griglia",
+                "description": null
+              },
+              "zuppavongole": {
+                "name": "Zuppa di vongole",
+                "description": null
+              },
+              "pescefresco": {
+                "name": "Spigole, Saraghi, Orate",
+                "description": null
+              },
+              "pescespada": {
+                "name": "Trancio di pesce spada",
+                "description": null
+              },
+              "cozzemarinara": {
+                "name": "Cozze alla marinara",
+                "description": null
+              },
+              "grigliamista": {
+                "name": "Grigliata mista",
+                "description": null
+              },
+              "zuppapesce": {
+                "name": "Zuppa di pesce",
+                "description": null
+              },
+              "aragosta": {
+                "name": "Aragosta",
+                "description": null
+              }
+            }
+          },
+          "contorni": {
+            "section": "Contorni",
+            "products": {
+              "crocchette": {
+                "name": "Crocchette di patate",
+                "description": null
+              },
+              "patatefritte": {
+                "name": "Patate fritte",
+                "description": null
+              },
+              "insalataverde": {
+                "name": "Insalata verde",
+                "description": null
+              },
+              "insalatamista": {
+                "name": "Insalata mista",
+                "description": null
+              },
+              "rucola": {
+                "name": "Rucola",
+                "description": null
+              },
+              "pomodori": {
+                "name": "Pomodori",
+                "description": null
+              },
+              "carote": {
+                "name": "Carote",
+                "description": null
+              },
+              "spinaci": {
+                "name": "Spinaci",
+                "description": null
+              },
+              "verdure": {
+                "name": "Verdure alla griglia",
+                "description": null
+              }
+            }
+          },
+          "formaggi": {
+            "section": "Formaggi Sardi & Nazionali",
+            "products": {
+              "pecorino": {
+                "name": "Pecorino Sardo",
+                "description": null
+              },
+              "caprino": {
+                "name": "Caprino Sardo",
+                "description": null
+              },
+              "gorgonzola": {
+                "name": "Gorgonzola",
+                "description": null
+              },
+              "mozzarella": {
+                "name": "Mozzarella",
+                "description": null
+              },
+              "formaggimisti": {
+                "name": "Formaggi misti",
+                "description": null
+              }
+            }
+          },
+          "pizze": {
+            "section": "Pizze",
+            "products": {
+              "margherita": {
+                "name": "Margherita",
+                "description": "Pomodoro e mozzarella."
+              },
+              "napoletana": {
+                "name": "Napoletana",
+                "description": "Pomodoro, mozzarella, capperi, acciughe e olive."
+              },
+              "primavera": {
+                "name": "Primavera",
+                "description": "Pomodoro fresco, mozzarella e rucola."
+              },
+              "capricciosa": {
+                "name": "Capricciosa",
+                "description": "Pomodoro, mozzarella, salame, carciofi, funghi e olive."
+              },
+              "4stagioni": {
+                "name": "4 Stagioni",
+                "description": "Pomodoro, mozzarella, prosciutto, carciofi, funghi e olive."
+              },
+              "rustica": {
+                "name": "Rustica",
+                "description": "Pomodoro, mozzarella, peperoni, melanzane e spinaci."
+              },
+              "contadina": {
+                "name": "Contadina",
+                "description": "Pomodoro, mozzarella, zucchine e mais."
+              },
+              "diavola": {
+                "name": "Diavola",
+                "description": "Pomodoro, mozzarella, salsiccia piccante."
+              },
+              "pescatora": {
+                "name": "Pescatora",
+                "description": "Pomodoro, mozzarella e frutti di mare."
+              },
+              "boscaiola": {
+                "name": "Boscaiola",
+                "description": "Pomodoro, mozzarella, cipolla e funghi."
+              },
+              "4formaggi": {
+                "name": "4 Formaggi",
+                "description": "Pomodoro, mozzarella e formaggi vari."
+              },
+              "reale": {
+                "name": "Reale",
+                "description": "Pomodoro, mozzarella, salmone e bottarga."
+              },
+              "garibaldina": {
+                "name": "Garibaldina",
+                "description": "Pomodoro fresco, mozzarella, spada affumicato e radicchio rosso."
+              },
+              "calzone": {
+                "name": "Calzone",
+                "description": "Pomodoro, mozzarella, prosciutto, salame, carciofi e funghi."
+              },
+              "dellacasa": {
+                "name": "Della casa",
+                "description": "Pomodoro, mozzarella, prosciutto, salsiccia, funghi e carciofi."
+              },
+              "americana": {
+                "name": "Americana",
+                "description": "Pomodoro, mozzarella e patatine fritte."
+              },
+              "gheriglio": {
+                "name": "Gheriglio",
+                "description": "Mozzarella, gorgonzola e noci."
+              },
+              "wrustel": {
+                "name": "Wrustel",
+                "description": "Pomodoro, mozzarella e wrustel."
+              },
+              "pizzatonno": {
+                "name": "Tonno",
+                "description": "Pomodoro, mozzarella e tonno."
+              },
+              "pizzasarda": {
+                "name": "Sarda",
+                "description": "Pomodoro, mozzarella, pecorino e salsiccia sarda."
+              },
+              "vesuvius": {
+                "name": "Vesuvius",
+                "description": "Mozzarella, friarielli e salsiccia fresca."
+              },
+              "aggiuntacrudo": {
+                "name": "Prosciutto crudo in aggiunta",
+                "description": null
+              }
+            }
+          },
+          "dolci": {
+            "section": "Dolci",
+            "products": {
+              "fruttastagione": {
+                "name": "Frutta di stagione",
+                "description": null
+              },
+              "gelatisemifreddi": {
+                "name": "Semifreddi",
+                "description": null
+              },
+              "tortesemifredde": {
+                "name": "Torte semifredde",
+                "description": null
+              },
+              "cremacatalana": {
+                "name": "Crema catalana",
+                "description": null
+              },
+              "seadas": {
+                "name": "Seadas",
+                "description": null
+              }
+            }
+          },
+          "coperto": {
+            "section": "Coperto",
+            "products": {
+              "copertoprodotto": {
+                "name": null,
+                "description": "Costo per pane e servizio, non cancellabile."
+              }
+            }
+          }
+        },
+        "en": {
+          "antipasti": {
+            "section": "Starters",
+            "products": {
+              "bruschette": {
+                "name": "Bruschette",
+                "description": "Pane tostato con pomodoro fresco."
+              },
+              "insalatadimare": {
+                "name": "Insalata di mare",
+                "description": null
+              },
+              "insalatadipolpo": {
+                "name": "Insalata di polpo",
+                "description": null
+              },
+              "salumimisti": {
+                "name": "Salumi misti",
+                "description": null
+              },
+              "prosciuttocrudo": {
+                "name": "Prosciutto crudo",
+                "description": null
+              },
+              "crudomozzarella": {
+                "name": "Crudo & mozzarella",
+                "description": null
+              },
+              "caprese": {
+                "name": "Insalata caprese",
+                "description": null
+              },
+              "crudomelone": {
+                "name": "Crudo & melone",
+                "description": null
+              },
+              "cocktailgamberi": {
+                "name": "Cocktail di gamberi",
+                "description": null
+              },
+              "razzacatalana": {
+                "name": "Razza alla catalana",
+                "description": null
+              },
+              "spadaaffumicato": {
+                "name": "Spada affumicato & radicchio rosso",
+                "description": null
+              },
+              "archipelago": {
+                "name": "Archipelago di antipasti",
+                "description": null
+              }
+            }
+          },
+          "specialita": {
+            "section": "House Specialties",
+            "products": {
+              "spacartoccio": {
+                "name": "Spaghetti al cartoccio",
+                "description": null
+              },
+              "spapescatora": {
+                "name": "Spaghetti alla pescatora",
+                "description": null
+              },
+              "gnocchispada": {
+                "name": "Gnochetti al pesce spada",
+                "description": null
+              },
+              "risonero": {
+                "name": "Riso al nero di seppia",
+                "description": null
+              },
+              "risopescatora": {
+                "name": "Riso alla pescatora",
+                "description": null
+              },
+              "raviolisardi": {
+                "name": "Ravioli Sardi",
+                "description": null
+              },
+              "tagliatelleisola": {
+                "name": "Tagliatelle Isolane",
+                "description": null
+              },
+              "kulurgiones": {
+                "name": "Kulurgiones",
+                "description": null
+              },
+              "fregolavongole": {
+                "name": "Fregola vongole & bottarga",
+                "description": null
+              }
+            }
+          },
+          "primi": {
+            "section": "First Course - Pasta",
+            "products": {
+              "spapomodoro": {
+                "name": "Spaghetti al pomodoro",
+                "description": null
+              },
+              "sparagu": {
+                "name": "Spaghetti al ragú",
+                "description": null
+              },
+              "spacarbonara": {
+                "name": "Spaghetti alla carbonara",
+                "description": null
+              },
+              "spacozzevongole": {
+                "name": "Spaghetti alle cozze & vongole",
+                "description": null
+              },
+              "spabottarga": {
+                "name": "Spaghetti alla bottarga",
+                "description": null
+              },
+              "pennesalmone": {
+                "name": "Penne al salmone",
+                "description": null
+              },
+              "gnosardi": {
+                "name": "Gnochetti sardi",
+                "description": null
+              }
+            }
+          },
+          "pesce": {
+            "section": "Second Course - Fish",
+            "products": {
+              "calagriglia": {
+                "name": "Calamari alla griglia",
+                "description": null
+              },
+              "calafritti": {
+                "name": "Calamari fritti",
+                "description": null
+              },
+              "frittomisto": {
+                "name": "Fritto misto",
+                "description": null
+              },
+              "gamberoni": {
+                "name": "Gamberoni alla griglia",
+                "description": null
+              },
+              "scampi": {
+                "name": "Scampi alla griglia",
+                "description": null
+              },
+              "zuppavongole": {
+                "name": "Zuppa di vongole",
+                "description": null
+              },
+              "pescefresco": {
+                "name": "Spigole, Saraghi, Orate",
+                "description": null
+              },
+              "pescespada": {
+                "name": "Trancio di pesce spada",
+                "description": null
+              },
+              "cozzemarinara": {
+                "name": "Cozze alla marinara",
+                "description": null
+              },
+              "grigliamista": {
+                "name": "Grigliata mista",
+                "description": null
+              },
+              "zuppapesce": {
+                "name": "Zuppa di pesce",
+                "description": null
+              },
+              "aragosta": {
+                "name": "Aragosta",
+                "description": null
+              }
+            }
+          },
+          "contorni": {
+            "section": "Sides",
+            "products": {
+              "crocchette": {
+                "name": "Crocchette di patate",
+                "description": null
+              },
+              "patatefritte": {
+                "name": "Patate fritte",
+                "description": null
+              },
+              "insalataverde": {
+                "name": "Insalata verde",
+                "description": null
+              },
+              "insalatamista": {
+                "name": "Insalata mista",
+                "description": null
+              },
+              "rucola": {
+                "name": "Rucola",
+                "description": null
+              },
+              "pomodori": {
+                "name": "Pomodori",
+                "description": null
+              },
+              "carote": {
+                "name": "Carote",
+                "description": null
+              },
+              "spinaci": {
+                "name": "Spinaci",
+                "description": null
+              },
+              "verdure": {
+                "name": "Verdure alla griglia",
+                "description": null
+              }
+            }
+          },
+          "formaggi": {
+            "section": "Cheeses - Sardinian / Italian",
+            "products": {
+              "pecorino": {
+                "name": "Pecorino Sardo",
+                "description": null
+              },
+              "caprino": {
+                "name": "Caprino Sardo",
+                "description": null
+              },
+              "gorgonzola": {
+                "name": "Gorgonzola",
+                "description": null
+              },
+              "mozzarella": {
+                "name": "Mozzarella",
+                "description": null
+              },
+              "formaggimisti": {
+                "name": "Formaggi misti",
+                "description": null
+              }
+            }
+          },
+          "pizze": {
+            "section": "Pizza",
+            "products": {
+              "margherita": {
+                "name": "Margherita",
+                "description": "Pomodoro e mozzarella."
+              },
+              "napoletana": {
+                "name": "Napoletana",
+                "description": "Pomodoro, mozzarella, capperi, acciughe e olive."
+              },
+              "primavera": {
+                "name": "Primavera",
+                "description": "Pomodoro fresco, mozzarella e rucola."
+              },
+              "capricciosa": {
+                "name": "Capricciosa",
+                "description": "Pomodoro, mozzarella, salame, carciofi, funghi e olive."
+              },
+              "4stagioni": {
+                "name": "4 Stagioni",
+                "description": "Pomodoro, mozzarella, prosciutto, carciofi, funghi e olive."
+              },
+              "rustica": {
+                "name": "Rustica",
+                "description": "Pomodoro, mozzarella, peperoni, melanzane e spinaci."
+              },
+              "contadina": {
+                "name": "Contadina",
+                "description": "Pomodoro, mozzarella, zucchine e mais."
+              },
+              "diavola": {
+                "name": "Diavola",
+                "description": "Pomodoro, mozzarella, salsiccia piccante."
+              },
+              "pescatora": {
+                "name": "Pescatora",
+                "description": "Pomodoro, mozzarella e frutti di mare."
+              },
+              "boscaiola": {
+                "name": "Boscaiola",
+                "description": "Pomodoro, mozzarella, cipolla e funghi."
+              },
+              "4formaggi": {
+                "name": "4 Formaggi",
+                "description": "Pomodoro, mozzarella e formaggi vari."
+              },
+              "reale": {
+                "name": "Reale",
+                "description": "Pomodoro, mozzarella, salmone e bottarga."
+              },
+              "garibaldina": {
+                "name": "Garibaldina",
+                "description": "Pomodoro fresco, mozzarella, spada affumicato e radicchio rosso."
+              },
+              "calzone": {
+                "name": "Calzone",
+                "description": "Pomodoro, mozzarella, prosciutto, salame, carciofi e funghi."
+              },
+              "dellacasa": {
+                "name": "Della casa",
+                "description": "Pomodoro, mozzarella, prosciutto, salsiccia, funghi e carciofi."
+              },
+              "americana": {
+                "name": "Americana",
+                "description": "Pomodoro, mozzarella e patatine fritte."
+              },
+              "gheriglio": {
+                "name": "Gheriglio",
+                "description": "Mozzarella, gorgonzola e noci."
+              },
+              "wrustel": {
+                "name": "Wrustel",
+                "description": "Pomodoro, mozzarella e wrustel."
+              },
+              "pizzatonno": {
+                "name": "Tonno",
+                "description": "Pomodoro, mozzarella e tonno."
+              },
+              "pizzasarda": {
+                "name": "Sarda",
+                "description": "Pomodoro, mozzarella, pecorino e salsiccia sarda."
+              },
+              "vesuvius": {
+                "name": "Vesuvius",
+                "description": "Mozzarella, friarielli e salsiccia fresca."
+              },
+              "aggiuntacrudo": {
+                "name": "Prosciutto crudo in aggiunta",
+                "description": null
+              }
+            }
+          },
+          "dolci": {
+            "section": "Desserts",
+            "products": {
+              "fruttastagione": {
+                "name": "Frutta di stagione",
+                "description": null
+              },
+              "gelatisemifreddi": {
+                "name": "Semifreddi",
+                "description": null
+              },
+              "tortesemifredde": {
+                "name": "Torte semifredde",
+                "description": null
+              },
+              "cremacatalana": {
+                "name": "Crema catalana",
+                "description": null
+              },
+              "seadas": {
+                "name": "Seadas",
+                "description": null
+              }
+            }
+          },
+          "coperto": {
+            "section": "Coperto",
+            "products": {
+              "copertoprodotto": {
+                "name": null,
+                "description": "Costo per pane e servizio, non cancellabile."
+              }
+            }
+          }
+        }
+      },
+      "menu": {
+        "antipasti": {
+          "section": "Antipasti",
+          "position": 0,
+          "products": {
+            "bruschette": {
+              "name": "Bruschette",
+              "position": 0,
+              "description": "Pane tostato con pomodoro fresco.",
+              "price": 2.5
+            },
+            "insalatadimare": {
+              "name": "Insalata di mare",
+              "position": 1,
+              "description": null,
+              "price": 9
+            },
+            "insalatadipolpo": {
+              "name": "Insalata di polpo",
+              "position": 2,
+              "description": null,
+              "price": 9
+            },
+            "salumimisti": {
+              "name": "Salumi misti",
+              "position": 3,
+              "description": null,
+              "price": 7
+            },
+            "prosciuttocrudo": {
+              "name": "Prosciutto crudo",
+              "position": 4,
+              "description": null,
+              "price": 8
+            },
+            "crudomozzarella": {
+              "name": "Crudo & mozzarella",
+              "position": 5,
+              "description": null,
+              "price": 8
+            },
+            "caprese": {
+              "name": "Insalata caprese",
+              "position": 6,
+              "description": null,
+              "price": 6
+            },
+            "crudomelone": {
+              "name": "Crudo & melone",
+              "position": 7,
+              "description": null,
+              "price": 9
+            },
+            "cocktailgamberi": {
+              "name": "Cocktail di gamberi",
+              "position": 8,
+              "description": null,
+              "price": 6
+            },
+            "razzacatalana": {
+              "name": "Razza alla catalana",
+              "position": 9,
+              "description": null,
+              "price": 6
+            },
+            "spadaaffumicato": {
+              "name": "Spada affumicato & radicchio rosso",
+              "position": 10,
+              "description": null,
+              "price": 7
+            },
+            "archipelago": {
+              "name": "Archipelago di antipasti",
+              "position": 11,
+              "description": null,
+              "price": 17
+            }
+          }
+        },
+        "specialita": {
+          "section": "Specialità della casa",
+          "position": 1,
+          "products": {
+            "spacartoccio": {
+              "name": "Spaghetti al cartoccio",
+              "position": 0,
+              "description": null,
+              "price": 11
+            },
+            "spapescatora": {
+              "name": "Spaghetti alla pescatora",
+              "position": 1,
+              "description": null,
+              "price": 11
+            },
+            "gnocchispada": {
+              "name": "Gnochetti al pesce spada",
+              "position": 2,
+              "description": null,
+              "price": 10
+            },
+            "risonero": {
+              "name": "Riso al nero di seppia",
+              "position": 3,
+              "description": null,
+              "price": 11
+            },
+            "risopescatora": {
+              "name": "Riso alla pescatora",
+              "position": 4,
+              "description": null,
+              "price": 11
+            },
+            "raviolisardi": {
+              "name": "Ravioli Sardi",
+              "position": 5,
+              "description": null,
+              "price": 9
+            },
+            "tagliatelleisola": {
+              "name": "Tagliatelle Isolane",
+              "position": 6,
+              "description": null,
+              "price": 10
+            },
+            "kulurgiones": {
+              "name": "Kulurgiones",
+              "position": 7,
+              "description": null,
+              "price": 10
+            },
+            "fregolavongole": {
+              "name": "Fregola vongole & bottarga",
+              "position": 8,
+              "description": null,
+              "price": 12
+            }
+          }
+        },
+        "primi": {
+          "section": "Primi Piatti",
+          "position": 2,
+          "products": {
+            "spapomodoro": {
+              "name": "Spaghetti al pomodoro",
+              "position": 0,
+              "description": null,
+              "price": 7.5
+            },
+            "sparagu": {
+              "name": "Spaghetti al ragú",
+              "position": 1,
+              "description": null,
+              "price": 7.5
+            },
+            "spacarbonara": {
+              "name": "Spaghetti alla carbonara",
+              "position": 2,
+              "description": null,
+              "price": 7.5
+            },
+            "spacozzevongole": {
+              "name": "Spaghetti alle cozze & vongole",
+              "position": 3,
+              "description": null,
+              "price": 9
+            },
+            "spabottarga": {
+              "name": "Spaghetti alla bottarga",
+              "position": 4,
+              "description": null,
+              "price": 8
+            },
+            "pennesalmone": {
+              "name": "Penne al salmone",
+              "position": 5,
+              "description": null,
+              "price": 7.5
+            },
+            "gnosardi": {
+              "name": "Gnochetti sardi",
+              "position": 6,
+              "description": null,
+              "price": 8
+            }
+          }
+        },
+        "pesce": {
+          "section": "Secondi di pesce",
+          "position": 3,
+          "products": {
+            "calagriglia": {
+              "name": "Calamari alla griglia",
+              "position": 0,
+              "description": null,
+              "price": 11
+            },
+            "calafritti": {
+              "name": "Calamari fritti",
+              "position": 1,
+              "description": null,
+              "price": 11
+            },
+            "frittomisto": {
+              "name": "Fritto misto",
+              "position": 2,
+              "description": null,
+              "price": 11
+            },
+            "gamberoni": {
+              "name": "Gamberoni alla griglia",
+              "position": 3,
+              "description": null,
+              "price": 16
+            },
+            "scampi": {
+              "name": "Scampi alla griglia",
+              "position": 4,
+              "description": null,
+              "price": 16
+            },
+            "zuppavongole": {
+              "name": "Zuppa di vongole",
+              "position": 5,
+              "description": null,
+              "price": 14
+            },
+            "pescefresco": {
+              "name": "Spigole, Saraghi, Orate",
+              "position": 6,
+              "description": null,
+              "price": 6,
+              "priceForGrams": 100
+            },
+            "pescespada": {
+              "name": "Trancio di pesce spada",
+              "position": 7,
+              "description": null,
+              "price": 11
+            },
+            "cozzemarinara": {
+              "name": "Cozze alla marinara",
+              "position": 8,
+              "description": null,
+              "price": 13
+            },
+            "grigliamista": {
+              "name": "Grigliata mista",
+              "position": 9,
+              "description": null,
+              "price": 16
+            },
+            "zuppapesce": {
+              "name": "Zuppa di pesce",
+              "position": 10,
+              "description": null,
+              "price": 18
+            },
+            "aragosta": {
+              "name": "Aragosta",
+              "position": 11,
+              "description": null,
+              "price": null,
+              "preordered": true
+            }
+          }
+        },
+        "contorni": {
+          "section": "Contorni",
+          "position": 4,
+          "products": {
+            "crocchette": {
+              "name": "Crocchette di patate",
+              "position": 0,
+              "description": null,
+              "price": 3
+            },
+            "patatefritte": {
+              "name": "Patate fritte",
+              "position": 1,
+              "description": null,
+              "price": 3
+            },
+            "insalataverde": {
+              "name": "Insalata verde",
+              "position": 2,
+              "description": null,
+              "price": 3
+            },
+            "insalatamista": {
+              "name": "Insalata mista",
+              "position": 3,
+              "description": null,
+              "price": 3
+            },
+            "rucola": {
+              "name": "Rucola",
+              "position": 4,
+              "description": null,
+              "price": 4
+            },
+            "pomodori": {
+              "name": "Pomodori",
+              "position": 5,
+              "description": null,
+              "price": 3
+            },
+            "carote": {
+              "name": "Carote",
+              "position": 6,
+              "description": null,
+              "price": 3
+            },
+            "spinaci": {
+              "name": "Spinaci",
+              "position": 7,
+              "description": null,
+              "price": 3
+            },
+            "verdure": {
+              "name": "Verdure alla griglia",
+              "position": 8,
+              "description": null,
+              "price": 4
+            }
+          }
+        },
+        "formaggi": {
+          "section": "Formaggi Sardi & Nazionali",
+          "position": 5,
+          "products": {
+            "pecorino": {
+              "name": "Pecorino Sardo",
+              "position": 0,
+              "description": null,
+              "price": 3.5
+            },
+            "caprino": {
+              "name": "Caprino Sardo",
+              "position": 1,
+              "description": null,
+              "price": 3.5
+            },
+            "gorgonzola": {
+              "name": "Gorgonzola",
+              "position": 2,
+              "description": null,
+              "price": 3.5
+            },
+            "mozzarella": {
+              "name": "Mozzarella",
+              "position": 3,
+              "description": null,
+              "price": 3.5
+            },
+            "formaggimisti": {
+              "name": "Formaggi misti",
+              "position": 4,
+              "description": null,
+              "price": 7
+            }
+          }
+        },
+        "pizze": {
+          "section": "Pizze",
+          "position": 6,
+          "products": {
+            "margherita": {
+              "name": "Margherita",
+              "position": 0,
+              "description": "Pomodoro e mozzarella.",
+              "price": 5
+            },
+            "napoletana": {
+              "name": "Napoletana",
+              "position": 1,
+              "description": "Pomodoro, mozzarella, capperi, acciughe e olive.",
+              "price": 6.5
+            },
+            "primavera": {
+              "name": "Primavera",
+              "position": 2,
+              "description": "Pomodoro fresco, mozzarella e rucola.",
+              "price": 7
+            },
+            "capricciosa": {
+              "name": "Capricciosa",
+              "position": 3,
+              "description": "Pomodoro, mozzarella, salame, carciofi, funghi e olive.",
+              "price": 6.5
+            },
+            "4stagioni": {
+              "name": "4 Stagioni",
+              "position": 4,
+              "description": "Pomodoro, mozzarella, prosciutto, carciofi, funghi e olive.",
+              "price": 6.5
+            },
+            "rustica": {
+              "name": "Rustica",
+              "position": 5,
+              "description": "Pomodoro, mozzarella, peperoni, melanzane e spinaci.",
+              "price": 6.5
+            },
+            "contadina": {
+              "name": "Contadina",
+              "position": 6,
+              "description": "Pomodoro, mozzarella, zucchine e mais.",
+              "price": 6.5
+            },
+            "diavola": {
+              "name": "Diavola",
+              "position": 7,
+              "description": "Pomodoro, mozzarella, salsiccia piccante.",
+              "price": 6.5
+            },
+            "pescatora": {
+              "name": "Pescatora",
+              "position": 8,
+              "description": "Pomodoro, mozzarella e frutti di mare.",
+              "price": 8
+            },
+            "boscaiola": {
+              "name": "Boscaiola",
+              "position": 9,
+              "description": "Pomodoro, mozzarella, cipolla e funghi.",
+              "price": 6.5
+            },
+            "4formaggi": {
+              "name": "4 Formaggi",
+              "position": 10,
+              "description": "Pomodoro, mozzarella e formaggi vari.",
+              "price": 6.5
+            },
+            "reale": {
+              "name": "Reale",
+              "position": 11,
+              "description": "Pomodoro, mozzarella, salmone e bottarga.",
+              "price": 7
+            },
+            "garibaldina": {
+              "name": "Garibaldina",
+              "position": 12,
+              "description": "Pomodoro fresco, mozzarella, spada affumicato e radicchio rosso.",
+              "price": 8
+            },
+            "calzone": {
+              "name": "Calzone",
+              "position": 13,
+              "description": "Pomodoro, mozzarella, prosciutto, salame, carciofi e funghi.",
+              "price": 6.5
+            },
+            "dellacasa": {
+              "name": "Della casa",
+              "position": 14,
+              "description": "Pomodoro, mozzarella, prosciutto, salsiccia, funghi e carciofi.",
+              "price": 7
+            },
+            "americana": {
+              "name": "Americana",
+              "position": 15,
+              "description": "Pomodoro, mozzarella e patatine fritte.",
+              "price": 7
+            },
+            "gheriglio": {
+              "name": "Gheriglio",
+              "position": 16,
+              "description": "Mozzarella, gorgonzola e noci.",
+              "price": 6.5
+            },
+            "wrustel": {
+              "name": "Wrustel",
+              "position": 17,
+              "description": "Pomodoro, mozzarella e wrustel.",
+              "price": 6.5
+            },
+            "pizzatonno": {
+              "name": "Tonno",
+              "position": 18,
+              "description": "Pomodoro, mozzarella e tonno.",
+              "price": 6.5
+            },
+            "pizzasarda": {
+              "name": "Sarda",
+              "position": 19,
+              "description": "Pomodoro, mozzarella, pecorino e salsiccia sarda.",
+              "price": 6.5
+            },
+            "vesuvius": {
+              "name": "Vesuvius",
+              "position": 20,
+              "description": "Mozzarella, friarielli e salsiccia fresca.",
+              "price": 6.5
+            },
+            "aggiuntacrudo": {
+              "name": "Prosciutto crudo in aggiunta",
+              "position": 21,
+              "description": null,
+              "price": 2
+            }
+          }
+        },
+        "dolci": {
+          "section": "Dolci",
+          "position": 7,
+          "products": {
+            "fruttastagione": {
+              "name": "Frutta di stagione",
+              "position": 0,
+              "description": null,
+              "price": 4
+            },
+            "gelatisemifreddi": {
+              "name": "Semifreddi",
+              "position": 1,
+              "description": null,
+              "price": 4
+            },
+            "tortesemifredde": {
+              "name": "Torte semifredde",
+              "position": 2,
+              "description": null,
+              "price": 4
+            },
+            "cremacatalana": {
+              "name": "Crema catalana",
+              "position": 3,
+              "description": null,
+              "price": 4
+            },
+            "seadas": {
+              "name": "Seadas",
+              "position": 4,
+              "description": null,
+              "price": 5
+            }
+          }
+        },
+        "coperto": {
+          "section": "Coperto",
+          "position": 8,
+          "products": {
+            "copertoprodotto": {
+              "name": null,
+              "position": 0,
+              "description": "Costo per pane e servizio, non cancellabile.",
+              "price": 2,
+              "pricePerPerson": true
+            }
+          }
+        }
+      }
+    }
+  }
+}
