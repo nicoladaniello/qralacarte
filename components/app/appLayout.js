@@ -1,7 +1,7 @@
 import React, { useState, createRef } from "react";
 import AppHeader from "./appHeader";
 import AppMenuNav from "./appMenuNav";
-import AppMenu from "./AppMenu";
+import AppMenu from "./appMenu.js";
 
 const AppLayout = ({ data }) => {
   const { info, menu, translations, language } = data;
