@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import MenuSection from "./MenuSection";
 import map from "lodash/map";
 
