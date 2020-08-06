@@ -1,19 +1,22 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import MenuItem from "./menuItem";
 import map from "lodash/map";
-import useMeasure from "react-use-measure";
-import { useViewportScroll } from "framer-motion";
-import mergeRefs from "react-merge-refs";
+import useMeasure from "../../hooks/useMeasure";
 
 const MenuSection = forwardRef(
   ({ data, onScrolledIn, onCLick, ...rest }, ref) => {
-    const [mRef, bounds] = useMeasure();
-    const { scrollY } = useViewportScroll();
+    const bounds = useMeasure(ref);
     const [active, setActive] = useState(false);
+    const { section, products } = data;
 
-    useEffect(() =>
-      scrollY.onChange((latest) => {
-        if (latest > bounds.top - 50 && latest < bounds.bottom - 50) {
+    useEffect(() => {
+      const handleScroll = () => {
+        if (!bounds) return;
+
+        if (
+          window.pageYOffset > bounds.top - 50 &&
+          window.pageYOffset < bounds.bottom - 50
+        ) {
           if (!active) {
             onScrolledIn(ref);
             setActive(true);
@@ -21,17 +24,18 @@ const MenuSection = forwardRef(
         } else if (active) {
           setActive(false);
         }
-      })
-    );
+      };
 
-    const { section, products } = data;
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", () => handleScroll);
+    });
 
     return (
-      <div ref={mergeRefs([ref, mRef])} {...rest}>
+      <div ref={ref} {...rest}>
         <div className="p-1">
           <h6 className="mb-0">{section}</h6>
         </div>
-        <div className="list-group mb-2">
+        <div className="list-group app-item mb-2">
           {map(products, (menuItem) => (
             <MenuItem
               key={menuItem._key}

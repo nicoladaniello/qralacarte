@@ -2,6 +2,7 @@ import React, { useState, createRef } from "react";
 import AppHeader from "./appHeader";
 import AppMenuNav from "./appMenuNav";
 import AppMenu from "./appMenu.js";
+import AppFooter from "./appFooter";
 
 const AppLayout = ({ data }) => {
   const { info, menu, translations, language } = data;
@@ -17,13 +18,12 @@ const AppLayout = ({ data }) => {
 
   const handleScrollTo = (key) => {
     setActiveKey(key);
-
-    if (navRefs[key].current) navRefs[key].current.scrollIntoView(true);
   };
 
   const handleNavItemClick = (key) => {
-    if (sectionRefs[key].current) sectionRefs[key].current.scrollIntoView();
-    if (navRefs[key].current) navRefs[key].current.scrollIntoView(true);
+    if (sectionRefs[key].current) {
+      sectionRefs[key].current.scrollIntoView();
+    }
   };
 
   const handleMenuItemClick = (key) => {};
@@ -46,9 +46,10 @@ const AppLayout = ({ data }) => {
           data={menu}
           onScrolledTo={handleScrollTo}
           refs={sectionRefs}
-          onCLick={handleMenuItemClick}
+          onItemCLick={handleMenuItemClick}
         />
       </main>
+      <AppFooter />
     </div>
   );
 };

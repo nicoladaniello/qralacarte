@@ -30,7 +30,11 @@ const MenuItem = ({ data, onClick, ...rest }) => {
         </div>
         {!!img && (
           <div className="col-auto ml-auto">
-            <img className="img-fluid" alt={name} src={img} />
+            <div
+              className="app-item-thumb"
+              style={{ backgroundImage: `url(${img})` }}
+            ></div>
+            {/* <img className="img-fluid" alt={name} src={img} /> */}
           </div>
         )}
       </div>

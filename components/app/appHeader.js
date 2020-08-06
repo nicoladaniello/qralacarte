@@ -13,7 +13,7 @@ const AppHeader = ({ data, onShowModal }) => {
   const { img, title, phone, address, language, translations } = data;
 
   const { scrollY } = useViewportScroll();
-  const backgroundPositionY = useTransform(scrollY, [0, 500], ["0%", "-60%"]);
+  const backgroundPositionY = useTransform(scrollY, [0, 300], ["0px", "-50px"]);
 
   return (
     <header>

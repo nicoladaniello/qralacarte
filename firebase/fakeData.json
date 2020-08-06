@@ -330,8 +330,8 @@
                 "description": "Mozzarella, gorgonzola e noci."
               },
               "wrustel": {
-                "name": "Wrustel",
-                "description": "Pomodoro, mozzarella e wrustel."
+                "name": "Würstel",
+                "description": "Pomodoro, mozzarella e würstel."
               },
               "pizzatonno": {
                 "name": "Tonno",
@@ -392,19 +392,19 @@
             "products": {
               "bruschette": {
                 "name": "Bruschette",
-                "description": "Pane tostato con pomodoro fresco."
+                "description": "Toasted bread slices with fresh tomato."
               },
               "insalatadimare": {
                 "name": "Insalata di mare",
-                "description": null
+                "description": "Seafood mix."
               },
               "insalatadipolpo": {
                 "name": "Insalata di polpo",
-                "description": null
+                "description": "Octopus mix."
               },
               "salumimisti": {
                 "name": "Salumi misti",
-                "description": null
+                "description": "Mixed salumi."
               },
               "prosciuttocrudo": {
                 "name": "Prosciutto crudo",
@@ -412,31 +412,31 @@
               },
               "crudomozzarella": {
                 "name": "Crudo & mozzarella",
-                "description": null
+                "description": "Prosciutto crudo with fresh mozzarella."
               },
               "caprese": {
                 "name": "Insalata caprese",
-                "description": null
+                "description": "Caprese salad with mozzarella and tomatoes."
               },
               "crudomelone": {
                 "name": "Crudo & melone",
-                "description": null
+                "description": "Melon and prosciutto crudo."
               },
               "cocktailgamberi": {
                 "name": "Cocktail di gamberi",
-                "description": null
+                "description": "Prawn cocktail."
               },
               "razzacatalana": {
                 "name": "Razza alla catalana",
-                "description": null
+                "description": "Razza fish served catalan style."
               },
               "spadaaffumicato": {
                 "name": "Spada affumicato & radicchio rosso",
-                "description": null
+                "description": "Smoked swordfish served with Italian chicory"
               },
               "archipelago": {
                 "name": "Archipelago di antipasti",
-                "description": null
+                "description": "Our most famous anitpasti platter."
               }
             }
           },
@@ -445,39 +445,39 @@
             "products": {
               "spacartoccio": {
                 "name": "Spaghetti al cartoccio",
-                "description": null
+                "description": "Spaghetti pasta in a rich tomato souce and seafood."
               },
               "spapescatora": {
                 "name": "Spaghetti alla pescatora",
-                "description": null
+                "description": "Spaghetti pasta with seafood."
               },
               "gnocchispada": {
                 "name": "Gnochetti al pesce spada",
-                "description": null
+                "description": "Traditional sardinian gnocchetti pasta with swordfish."
               },
               "risonero": {
                 "name": "Riso al nero di seppia",
-                "description": null
+                "description": "Squid ink risotto with squids."
               },
               "risopescatora": {
                 "name": "Riso alla pescatora",
-                "description": null
+                "description": "Risotto with seafood."
               },
               "raviolisardi": {
                 "name": "Ravioli Sardi",
-                "description": null
+                "description": "Traditional sardinian ravioli."
               },
               "tagliatelleisola": {
                 "name": "Tagliatelle Isolane",
-                "description": null
+                "description": "Tagliatelle pasta served with shrimps, bottarga and rocket leaves."
               },
               "kulurgiones": {
                 "name": "Kulurgiones",
-                "description": null
+                "description": "Traditional sardinian pasta filled with pash potato."
               },
               "fregolavongole": {
                 "name": "Fregola vongole & bottarga",
-                "description": null
+                "description": "Traditional sardinian Fregola pasta with clams and bottarga."
               }
             }
           },
@@ -486,31 +486,31 @@
             "products": {
               "spapomodoro": {
                 "name": "Spaghetti al pomodoro",
-                "description": null
+                "description": "Spaghetti pasta in rich tomato souce."
               },
               "sparagu": {
                 "name": "Spaghetti al ragú",
-                "description": null
+                "description": "Spaghetti pasta in bolognese sauce."
               },
               "spacarbonara": {
                 "name": "Spaghetti alla carbonara",
-                "description": null
+                "description": "Spaghetti pasta in carbonara souce."
               },
               "spacozzevongole": {
                 "name": "Spaghetti alle cozze & vongole",
-                "description": null
+                "description": "Spaghetti pasta with clams and mussels."
               },
               "spabottarga": {
                 "name": "Spaghetti alla bottarga",
-                "description": null
+                "description": "Spaghetti pasta with bottarga."
               },
               "pennesalmone": {
                 "name": "Penne al salmone",
-                "description": null
+                "description": "Penne pasta with salmon and cream."
               },
               "gnosardi": {
                 "name": "Gnochetti sardi",
-                "description": null
+                "description": "Traditional sardinian gnocchetti pasta."
               }
             }
           },
@@ -519,51 +519,51 @@
             "products": {
               "calagriglia": {
                 "name": "Calamari alla griglia",
-                "description": null
+                "description": "Grilled calamari."
               },
               "calafritti": {
                 "name": "Calamari fritti",
-                "description": null
+                "description": "Deep fried calamari rings."
               },
               "frittomisto": {
                 "name": "Fritto misto",
-                "description": null
+                "description": "Mix of fried seafood."
               },
               "gamberoni": {
                 "name": "Gamberoni alla griglia",
-                "description": null
+                "description": "Grilled king prawns."
               },
               "scampi": {
                 "name": "Scampi alla griglia",
-                "description": null
+                "description": "Grilled Scampi, also known as Norway Lobsters."
               },
               "zuppavongole": {
                 "name": "Zuppa di vongole",
-                "description": null
+                "description": "Clam soup."
               },
               "pescefresco": {
                 "name": "Spigole, Saraghi, Orate",
-                "description": null
+                "description": "Fresh fish - Seabass / Sarago / Seabream."
               },
               "pescespada": {
                 "name": "Trancio di pesce spada",
-                "description": null
+                "description": "Swordfish steak."
               },
               "cozzemarinara": {
                 "name": "Cozze alla marinara",
-                "description": null
+                "description": "Mussels marinière."
               },
               "grigliamista": {
                 "name": "Grigliata mista",
-                "description": null
+                "description": "Mix grilled platter."
               },
               "zuppapesce": {
                 "name": "Zuppa di pesce",
-                "description": null
+                "description": "Fish soup."
               },
               "aragosta": {
                 "name": "Aragosta",
-                "description": null
+                "description": "Mediterranean Lobstar."
               }
             }
           },
@@ -572,39 +572,39 @@
             "products": {
               "crocchette": {
                 "name": "Crocchette di patate",
-                "description": null
+                "description": "Croquettes filled with mash potato."
               },
               "patatefritte": {
                 "name": "Patate fritte",
-                "description": null
+                "description": "French fries."
               },
               "insalataverde": {
                 "name": "Insalata verde",
-                "description": null
+                "description": "Green leaves salad."
               },
               "insalatamista": {
                 "name": "Insalata mista",
-                "description": null
+                "description": "Mixed leaves salad."
               },
               "rucola": {
                 "name": "Rucola",
-                "description": null
+                "description": "Rocket salad."
               },
               "pomodori": {
                 "name": "Pomodori",
-                "description": null
+                "description": "Tomato salad."
               },
               "carote": {
-                "name": "Carote",
+                "name": "Carrots",
                 "description": null
               },
               "spinaci": {
-                "name": "Spinaci",
+                "name": "Spinach",
                 "description": null
               },
               "verdure": {
                 "name": "Verdure alla griglia",
-                "description": null
+                "description": "Mix of grilled vegetables."
               }
             }
           },
@@ -613,11 +613,11 @@
             "products": {
               "pecorino": {
                 "name": "Pecorino Sardo",
-                "description": null
+                "description": "Sardinian sheep cheese."
               },
               "caprino": {
                 "name": "Caprino Sardo",
-                "description": null
+                "description": "Sardinian goat cheese."
               },
               "gorgonzola": {
                 "name": "Gorgonzola",
@@ -629,7 +629,7 @@
               },
               "formaggimisti": {
                 "name": "Formaggi misti",
-                "description": null
+                "description": "Selection of cheeses."
               }
             }
           },
@@ -638,91 +638,91 @@
             "products": {
               "margherita": {
                 "name": "Margherita",
-                "description": "Pomodoro e mozzarella."
+                "description": "Tomato souce and mozzarella cheese."
               },
               "napoletana": {
                 "name": "Napoletana",
-                "description": "Pomodoro, mozzarella, capperi, acciughe e olive."
+                "description": "Tomato souce, mozzarella, capers, anchovies and olives."
               },
               "primavera": {
                 "name": "Primavera",
-                "description": "Pomodoro fresco, mozzarella e rucola."
+                "description": "Fresh tomatoes, mozzarella and rocket leaves."
               },
               "capricciosa": {
                 "name": "Capricciosa",
-                "description": "Pomodoro, mozzarella, salame, carciofi, funghi e olive."
+                "description": "Tomato souce, mozzarella, salami, artichokes, mashrooms and olives."
               },
               "4stagioni": {
                 "name": "4 Stagioni",
-                "description": "Pomodoro, mozzarella, prosciutto, carciofi, funghi e olive."
+                "description": "Tomato souce, mozzarella, prosciutto, artichokes, mashrooms and olives."
               },
               "rustica": {
                 "name": "Rustica",
-                "description": "Pomodoro, mozzarella, peperoni, melanzane e spinaci."
+                "description": "Tomato souce, mozzarella, peppers, aubergine and spinach."
               },
               "contadina": {
                 "name": "Contadina",
-                "description": "Pomodoro, mozzarella, zucchine e mais."
+                "description": "Tomato souce, mozzarella, zucchini and sweetcorn."
               },
               "diavola": {
                 "name": "Diavola",
-                "description": "Pomodoro, mozzarella, salsiccia piccante."
+                "description": "Tomato souce, mozzarella and spicy salami."
               },
               "pescatora": {
                 "name": "Pescatora",
-                "description": "Pomodoro, mozzarella e frutti di mare."
+                "description": "Tomato souce, mozzarella and seafood."
               },
               "boscaiola": {
                 "name": "Boscaiola",
-                "description": "Pomodoro, mozzarella, cipolla e funghi."
+                "description": "Tomato souce, mozzarella, onion and mashrooms."
               },
               "4formaggi": {
                 "name": "4 Formaggi",
-                "description": "Pomodoro, mozzarella e formaggi vari."
+                "description": "Tomato souce, mozzarella and various cheeses."
               },
               "reale": {
                 "name": "Reale",
-                "description": "Pomodoro, mozzarella, salmone e bottarga."
+                "description": "Tomato souce, mozzarella, smoked salmon and bottarga."
               },
               "garibaldina": {
                 "name": "Garibaldina",
-                "description": "Pomodoro fresco, mozzarella, spada affumicato e radicchio rosso."
+                "description": "Pomodoro fresco, mozzarella, smoked swordfish and Italian chicory."
               },
               "calzone": {
                 "name": "Calzone",
-                "description": "Pomodoro, mozzarella, prosciutto, salame, carciofi e funghi."
+                "description": "Tomato souce, mozzarella, prosciutto, salami, artichokes and mashrooms."
               },
               "dellacasa": {
                 "name": "Della casa",
-                "description": "Pomodoro, mozzarella, prosciutto, salsiccia, funghi e carciofi."
+                "description": "Tomato souce, mozzarella, prosciutto, salami, mashrooms and artichokes."
               },
               "americana": {
                 "name": "Americana",
-                "description": "Pomodoro, mozzarella e patatine fritte."
+                "description": "Tomato souce, mozzarella and french fries."
               },
               "gheriglio": {
                 "name": "Gheriglio",
-                "description": "Mozzarella, gorgonzola e noci."
+                "description": "Mozzarella, gorgonzola cheese and walnuts."
               },
               "wrustel": {
-                "name": "Wrustel",
-                "description": "Pomodoro, mozzarella e wrustel."
+                "name": "Würstel",
+                "description": "Tomato souce, mozzarella and würstel."
               },
               "pizzatonno": {
                 "name": "Tonno",
-                "description": "Pomodoro, mozzarella e tonno."
+                "description": "Tomato souce, mozzarella and tuna."
               },
               "pizzasarda": {
                 "name": "Sarda",
-                "description": "Pomodoro, mozzarella, pecorino e salsiccia sarda."
+                "description": "Tomato souce, mozzarella, pecorino cheese and sardinian salami."
               },
               "vesuvius": {
                 "name": "Vesuvius",
-                "description": "Mozzarella, friarielli e salsiccia fresca."
+                "description": "Mozzarella, friarielli and sausages."
               },
               "aggiuntacrudo": {
-                "name": "Prosciutto crudo in aggiunta",
-                "description": null
+                "name": "Additional prosciutto",
+                "description": "Add prosciutto crudo to any pizza"
               }
             }
           },
@@ -730,33 +730,33 @@
             "section": "Desserts",
             "products": {
               "fruttastagione": {
-                "name": "Frutta di stagione",
-                "description": null
+                "name": "Seasonal fruits",
+                "description": "null"
               },
               "gelatisemifreddi": {
                 "name": "Semifreddi",
-                "description": null
+                "description": "Selection of semi-frozed desserts."
               },
               "tortesemifredde": {
                 "name": "Torte semifredde",
-                "description": null
+                "description": "Selection of semi-frozed cakes."
               },
               "cremacatalana": {
                 "name": "Crema catalana",
-                "description": null
+                "description": "Also known as crème brûlée, lemon and vanilla custard base topped with carmelised sugar."
               },
               "seadas": {
                 "name": "Seadas",
-                "description": null
+                "description": "Traditional sardinian dessert made with fried pastry and local sweet cheese, served hot and topped with honey."
               }
             }
           },
           "coperto": {
-            "section": "Coperto",
+            "section": "Cover charge",
             "products": {
               "copertoprodotto": {
                 "name": null,
-                "description": "Costo per pane e servizio, non cancellabile."
+                "description": "The cover charge cannot be removed from the bill."
               }
             }
           }
@@ -764,85 +764,59 @@
       },
       "menu": {
         "antipasti": {
-          "section": "Antipasti",
           "position": 0,
           "products": {
             "bruschette": {
-              "name": "Bruschette",
               "position": 0,
-              "description": "Pane tostato con pomodoro fresco.",
               "price": 2.5
             },
             "insalatadimare": {
-              "name": "Insalata di mare",
               "position": 1,
-              "description": null,
               "price": 9
             },
             "insalatadipolpo": {
-              "name": "Insalata di polpo",
               "position": 2,
-              "description": null,
               "price": 9
             },
             "salumimisti": {
-              "name": "Salumi misti",
               "position": 3,
-              "description": null,
               "price": 7
             },
             "prosciuttocrudo": {
-              "name": "Prosciutto crudo",
               "position": 4,
-              "description": null,
               "price": 8
             },
             "crudomozzarella": {
-              "name": "Crudo & mozzarella",
               "position": 5,
-              "description": null,
               "price": 8
             },
             "caprese": {
-              "name": "Insalata caprese",
               "position": 6,
-              "description": null,
               "price": 6
             },
             "crudomelone": {
-              "name": "Crudo & melone",
               "position": 7,
-              "description": null,
               "price": 9
             },
             "cocktailgamberi": {
-              "name": "Cocktail di gamberi",
               "position": 8,
-              "description": null,
               "price": 6
             },
             "razzacatalana": {
-              "name": "Razza alla catalana",
               "position": 9,
-              "description": null,
               "price": 6
             },
             "spadaaffumicato": {
-              "name": "Spada affumicato & radicchio rosso",
               "position": 10,
-              "description": null,
               "price": 7
             },
             "archipelago": {
-              "name": "Archipelago di antipasti",
               "position": 11,
-              "description": null,
               "price": 17
             }
           }
         },
         "specialita": {
-          "section": "Specialità della casa",
           "position": 1,
           "products": {
             "spacartoccio": {
@@ -1232,9 +1206,9 @@
               "price": 6.5
             },
             "wrustel": {
-              "name": "Wrustel",
+              "name": "Würstel",
               "position": 17,
-              "description": "Pomodoro, mozzarella e wrustel.",
+              "description": "Pomodoro, mozzarella e würstel.",
               "price": 6.5
             },
             "pizzatonno": {

@@ -2,9 +2,7 @@ import React from "react";
 import MenuSection from "./MenuSection";
 import map from "lodash/map";
 
-const AppMenu = ({ data, onScrolledTo, onCLick, refs }) => {
-  if (!data) return null;
-
+const AppMenu = ({ data, onScrolledTo, onItemCLick, refs }) => {
   return map(data, (menuSection) => (
     <MenuSection
       ref={refs[menuSection._key]}
@@ -12,7 +10,7 @@ const AppMenu = ({ data, onScrolledTo, onCLick, refs }) => {
       id={menuSection._key}
       data={menuSection}
       onScrolledIn={() => onScrolledTo(menuSection._key)}
-      onCLick={onCLick}
+      onCLick={onItemCLick}
     />
   ));
 };

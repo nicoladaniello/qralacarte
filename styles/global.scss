@@ -85,5 +85,25 @@ input[type="password"] {
   color: $white !important;
 }
 
-.app-modal {
+.app-scroll-nav {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+}
+
+.app-item .list-group-item-action:focus {
+  background-color: $white;
+}
+
+.app-item-thumb {
+  width: 80px;
+  height: 80px;
+  border: 1px solid $gray-100;
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }

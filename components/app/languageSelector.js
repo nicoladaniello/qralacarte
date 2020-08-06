@@ -21,7 +21,7 @@ const LanguageSelector = ({ languages, defaultLanguage }) => {
     !!languages && (
       <div className="dropdown">
         <button
-          className="btn btn-secondary btn-sm px-1 dropdown-toggle"
+          className="btn btn-light btn-sm dropdown-toggle"
           type="button"
           id="languageSelector"
           aria-haspopup="true"
