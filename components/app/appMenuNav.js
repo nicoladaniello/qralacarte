@@ -40,11 +40,14 @@ const AppMenuNav = ({ data, activeKey, refs, onClick }) => {
   });
 
   return (
-    <nav className={classnames({ "fixed-top shadow-sm": isSticky })}>
+    <nav
+      className={classnames({ "fixed-top shadow-sm": isSticky })}
+      style={{ top: "48px" }}
+    >
       <div
         ref={ref}
         items={Object.keys(data)}
-        className="nav app-scroll-nav p-1 bg-white border border-top-0"
+        className="nav app-scroll-nav p-1 bg-white border-bottom"
       >
         {map(data, ({ _key, section }) => (
           <AppMenuNavItem

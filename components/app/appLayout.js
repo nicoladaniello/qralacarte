@@ -40,7 +40,7 @@ const AppLayout = ({ data }) => {
 
   return (
     <div className="card border-0 bg-light">
-      <AppTopNav data={{ translations, language }} />
+      <AppTopNav data={{ translations, language, title: info.title }} />
       <AppHeader
         data={{ ...info, translations, language }}
         onShowModal={() => null}

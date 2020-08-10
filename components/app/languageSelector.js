@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import classnames from "classnames";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFlag } from "@fortawesome/free-solid-svg-icons";
 
 const LanguageSelector = ({ languages, defaultLanguage }) => {
   const router = useRouter();
@@ -18,40 +20,39 @@ const LanguageSelector = ({ languages, defaultLanguage }) => {
   };
 
   return (
-    !!languages && (
-      <div className="dropdown">
-        <button
-          className="btn btn-light btn-sm dropdown-toggle"
-          type="button"
-          id="languageSelector"
-          aria-haspopup="true"
-          aria-expanded={show}
-          onClick={() => setShow(!show)}
-        >
-          {current}
-        </button>
-        <div
-          className={classnames([
-            "dropdown-menu shadow-lg rounded-0",
-            { show },
-          ])}
-          style={{ minWidth: "auto" }}
-          aria-labelledby="languageSelector"
-        >
-          {languages
-            .filter((lang) => lang !== current)
-            .map((lang) => (
-              <button
-                key={lang}
-                className="dropdown-item btn-sm"
-                onClick={() => select(lang)}
-              >
-                {lang}
-              </button>
-            ))}
-        </div>
+    <>
+      <a
+        className="nav-link dropdown-toggle px-1 py-0 btn btn-light btn-sm"
+        id="languageSelector"
+        aria-haspopup="true"
+        aria-expanded={show}
+        onClick={() => setShow(!show)}
+      >
+        <FontAwesomeIcon
+          icon={faFlag}
+          className="text-primary"
+          style={{ fontSize: "0.75rem" }}
+        />{" "}
+        {current}
+      </a>
+      <div
+        className={classnames(["dropdown-menu shadow-lg rounded-0", { show }])}
+        style={{ minWidth: "auto" }}
+        aria-labelledby="languageSelector"
+      >
+        {languages
+          .filter((lang) => lang !== current)
+          .map((lang) => (
+            <button
+              key={lang}
+              className="dropdown-item btn-sm"
+              onClick={() => select(lang)}
+            >
+              {lang}
+            </button>
+          ))}
       </div>
-    )
+    </>
   );
 };
 
