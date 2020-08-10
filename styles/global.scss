@@ -128,3 +128,7 @@ input[type="password"] {
   border-bottom-left-radius: 0;
   z-index: $zindex-modal;
 }
+
+.app-navbar {
+  min-height: 54px;
+}

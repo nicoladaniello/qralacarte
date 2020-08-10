@@ -18,7 +18,7 @@ const AppTopNav = ({ data }) => {
   return (
     <nav
       className={classnames([
-        "navbar px-0 py-1 fixed-top",
+        "navbar app-navbar px-0 py-1 fixed-top",
         { "bg-white border-bottom": isTransformed },
       ])}
       style={{ transition: "all 200ms ease-in-out" }}
