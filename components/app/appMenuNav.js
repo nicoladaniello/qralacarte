@@ -42,7 +42,7 @@ const AppMenuNav = ({ data, activeKey, refs, onClick }) => {
   return (
     <nav
       className={classnames({ "fixed-top shadow-sm": isSticky })}
-      style={{ top: "48px" }}
+      style={{ top: "54px" }}
     >
       <div
         ref={ref}
