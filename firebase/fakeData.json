@@ -768,19 +768,35 @@
           "products": {
             "bruschette": {
               "position": 0,
-              "price": 2.5
+              "price": 2.5,
+              "images": {
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fbruschette%2Fbruschette-thumb.jpg?alt=media",
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fbruschette%2Fbruschette-mob.jpg?alt=media"
+              }
             },
             "insalatadimare": {
               "position": 1,
-              "price": 9
+              "price": 9,
+              "images": {
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Finsalatadimare%2Finsalata-mare%20-thumb.jpg?alt=media",
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Finsalatadimare%2Finsalata-mare-mob.jpg?alt=media"
+              }
             },
             "insalatadipolpo": {
               "position": 2,
-              "price": 9
+              "price": 9,
+              "images": {
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Finsalatadipolpo%2Finsalata-polpo%20-thumb.jpg?alt=media",
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Finsalatadipolpo%2Finsalata-polpo-mob.jpg?alt=media"
+              }
             },
             "salumimisti": {
               "position": 3,
-              "price": 7
+              "price": 7,
+              "images": {
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fsalumimisti%2Fsalumi-misti-thumb.jpg?alt=media",
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fsalumimisti%2Fsalumi-misti-mob.jpg?alt=media"
+              }
             },
             "prosciuttocrudo": {
               "position": 4,
@@ -792,7 +808,11 @@
             },
             "caprese": {
               "position": 6,
-              "price": 6
+              "price": 6,
+              "images": {
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcaprese%2Fcaprese-thumb.jpg?alt=media",
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcaprese%2Fcaprese-mob.jpg?alt=media"
+              }
             },
             "crudomelone": {
               "position": 7,
@@ -800,7 +820,11 @@
             },
             "cocktailgamberi": {
               "position": 8,
-              "price": 6
+              "price": 6,
+              "images": {
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcocktaildigamberi%2Fcocktail-thumb.jpg?alt=media",
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcocktaildigamberi%2Fcocktail-mob.jpg?alt=media"
+              }
             },
             "razzacatalana": {
               "position": 9,
@@ -812,7 +836,11 @@
             },
             "archipelago": {
               "position": 11,
-              "price": 17
+              "price": 17,
+              "images": {
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Farchipelago%2Farchipelago-thumb.jpg?alt=media",
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Farchipelago%2Farchipelago-mob.jpg?alt=media"
+              }
             }
           }
         },
@@ -820,57 +848,43 @@
           "position": 1,
           "products": {
             "spacartoccio": {
-              "name": "Spaghetti al cartoccio",
               "position": 0,
-              "description": null,
-              "price": 11
+              "price": 11,
+              "images": {
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fspacartoccio%2Fspa-cartoccio-thumb.jpg?alt=media",
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fspacartoccio%2Fspa-cartoccio-mob.jpg?alt=media"
+              }
             },
             "spapescatora": {
-              "name": "Spaghetti alla pescatora",
               "position": 1,
-              "description": null,
               "price": 11
             },
             "gnocchispada": {
-              "name": "Gnochetti al pesce spada",
               "position": 2,
-              "description": null,
               "price": 10
             },
             "risonero": {
-              "name": "Riso al nero di seppia",
               "position": 3,
-              "description": null,
               "price": 11
             },
             "risopescatora": {
-              "name": "Riso alla pescatora",
               "position": 4,
-              "description": null,
               "price": 11
             },
             "raviolisardi": {
-              "name": "Ravioli Sardi",
               "position": 5,
-              "description": null,
               "price": 9
             },
             "tagliatelleisola": {
-              "name": "Tagliatelle Isolane",
               "position": 6,
-              "description": null,
               "price": 10
             },
             "kulurgiones": {
-              "name": "Kulurgiones",
               "position": 7,
-              "description": null,
               "price": 10
             },
             "fregolavongole": {
-              "name": "Fregola vongole & bottarga",
               "position": 8,
-              "description": null,
               "price": 12
             }
           }
@@ -931,7 +945,8 @@
               "name": "Calamari alla griglia",
               "position": 0,
               "description": null,
-              "price": 11
+              "price": 11,
+              "img": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcalamari.jpg?alt=media&token=43cc5d07-272b-42dc-a3d0-cf48bdc8186e"
             },
             "calafritti": {
               "name": "Calamari fritti",
@@ -1179,7 +1194,8 @@
               "name": "Garibaldina",
               "position": 12,
               "description": "Pomodoro fresco, mozzarella, spada affumicato e radicchio rosso.",
-              "price": 8
+              "price": 8,
+              "img": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-garibaldina.jpg?alt=media&token=33e75a32-e422-4906-b416-25fc2eecfcd1"
             },
             "calzone": {
               "name": "Calzone",

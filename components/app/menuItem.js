@@ -1,15 +1,8 @@
 import React from "react";
+import PirceTag from "./priceTag";
 
 const MenuItem = ({ data, onClick, ...rest }) => {
-  const {
-    name,
-    description,
-    price,
-    pricePerPerson,
-    priceForGrams,
-    preordered,
-    img,
-  } = data;
+  const { name, description, images } = data;
 
   return (
     <a
@@ -21,20 +14,14 @@ const MenuItem = ({ data, onClick, ...rest }) => {
         <div className="col">
           <p className="mb-0">{name}</p>
           <p className="small text-muted">{description}</p>
-          <p className="small text-muted mb-0">
-            {!!price && <>€{price}</>}
-            {!!pricePerPerson && <> per persona</>}
-            {!!priceForGrams && <> per {priceForGrams} grammi</>}
-            {!!preordered && <>su ordinazione</>}
-          </p>
+          <PirceTag data={data} />
         </div>
-        {!!img && (
+        {!!images && (
           <div className="col-auto ml-auto">
             <div
               className="app-item-thumb"
-              style={{ backgroundImage: `url(${img})` }}
+              style={{ backgroundImage: `url(${images.thumb})` }}
             ></div>
-            {/* <img className="img-fluid" alt={name} src={img} /> */}
           </div>
         )}
       </div>

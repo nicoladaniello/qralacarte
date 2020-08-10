@@ -3,10 +3,14 @@ import AppHeader from "./appHeader";
 import AppMenuNav from "./appMenuNav";
 import AppMenu from "./appMenu.js";
 import AppFooter from "./appFooter";
+import AppTopNav from "./appTopNav";
+import BottomSheet from "./bottomSheet";
 
 const AppLayout = ({ data }) => {
   const { info, menu, translations, language } = data;
   const [activeKey, setActiveKey] = useState();
+  const [showModal, setShowModal] = useState();
+  const [modalData, setModalData] = useState({});
 
   const navRefs = new Array();
   const sectionRefs = new Array();
@@ -26,10 +30,17 @@ const AppLayout = ({ data }) => {
     }
   };
 
-  const handleMenuItemClick = (key) => {};
+  const handleMenuItemClick = (sectionIdx, itemIdx) => {
+    if (!menu[sectionIdx]?.products[itemIdx]?.images) return;
+
+    setModalData(menu[sectionIdx].products[itemIdx]);
+
+    setShowModal(true);
+  };
 
   return (
     <div className="card border-0 bg-light">
+      <AppTopNav data={{ translations, language }} />
       <AppHeader
         data={{ ...info, translations, language }}
         onShowModal={() => null}
@@ -47,6 +58,12 @@ const AppLayout = ({ data }) => {
           onScrolledTo={handleScrollTo}
           refs={sectionRefs}
           onItemCLick={handleMenuItemClick}
+        />
+
+        <BottomSheet
+          data={modalData}
+          show={showModal}
+          onHide={() => setShowModal(false)}
         />
       </main>
       <AppFooter />

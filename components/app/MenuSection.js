@@ -36,12 +36,12 @@ const MenuSection = forwardRef(
           <h6 className="mb-0">{section}</h6>
         </div>
         <div className="list-group app-item mb-2">
-          {map(products, (menuItem) => (
+          {map(products, (menuItem, idx) => (
             <MenuItem
               key={menuItem._key}
               id={menuItem._key}
               data={menuItem}
-              onClick={() => onCLick(menuItem._key)}
+              onClick={() => onCLick(idx)}
             />
           ))}
         </div>

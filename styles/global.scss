@@ -2,7 +2,7 @@ $headings-font-family: Italiana, system-ui, -apple-system, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 
-$font-size-base: 0.9rem;
+// $font-size-base: 0.9rem;
 
 $enable-responsive-font-sizes: true;
 
@@ -94,8 +94,10 @@ input[type="password"] {
   scroll-behavior: smooth;
 }
 
-.app-item .list-group-item-action:focus {
-  background-color: $white;
+.app-item .list-group-item-action {
+  &:focus {
+    background-color: $white;
+  }
 }
 
 .app-item-thumb {
@@ -106,4 +108,23 @@ input[type="password"] {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+.bottom-sheet-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+  z-index: $zindex-modal-backdrop;
+}
+
+.bottom-sheet {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  z-index: $zindex-modal;
 }

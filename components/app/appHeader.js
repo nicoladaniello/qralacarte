@@ -30,7 +30,7 @@ const AppHeader = ({ data, onShowModal }) => {
           backgroundSize: "contain",
         }}
       >
-        <LanguageSelector languages={translations} defaultLanguage={language} />
+        {/* <LanguageSelector languages={translations} defaultLanguage={language} /> */}
       </motion.div>
       <div className="list-group">
         <div className="list-group-item px-1 list-group-item-action rounded-0">
