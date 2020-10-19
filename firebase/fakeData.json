@@ -103,6 +103,10 @@
               "fregolavongole": {
                 "name": "Fregola vongole & bottarga",
                 "description": null
+              },
+              "gnocchipatatefagioli": {
+                "name": "Gnocchi di patate fagioli e cozze",
+                "description": null
               }
             }
           },
@@ -129,6 +133,10 @@
                 "name": "Spaghetti alla bottarga",
                 "description": null
               },
+              "spaarrabbiata": {
+                "name": "Spaghetti all'arrabbiata",
+                "description": null
+              },
               "pennesalmone": {
                 "name": "Penne al salmone",
                 "description": null
@@ -136,12 +144,20 @@
               "gnosardi": {
                 "name": "Gnochetti sardi",
                 "description": null
+              },
+              "gnocchipatatemozz": {
+                "name": "Gnocchi di patate con la mozzarella",
+                "description": null
               }
             }
           },
           "pesce": {
             "section": "Secondi di pesce",
             "products": {
+              "calaumido": {
+                "name": "Calamaro in umido",
+                "description": null
+              },
               "calagriglia": {
                 "name": "Calamari alla griglia",
                 "description": null
@@ -186,8 +202,53 @@
                 "name": "Zuppa di pesce",
                 "description": null
               },
+              "carpacciotonno": {
+                "name": "Carpaccio d tonno",
+                "description": null
+              },
               "aragosta": {
                 "name": "Aragosta",
+                "description": null
+              }
+            }
+          },
+          "carne": {
+            "section": "Secondi di carne",
+            "products": {
+              "filettogriglia": {
+                "name": "Filetto alla griglia",
+                "description": null
+              },
+              "filettopepeverde": {
+                "name": "Filetto al pepe verde",
+                "description": null
+              },
+              "costatavitello": {
+                "name": "Costata di vitello",
+                "description": null
+              },
+              "costatamaiale": {
+                "name": "Costata di maiale",
+                "description": null
+              },
+              "scaloppine": {
+                "name": "Scaloppine",
+                "description": null
+              },
+              "pettodipollo": {
+                "name": "Petto di pollo",
+                "description": null
+              },
+              "milanese": {
+                "name": "Milanese",
+                "description": null
+              },
+              "fettinavitone": {
+                "name": "Fettina vit.ne",
+                "description": null
+              },
+              "costatineagnello": {
+                "name": "Costatine di agnello",
                 "description": null
               }
             }
@@ -246,6 +307,10 @@
               },
               "gorgonzola": {
                 "name": "Gorgonzola",
+                "description": null
+              },
+              "gruviera": {
+                "name": "Gruviera o Fontina",
                 "description": null
               },
               "mozzarella": {
@@ -351,27 +416,213 @@
               }
             }
           },
-          "dolci": {
-            "section": "Dolci",
+          "dolcidellacasa": {
+            "section": "Dolci della casa",
             "products": {
-              "fruttastagione": {
+              "fruttadistagione": {
                 "name": "Frutta di stagione",
                 "description": null
               },
-              "gelatisemifreddi": {
-                "name": "Semifreddi",
+              "tiramisu": {
+                "name": "Tiramisú",
                 "description": null
               },
-              "tortesemifredde": {
-                "name": "Torte semifredde",
+              "seadas": {
+                "name": "Seadas",
+                "description": "Dolce sardo tradizionale, servito con miele o zucchero."
+              },
+              "millefogliecioc": {
+                "name": "Millefoglie al cioccolato",
+                "description": null
+              },
+              "millefogliebosco": {
+                "name": "Millefoglie ai frutti di bosco",
+                "description": null
+              },
+              "pannacotta": {
+                "name": "Pannacotta",
                 "description": null
               },
               "cremacatalana": {
                 "name": "Crema catalana",
                 "description": null
+              }
+            }
+          },
+          "dolcisemifreddi": {
+            "section": "Dolci semifreddi",
+            "products": {
+              "moussestracciatella": {
+                "name": "Mousse alla stracciatella",
+                "description": null
               },
-              "seadas": {
-                "name": "Seadas",
+              "moussebosco": {
+                "name": "Mousse ai frutti di bosco",
+                "description": null
+              },
+              "tortanonna": {
+                "name": "Torta della nonna",
+                "description": null
+              },
+              "profiterol": {
+                "name": "Profiterol",
+                "description": null
+              },
+              "tartufonocciola": {
+                "name": "Tartufo alla nocciola",
+                "description": null
+              },
+              "tartufoclassico": {
+                "name": "Tartufo classico",
+                "description": null
+              },
+              "tartufocaffe": {
+                "name": "Tartufo al caffé",
+                "description": null
+              },
+              "tartufolimoncello": {
+                "name": "Tartufo al limoncello",
+                "description": null
+              },
+              "tartufobianco": {
+                "name": "Tartufo bianco",
+                "description": null
+              },
+              "sorbetto": {
+                "name": "Sorbetto al limone",
+                "description": null
+              },
+              "torroncino": {
+                "name": "Torroncino",
+                "description": null
+              },
+              "meringa": {
+                "name": "Meringa",
+                "description": null
+              }
+            }
+          },
+          "vinibianchi": {
+            "section": "Vini Bianchi",
+            "products": {
+              "filinebianco": {
+                "name": "Filine, Vermentino di Dorgali",
+                "description": null
+              },
+              "selemebianco": {
+                "name": "S'eleme, Vermentino di Gallura",
+                "description": null
+              },
+              "terrebianchebianco": {
+                "name": "Terre Bianche, Torbato di Alghero",
+                "description": null
+              },
+              "branubianco": {
+                "name": "Branu, Vermentino Vigne Surrau Arzachena",
+                "description": null
+              },
+              "balaribianco": {
+                "name": "Balari, Vermentino frizzante di Monti",
+                "description": null
+              },
+              "costamolinobianco": {
+                "name": "Costamolino, Vermentino cantine Argiolas",
+                "description": "Bottiglia da 75cl"
+              },
+              "costamolinopiccolobianco": {
+                "name": "Costamolino, Vermentino cantine Argiolas",
+                "description": "Bottiglia piccola da 37,5cl"
+              },
+              "funtanalirasbianco": {
+                "name": "Funtanaliras, Vermentino di Monti",
+                "description": null
+              },
+              "canajlibianco": {
+                "name": "Canajli, Vermentino Superiore di Monti",
+                "description": null
+              }
+            }
+          },
+          "vinirose": {
+            "section": "Vini Rosé",
+            "products": {
+              "barberinorosato": {
+                "name": "Barberino",
+                "description": "Rosato frizzante."
+              },
+              "filierirosato": {
+                "name": "Filieri Rosato",
+                "description": "Rosato Dry."
+              }
+            }
+          },
+          "vinirossi": {
+            "section": "Vini Rossi",
+            "products": {
+              "filierirosso": {
+                "name": "Filieri Rosso, Cannonau di Dorgali",
+                "description": null
+              },
+              "cannonaurosso": {
+                "name": "Cannonau, Cantine di Jerzu",
+                "description": null
+              },
+              "nepenterosso": {
+                "name": "Nepente, Cannonau di Oliena",
+                "description": null
+              },
+              "nebbiolorosso": {
+                "name": "Nebbiolo, Cantine di Tempio",
+                "description": null
+              },
+              "capocacciarosso": {
+                "name": "Capocaccia, Cantine di Alghero",
+                "description": null
+              },
+              "costerarosso": {
+                "name": "Costera, Cantine di Argiolas",
+                "description": null
+              },
+              "perderarosso": {
+                "name": "Perdera, Cantine di Argiolas",
+                "description": "Bottiglia da 75cl."
+              },
+              "perderapiccolorosso": {
+                "name": "Perdera, Cantine di Argiolas",
+                "description": "Bottiglia piccola da 37,5cl."
+              }
+            }
+          },
+          "vinispumanti": {
+            "section": "Vini Spumanti",
+            "products": {
+              "spumantebrut": {
+                "name": "Spumante Brut",
+                "description": null
+              },
+              "moscatobrut": {
+                "name": "Moscato",
+                "description": null
+              },
+              "proseccobrut": {
+                "name": "Prosecco",
+                "description": null
+              }
+            }
+          },
+          "vinidellacasa": {
+            "section": "Vini della casa",
+            "products": {
+              "quartinodellacasa": {
+                "name": "Rosso o bianco da 25cl",
+                "description": null
+              },
+              "mezzodellacasa": {
+                "name": "Rosso o bianco da 50cl",
+                "description": null
+              },
+              "litrodellacasa": {
+                "name": "Rosso o bianco da 1l",
                 "description": null
               }
             }
@@ -445,7 +696,7 @@
             "products": {
               "spacartoccio": {
                 "name": "Spaghetti al cartoccio",
-                "description": "Spaghetti pasta in a rich tomato souce and seafood."
+                "description": "Spaghetti pasta in a rich tomato sauce and seafood."
               },
               "spapescatora": {
                 "name": "Spaghetti alla pescatora",
@@ -478,6 +729,10 @@
               "fregolavongole": {
                 "name": "Fregola vongole & bottarga",
                 "description": "Traditional sardinian Fregola pasta with clams and bottarga."
+              },
+              "gnocchipatatefagioli": {
+                "name": "Gnocchi di patate fagioli e cozze",
+                "description": "Gnocchi pasta made with potatoes and served with beans and mussles."
               }
             }
           },
@@ -486,7 +741,7 @@
             "products": {
               "spapomodoro": {
                 "name": "Spaghetti al pomodoro",
-                "description": "Spaghetti pasta in rich tomato souce."
+                "description": "Spaghetti pasta in rich tomato sauce."
               },
               "sparagu": {
                 "name": "Spaghetti al ragú",
@@ -494,7 +749,7 @@
               },
               "spacarbonara": {
                 "name": "Spaghetti alla carbonara",
-                "description": "Spaghetti pasta in carbonara souce."
+                "description": "Spaghetti pasta in carbonara sauce."
               },
               "spacozzevongole": {
                 "name": "Spaghetti alle cozze & vongole",
@@ -504,6 +759,10 @@
                 "name": "Spaghetti alla bottarga",
                 "description": "Spaghetti pasta with bottarga."
               },
+              "spaarrabbiata": {
+                "name": "Spaghetti all'arrabbiata",
+                "description": "Spaghetti pasta with a spicy tomato sauce."
+              },
               "pennesalmone": {
                 "name": "Penne al salmone",
                 "description": "Penne pasta with salmon and cream."
@@ -511,12 +770,20 @@
               "gnosardi": {
                 "name": "Gnochetti sardi",
                 "description": "Traditional sardinian gnocchetti pasta."
+              },
+              "gnocchipatatemozz": {
+                "name": "Gnocchi di patate con la mozzarella",
+                "description": "Gnocchi pasta made with potato and served with tomato and mozzarella sauce."
               }
             }
           },
           "pesce": {
             "section": "Second Course - Fish",
             "products": {
+              "calaumido": {
+                "name": "Calamaro in umido",
+                "description": "Calamari cooked in a spicy tomato sauce."
+              },
               "calagriglia": {
                 "name": "Calamari alla griglia",
                 "description": "Grilled calamari."
@@ -561,9 +828,54 @@
                 "name": "Zuppa di pesce",
                 "description": "Fish soup."
               },
+              "carpacciotonno": {
+                "name": "Carpaccio d tonno",
+                "description": "Thin slices of seasoned raw tuna steak."
+              },
               "aragosta": {
                 "name": "Aragosta",
                 "description": "Mediterranean Lobstar."
+              }
+            }
+          },
+          "carne": {
+            "section": "Second course - Meat",
+            "products": {
+              "filettogriglia": {
+                "name": "Filetto alla griglia",
+                "description": null
+              },
+              "filettopepeverde": {
+                "name": "Filetto al pepe verde",
+                "description": null
+              },
+              "costatavitello": {
+                "name": "Costata di vitello",
+                "description": null
+              },
+              "costatamaiale": {
+                "name": "Costata di maiale",
+                "description": null
+              },
+              "scaloppine": {
+                "name": "Scaloppine",
+                "description": null
+              },
+              "pettodipollo": {
+                "name": "Petto di pollo",
+                "description": null
+              },
+              "milanese": {
+                "name": "Milanese",
+                "description": null
+              },
+              "fettinavitone": {
+                "name": "Fettina vit.ne",
+                "description": null
+              },
+              "costatineagnello": {
+                "name": "Costatine di agnello",
+                "description": null
               }
             }
           },
@@ -623,6 +935,10 @@
                 "name": "Gorgonzola",
                 "description": null
               },
+              "gruviera": {
+                "name": "Gruviera o Fontina",
+                "description": null
+              },
               "mozzarella": {
                 "name": "Mozzarella",
                 "description": null
@@ -638,11 +954,11 @@
             "products": {
               "margherita": {
                 "name": "Margherita",
-                "description": "Tomato souce and mozzarella cheese."
+                "description": "Tomato sauce and mozzarella cheese."
               },
               "napoletana": {
                 "name": "Napoletana",
-                "description": "Tomato souce, mozzarella, capers, anchovies and olives."
+                "description": "Tomato sauce, mozzarella, capers, anchovies and olives."
               },
               "primavera": {
                 "name": "Primavera",
@@ -650,39 +966,39 @@
               },
               "capricciosa": {
                 "name": "Capricciosa",
-                "description": "Tomato souce, mozzarella, salami, artichokes, mashrooms and olives."
+                "description": "Tomato sauce, mozzarella, salami, artichokes, mashrooms and olives."
               },
               "4stagioni": {
                 "name": "4 Stagioni",
-                "description": "Tomato souce, mozzarella, prosciutto, artichokes, mashrooms and olives."
+                "description": "Tomato sauce, mozzarella, prosciutto, artichokes, mashrooms and olives."
               },
               "rustica": {
                 "name": "Rustica",
-                "description": "Tomato souce, mozzarella, peppers, aubergine and spinach."
+                "description": "Tomato sauce, mozzarella, peppers, aubergine and spinach."
               },
               "contadina": {
                 "name": "Contadina",
-                "description": "Tomato souce, mozzarella, zucchini and sweetcorn."
+                "description": "Tomato sauce, mozzarella, zucchini and sweetcorn."
               },
               "diavola": {
                 "name": "Diavola",
-                "description": "Tomato souce, mozzarella and spicy salami."
+                "description": "Tomato sauce, mozzarella and spicy salami."
               },
               "pescatora": {
                 "name": "Pescatora",
-                "description": "Tomato souce, mozzarella and seafood."
+                "description": "Tomato sauce, mozzarella and seafood."
               },
               "boscaiola": {
                 "name": "Boscaiola",
-                "description": "Tomato souce, mozzarella, onion and mashrooms."
+                "description": "Tomato sauce, mozzarella, onion and mashrooms."
               },
               "4formaggi": {
                 "name": "4 Formaggi",
-                "description": "Tomato souce, mozzarella and various cheeses."
+                "description": "Tomato sauce, mozzarella and various cheeses."
               },
               "reale": {
                 "name": "Reale",
-                "description": "Tomato souce, mozzarella, smoked salmon and bottarga."
+                "description": "Tomato sauce, mozzarella, smoked salmon and bottarga."
               },
               "garibaldina": {
                 "name": "Garibaldina",
@@ -690,15 +1006,15 @@
               },
               "calzone": {
                 "name": "Calzone",
-                "description": "Tomato souce, mozzarella, prosciutto, salami, artichokes and mashrooms."
+                "description": "Tomato sauce, mozzarella, prosciutto, salami, artichokes and mashrooms."
               },
               "dellacasa": {
                 "name": "Della casa",
-                "description": "Tomato souce, mozzarella, prosciutto, salami, mashrooms and artichokes."
+                "description": "Tomato sauce, mozzarella, prosciutto, salami, mashrooms and artichokes."
               },
               "americana": {
                 "name": "Americana",
-                "description": "Tomato souce, mozzarella and french fries."
+                "description": "Tomato sauce, mozzarella and french fries."
               },
               "gheriglio": {
                 "name": "Gheriglio",
@@ -706,15 +1022,15 @@
               },
               "wrustel": {
                 "name": "Würstel",
-                "description": "Tomato souce, mozzarella and würstel."
+                "description": "Tomato sauce, mozzarella and würstel."
               },
               "pizzatonno": {
                 "name": "Tonno",
-                "description": "Tomato souce, mozzarella and tuna."
+                "description": "Tomato sauce, mozzarella and tuna."
               },
               "pizzasarda": {
                 "name": "Sarda",
-                "description": "Tomato souce, mozzarella, pecorino cheese and sardinian salami."
+                "description": "Tomato sauce, mozzarella, pecorino cheese and sardinian salami."
               },
               "vesuvius": {
                 "name": "Vesuvius",
@@ -726,28 +1042,214 @@
               }
             }
           },
-          "dolci": {
-            "section": "Desserts",
+          "dolcidellacasa": {
+            "section": "Dessets - Homemade",
             "products": {
-              "fruttastagione": {
-                "name": "Seasonal fruits",
-                "description": "null"
+              "fruttadistagione": {
+                "name": "Seasonal fruit salad",
+                "description": "Ask our staff for what fruits are available."
               },
-              "gelatisemifreddi": {
-                "name": "Semifreddi",
-                "description": "Selection of semi-frozed desserts."
-              },
-              "tortesemifredde": {
-                "name": "Torte semifredde",
-                "description": "Selection of semi-frozed cakes."
-              },
-              "cremacatalana": {
-                "name": "Crema catalana",
-                "description": "Also known as crème brûlée, lemon and vanilla custard base topped with carmelised sugar."
+              "tiramisu": {
+                "name": "Tiramisú",
+                "description": "Classic italian dessert with mascarpone and a buiscuit layer soaked in coffee."
               },
               "seadas": {
                 "name": "Seadas",
-                "description": "Traditional sardinian dessert made with fried pastry and local sweet cheese, served hot and topped with honey."
+                "description": "Traditional sardinian dessert made with sweet cheese and pastry, topped with a choice of honey or sugar."
+              },
+              "millefogliecioc": {
+                "name": "Millefoglie al cioccolato",
+                "description": "Puff pastry leaves served with chantilly cream and topped with chocolate sauce."
+              },
+              "millefogliebosco": {
+                "name": "Millefoglie ai frutti di bosco",
+                "description": "Puff pastry leaves served with chantilly cream and topped with forest fruits and berry sauce."
+              },
+              "pannacotta": {
+                "name": "Pannacotta",
+                "description": null
+              },
+              "cremacatalana": {
+                "name": "Crema catalana",
+                "description": "Rich custard base topped with a layer of caramelized sugar."
+              }
+            }
+          },
+          "dolcisemifreddi": {
+            "section": "Desserts - Semifreddi",
+            "products": {
+              "moussestracciatella": {
+                "name": "Stracciatella mousse cake",
+                "description": null
+              },
+              "moussebosco": {
+                "name": "Forest fruits and yogurt mousse cake",
+                "description": null
+              },
+              "tortanonna": {
+                "name": "Torta della nonna",
+                "description": null
+              },
+              "profiterol": {
+                "name": "Profiterol",
+                "description": null
+              },
+              "tartufonocciola": {
+                "name": "Tartufo alla nocciola",
+                "description": "Hazelnut truffle."
+              },
+              "tartufoclassico": {
+                "name": "Tartufo classico",
+                "description": "Chocolate truffle."
+              },
+              "tartufocaffe": {
+                "name": "Tartufo al caffé",
+                "description": "Coffee truffle."
+              },
+              "tartufolimoncello": {
+                "name": "Tartufo al limoncello",
+                "description": "Limoncello truffle."
+              },
+              "tartufobianco": {
+                "name": "Tartufo bianco",
+                "description": "White truffle with zabaione and an hearth of coffee."
+              },
+              "sorbetto": {
+                "name": "Sorbetto al limone",
+                "description": "Lemon sorbet."
+              },
+              "torroncino": {
+                "name": "Torroncino",
+                "description": null
+              },
+              "meringa": {
+                "name": "Meringa",
+                "description": null
+              }
+            }
+          },
+          "vinibianchi": {
+            "section": "Wines - Whites",
+            "products": {
+              "filinebianco": {
+                "name": "Filine, Vermentino from Dorgali",
+                "description": null
+              },
+              "selemebianco": {
+                "name": "S'eleme, Vermentino from Gallura",
+                "description": null
+              },
+              "terrebianchebianco": {
+                "name": "Terre Bianche, Torbato from Alghero",
+                "description": null
+              },
+              "branubianco": {
+                "name": "Branu, Vermentino Vigne Surrau from Arzachena",
+                "description": null
+              },
+              "balaribianco": {
+                "name": "Balari, Sparkling Vermentino from Monti",
+                "description": null
+              },
+              "costamolinobianco": {
+                "name": "Costamolino, Vermentino from Argiolas",
+                "description": "Large bottle - 75cl"
+              },
+              "costamolinopiccolobianco": {
+                "name": "Costamolino, Vermentino from Argiolas",
+                "description": "Small bottle - 37,5cl"
+              },
+              "funtanalirasbianco": {
+                "name": "Funtanaliras, Vermentino from Monti",
+                "description": null
+              },
+              "canajlibianco": {
+                "name": "Canajli, Vermentino Superior from Monti",
+                "description": null
+              }
+            }
+          },
+          "vinirose": {
+            "section": "Wines - Rosé",
+            "products": {
+              "barberinorosato": {
+                "name": "Barberino",
+                "description": "Sparkling rosé."
+              },
+              "filierirosato": {
+                "name": "Filieri Rosato",
+                "description": "Dry Rosé."
+              }
+            }
+          },
+          "vinirossi": {
+            "section": "Wines - Red",
+            "products": {
+              "filierirosso": {
+                "name": "Filieri Rosso, Cannonau from Dorgali",
+                "description": null
+              },
+              "cannonaurosso": {
+                "name": "Cannonau, cellars of Jerzu",
+                "description": null
+              },
+              "nepenterosso": {
+                "name": "Nepente, Cannonau from Oliena",
+                "description": null
+              },
+              "nebbiolorosso": {
+                "name": "Nebbiolo, cellars of Tempio",
+                "description": null
+              },
+              "capocacciarosso": {
+                "name": "Capocaccia, cellars of Alghero",
+                "description": null
+              },
+              "costerarosso": {
+                "name": "Costera, cellars of Argiolas",
+                "description": null
+              },
+              "perderarosso": {
+                "name": "Perdera, cellars of Argiolas",
+                "description": "Large bottle - 75cl."
+              },
+              "perderapiccolorosso": {
+                "name": "Perdera, cellars of Argiolas",
+                "description": "Small bottle - 37,5cl."
+              }
+            }
+          },
+          "vinispumanti": {
+            "section": "Wines - Sparkling",
+            "products": {
+              "spumantebrut": {
+                "name": "Spumante Brut",
+                "description": null
+              },
+              "moscatobrut": {
+                "name": "Moscato",
+                "description": "Sweet white wine."
+              },
+              "proseccobrut": {
+                "name": "Prosecco",
+                "description": null
+              }
+            }
+          },
+          "vinidellacasa": {
+            "section": "Wines - House",
+            "products": {
+              "quartinodellacasa": {
+                "name": "Red or White - 25cl",
+                "description": null
+              },
+              "mezzodellacasa": {
+                "name": "Red or White - 50cl",
+                "description": null
+              },
+              "litrodellacasa": {
+                "name": "Red or White - 1l",
+                "description": null
               }
             }
           },
@@ -770,32 +1272,32 @@
               "position": 0,
               "price": 2.5,
               "images": {
-                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fbruschette%2Fbruschette-thumb.jpg?alt=media",
-                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fbruschette%2Fbruschette-mob.jpg?alt=media"
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fbruschette-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fbruschette-thumbnail.jpg?alt=media"
               }
             },
             "insalatadimare": {
               "position": 1,
               "price": 9,
               "images": {
-                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Finsalatadimare%2Finsalata-mare%20-thumb.jpg?alt=media",
-                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Finsalatadimare%2Finsalata-mare-mob.jpg?alt=media"
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Finsalata-mare-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Finsalata-mare-thumbnail.jpg?alt=media"
               }
             },
             "insalatadipolpo": {
               "position": 2,
               "price": 9,
               "images": {
-                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Finsalatadipolpo%2Finsalata-polpo%20-thumb.jpg?alt=media",
-                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Finsalatadipolpo%2Finsalata-polpo-mob.jpg?alt=media"
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Finsalata-polpo-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Finsalata-polpo-thumbnail.jpg?alt=media"
               }
             },
             "salumimisti": {
               "position": 3,
               "price": 7,
               "images": {
-                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fsalumimisti%2Fsalumi-misti-thumb.jpg?alt=media",
-                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fsalumimisti%2Fsalumi-misti-mob.jpg?alt=media"
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fsalumi-misti-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fsalumi-misti-thumbnail.jpg?alt=media"
               }
             },
             "prosciuttocrudo": {
@@ -810,8 +1312,8 @@
               "position": 6,
               "price": 6,
               "images": {
-                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcaprese%2Fcaprese-thumb.jpg?alt=media",
-                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcaprese%2Fcaprese-mob.jpg?alt=media"
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcaprese-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcaprese-thumbnail.jpg?alt=media"
               }
             },
             "crudomelone": {
@@ -822,24 +1324,28 @@
               "position": 8,
               "price": 6,
               "images": {
-                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcocktaildigamberi%2Fcocktail-thumb.jpg?alt=media",
-                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcocktaildigamberi%2Fcocktail-mob.jpg?alt=media"
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcocktail-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcocktail-thumbnail.jpg?alt=media"
               }
             },
             "razzacatalana": {
               "position": 9,
-              "price": 6
+              "price": 6,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Frazza-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Frazza-thumbnail.jpg?alt=media"
+              }
             },
             "spadaaffumicato": {
               "position": 10,
-              "price": 7
+              "price": 8
             },
             "archipelago": {
               "position": 11,
               "price": 17,
               "images": {
-                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Farchipelago%2Farchipelago-thumb.jpg?alt=media",
-                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Farchipelago%2Farchipelago-mob.jpg?alt=media"
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Farchipelago-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Farchipelago-thumbnail.jpg?alt=media"
               }
             }
           }
@@ -851,13 +1357,17 @@
               "position": 0,
               "price": 11,
               "images": {
-                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fspacartoccio%2Fspa-cartoccio-thumb.jpg?alt=media",
-                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fspacartoccio%2Fspa-cartoccio-mob.jpg?alt=media"
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fspa-cartoccio-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fspa-cartoccio-thumbnail.jpg?alt=media"
               }
             },
             "spapescatora": {
               "position": 1,
-              "price": 11
+              "price": 11,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fspa-pescatora-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fspa-pescatora-thumbnail.jpg?alt=media"
+              }
             },
             "gnocchispada": {
               "position": 2,
@@ -865,11 +1375,19 @@
             },
             "risonero": {
               "position": 3,
-              "price": 11
+              "price": 11,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Friso-nero-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Friso-nero-thumbnail.jpg?alt=media"
+              }
             },
             "risopescatora": {
               "position": 4,
-              "price": 11
+              "price": 11,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Friso-pescatora-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Friso-pescatora-thumbnail.jpg?alt=media"
+              }
             },
             "raviolisardi": {
               "position": 5,
@@ -877,7 +1395,11 @@
             },
             "tagliatelleisola": {
               "position": 6,
-              "price": 10
+              "price": 10,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftagliatelle-isolana-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftagliatelle-isolana-thumbnail.jpg?alt=media"
+              }
             },
             "kulurgiones": {
               "position": 7,
@@ -886,146 +1408,197 @@
             "fregolavongole": {
               "position": 8,
               "price": 12
+            },
+            "gnocchipatatefagioli": {
+              "position": 9,
+              "price": 10
             }
           }
         },
         "primi": {
-          "section": "Primi Piatti",
           "position": 2,
           "products": {
             "spapomodoro": {
-              "name": "Spaghetti al pomodoro",
               "position": 0,
-              "description": null,
-              "price": 7.5
+              "price": 8,
+              "images": {
+                "mobile": "",
+                "thumb": ""
+              }
             },
             "sparagu": {
-              "name": "Spaghetti al ragú",
               "position": 1,
-              "description": null,
-              "price": 7.5
+              "price": 8
             },
             "spacarbonara": {
-              "name": "Spaghetti alla carbonara",
               "position": 2,
-              "description": null,
-              "price": 7.5
+              "price": 8
             },
             "spacozzevongole": {
-              "name": "Spaghetti alle cozze & vongole",
               "position": 3,
-              "description": null,
-              "price": 9
+              "price": 9,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fspa-cozze-vongole-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fspa-cozze-vongole-thumbnail.jpg?alt=media"
+              }
             },
             "spabottarga": {
-              "name": "Spaghetti alla bottarga",
               "position": 4,
-              "description": null,
+              "price": 8
+            },
+            "spaarrabbiata": {
+              "position": 5,
               "price": 8
             },
             "pennesalmone": {
-              "name": "Penne al salmone",
-              "position": 5,
-              "description": null,
-              "price": 7.5
+              "position": 6,
+              "price": 8
             },
             "gnosardi": {
-              "name": "Gnochetti sardi",
-              "position": 6,
-              "description": null,
+              "position": 7,
+              "price": 8
+            },
+            "gnocchipatatemozz": {
+              "position": 8,
               "price": 8
             }
           }
         },
         "pesce": {
-          "section": "Secondi di pesce",
           "position": 3,
           "products": {
-            "calagriglia": {
-              "name": "Calamari alla griglia",
+            "calaumido": {
               "position": 0,
-              "description": null,
+              "price": 11
+            },
+            "calagriglia": {
+              "position": 1,
               "price": 11,
-              "img": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcalamari.jpg?alt=media&token=43cc5d07-272b-42dc-a3d0-cf48bdc8186e"
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcalamari-griglia-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcalamari-griglia-thumbnail.jpg?alt=media"
+              }
             },
             "calafritti": {
-              "name": "Calamari fritti",
-              "position": 1,
-              "description": null,
+              "position": 2,
               "price": 11
             },
             "frittomisto": {
-              "name": "Fritto misto",
-              "position": 2,
-              "description": null,
+              "position": 3,
               "price": 11
             },
             "gamberoni": {
-              "name": "Gamberoni alla griglia",
-              "position": 3,
-              "description": null,
+              "position": 4,
               "price": 16
             },
             "scampi": {
-              "name": "Scampi alla griglia",
-              "position": 4,
-              "description": null,
+              "position": 5,
               "price": 16
             },
             "zuppavongole": {
-              "name": "Zuppa di vongole",
-              "position": 5,
-              "description": null,
-              "price": 14
+              "position": 6,
+              "price": 14,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fvongole-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fvongole-thumbnail.jpg?alt=media"
+              }
             },
             "pescefresco": {
-              "name": "Spigole, Saraghi, Orate",
-              "position": 6,
-              "description": null,
+              "position": 7,
               "price": 6,
               "priceForGrams": 100
             },
             "pescespada": {
-              "name": "Trancio di pesce spada",
-              "position": 7,
-              "description": null,
-              "price": 11
+              "position": 8,
+              "price": 11,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpesce-spada-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpesce-spada-thumbnail.jpg?alt=media"
+              }
             },
             "cozzemarinara": {
-              "name": "Cozze alla marinara",
-              "position": 8,
-              "description": null,
-              "price": 13
+              "position": 9,
+              "price": 13,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcozze-marinara-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcozze-marinara-thumbnail.jpg?alt=media"
+              }
             },
             "grigliamista": {
-              "name": "Grigliata mista",
-              "position": 9,
-              "description": null,
+              "position": 10,
               "price": 16
             },
             "zuppapesce": {
-              "name": "Zuppa di pesce",
-              "position": 10,
-              "description": null,
+              "position": 11,
               "price": 18
             },
+            "carpacciotonno": {
+              "position": 12,
+              "price": 10
+            },
             "aragosta": {
-              "name": "Aragosta",
-              "position": 11,
-              "description": null,
+              "position": 13,
               "price": null,
               "preordered": true
             }
           }
         },
-        "contorni": {
-          "section": "Contorni",
+        "carne": {
           "position": 4,
           "products": {
-            "crocchette": {
-              "name": "Crocchette di patate",
+            "filettogriglia": {
               "position": 0,
-              "description": null,
+              "price": 16
+            },
+            "filettopepeverde": {
+              "position": 1,
+              "price": 16
+            },
+            "costatavitello": {
+              "position": 2,
+              "price": 5,
+              "priceForGrams": 100
+            },
+            "costatamaiale": {
+              "position": 3,
+              "price": 8
+            },
+            "scaloppine": {
+              "position": 4,
+              "price": 8
+            },
+            "pettodipollo": {
+              "position": 5,
+              "price": 8
+            },
+            "milanese": {
+              "position": 6,
+              "price": 8,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmilanese-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmilanese-thumbnail.jpg?alt=media"
+              }
+            },
+            "fettinavitone": {
+              "position": 7,
+              "price": 8
+            },
+            "costatineagnello": {
+              "position": 8,
+              "price": 9,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcostolette-agnello-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcostolette-agnello-thumbnail.jpg?alt=media"
+              }
+            }
+          }
+        },
+        "contorni": {
+          "section": "Contorni",
+          "position": 5,
+          "products": {
+            "crocchette": {
+              "position": 0,
               "price": 3
             },
             "patatefritte": {
@@ -1079,219 +1652,442 @@
           }
         },
         "formaggi": {
-          "section": "Formaggi Sardi & Nazionali",
-          "position": 5,
+          "position": 6,
           "products": {
             "pecorino": {
-              "name": "Pecorino Sardo",
               "position": 0,
-              "description": null,
               "price": 3.5
             },
             "caprino": {
-              "name": "Caprino Sardo",
               "position": 1,
-              "description": null,
               "price": 3.5
             },
             "gorgonzola": {
-              "name": "Gorgonzola",
               "position": 2,
-              "description": null,
+              "price": 3.5
+            },
+            "gruviera": {
+              "position": 3,
               "price": 3.5
             },
             "mozzarella": {
-              "name": "Mozzarella",
-              "position": 3,
-              "description": null,
+              "position": 4,
               "price": 3.5
             },
             "formaggimisti": {
-              "name": "Formaggi misti",
-              "position": 4,
-              "description": null,
+              "position": 5,
               "price": 7
             }
           }
         },
         "pizze": {
           "section": "Pizze",
-          "position": 6,
+          "position": 7,
           "products": {
             "margherita": {
-              "name": "Margherita",
               "position": 0,
-              "description": "Pomodoro e mozzarella.",
-              "price": 5
+              "price": 5,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-margherita-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-margherita-thumbnail.jpg?alt=media"
+              }
             },
             "napoletana": {
-              "name": "Napoletana",
               "position": 1,
-              "description": "Pomodoro, mozzarella, capperi, acciughe e olive.",
-              "price": 6.5
+              "price": 6.5,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-napoli-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-napoli-thumbnail.jpg?alt=media"
+              }
             },
             "primavera": {
-              "name": "Primavera",
               "position": 2,
-              "description": "Pomodoro fresco, mozzarella e rucola.",
               "price": 7
             },
             "capricciosa": {
-              "name": "Capricciosa",
               "position": 3,
-              "description": "Pomodoro, mozzarella, salame, carciofi, funghi e olive.",
               "price": 6.5
             },
             "4stagioni": {
-              "name": "4 Stagioni",
               "position": 4,
-              "description": "Pomodoro, mozzarella, prosciutto, carciofi, funghi e olive.",
-              "price": 6.5
+              "price": 6.5,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-quattro-stagioni-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-quattro-stagioni-thumbnail.jpg?alt=media"
+              }
             },
             "rustica": {
-              "name": "Rustica",
               "position": 5,
-              "description": "Pomodoro, mozzarella, peperoni, melanzane e spinaci.",
-              "price": 6.5
+              "price": 6.5,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-rustica-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-rustica-thumbnail.jpg?alt=media"
+              }
             },
             "contadina": {
-              "name": "Contadina",
               "position": 6,
-              "description": "Pomodoro, mozzarella, zucchine e mais.",
               "price": 6.5
             },
             "diavola": {
-              "name": "Diavola",
               "position": 7,
-              "description": "Pomodoro, mozzarella, salsiccia piccante.",
-              "price": 6.5
+              "price": 6.5,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-diavola-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-diavola-thumbnail.jpg?alt=media"
+              }
             },
             "pescatora": {
-              "name": "Pescatora",
               "position": 8,
-              "description": "Pomodoro, mozzarella e frutti di mare.",
-              "price": 8
+              "price": 8,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-pescatora-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-pescatora-thumbnail.jpg?alt=media"
+              }
             },
             "boscaiola": {
-              "name": "Boscaiola",
               "position": 9,
-              "description": "Pomodoro, mozzarella, cipolla e funghi.",
               "price": 6.5
             },
             "4formaggi": {
-              "name": "4 Formaggi",
               "position": 10,
-              "description": "Pomodoro, mozzarella e formaggi vari.",
               "price": 6.5
             },
             "reale": {
-              "name": "Reale",
               "position": 11,
-              "description": "Pomodoro, mozzarella, salmone e bottarga.",
               "price": 7
             },
             "garibaldina": {
-              "name": "Garibaldina",
               "position": 12,
-              "description": "Pomodoro fresco, mozzarella, spada affumicato e radicchio rosso.",
               "price": 8,
-              "img": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-garibaldina.jpg?alt=media&token=33e75a32-e422-4906-b416-25fc2eecfcd1"
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-garibaldina-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-garibaldina-thumbnail.jpg?alt=media"
+              }
             },
             "calzone": {
-              "name": "Calzone",
               "position": 13,
-              "description": "Pomodoro, mozzarella, prosciutto, salame, carciofi e funghi.",
               "price": 6.5
             },
             "dellacasa": {
-              "name": "Della casa",
               "position": 14,
-              "description": "Pomodoro, mozzarella, prosciutto, salsiccia, funghi e carciofi.",
               "price": 7
             },
             "americana": {
-              "name": "Americana",
               "position": 15,
-              "description": "Pomodoro, mozzarella e patatine fritte.",
               "price": 7
             },
             "gheriglio": {
-              "name": "Gheriglio",
               "position": 16,
-              "description": "Mozzarella, gorgonzola e noci.",
               "price": 6.5
             },
             "wrustel": {
-              "name": "Würstel",
               "position": 17,
-              "description": "Pomodoro, mozzarella e würstel.",
-              "price": 6.5
+              "price": 6.5,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-wrustel-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-wrustel-thumbnail.jpg?alt=media"
+              }
             },
             "pizzatonno": {
-              "name": "Tonno",
               "position": 18,
-              "description": "Pomodoro, mozzarella e tonno.",
               "price": 6.5
             },
             "pizzasarda": {
-              "name": "Sarda",
               "position": 19,
-              "description": "Pomodoro, mozzarella, pecorino e salsiccia sarda.",
               "price": 6.5
             },
             "vesuvius": {
-              "name": "Vesuvius",
               "position": 20,
-              "description": "Mozzarella, friarielli e salsiccia fresca.",
-              "price": 6.5
+              "price": 6.5,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-vesuvius-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-vesuvius-thumbnail.jpg?alt=media"
+              }
             },
             "aggiuntacrudo": {
-              "name": "Prosciutto crudo in aggiunta",
               "position": 21,
-              "description": null,
               "price": 2
             }
           }
         },
-        "dolci": {
-          "section": "Dolci",
-          "position": 7,
+        "dolcidellacasa": {
+          "position": 8,
           "products": {
-            "fruttastagione": {
-              "name": "Frutta di stagione",
+            "fruttadistagione": {
               "position": 0,
-              "description": null,
               "price": 4
             },
-            "gelatisemifreddi": {
-              "name": "Semifreddi",
+            "tiramisu": {
               "position": 1,
-              "description": null,
-              "price": 4
-            },
-            "tortesemifredde": {
-              "name": "Torte semifredde",
-              "position": 2,
-              "description": null,
-              "price": 4
-            },
-            "cremacatalana": {
-              "name": "Crema catalana",
-              "position": 3,
-              "description": null,
               "price": 4
             },
             "seadas": {
-              "name": "Seadas",
-              "position": 4,
-              "description": null,
+              "position": 2,
               "price": 5
+            },
+            "millefogliecioc": {
+              "position": 3,
+              "price": 4,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmillefoglie-choc-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmillefoglie-choc-thumbnail.jpg?alt=media"
+              }
+            },
+            "millefogliebosco": {
+              "position": 4,
+              "price": 4,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmillefoglie-bosco-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmillefoglie-bosco-thumbnail.jpg?alt=media"
+              }
+            },
+            "pannacotta": {
+              "position": 5,
+              "price": 4,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpannacotta-bosco-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpannacotta-bosco-thumbnail.jpg?alt=media"
+              }
+            },
+            "cremacatalana": {
+              "position": 6,
+              "price": 4,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcrema-catalana-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcrema-catalana-thumbnail.jpg?alt=media"
+              }
+            }
+          }
+        },
+        "dolcisemifreddi": {
+          "position": 9,
+          "products": {
+            "moussestracciatella": {
+              "position": 0,
+              "price": 4,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmousse-stracciatella-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmousse-stracciatella-thumb.jpg?alt=media"
+              }
+            },
+            "moussebosco": {
+              "position": 1,
+              "price": 4,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmousse-bosco-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmousse-bosco-thumb.jpg?alt=media"
+              }
+            },
+            "tortanonna": {
+              "position": 2,
+              "price": 4,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftorta-nonna-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftorta-nonna-thumb.jpg?alt=media"
+              }
+            },
+            "profiterol": {
+              "position": 3,
+              "price": 4,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fprofiterol-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fprofiterol-thumb.jpg?alt=media"
+              }
+            },
+            "tartufonocciola": {
+              "position": 4,
+              "price": 4,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftartufo-nocciola-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftartufo-nocciola-thumb.jpg?alt=media"
+              }
+            },
+            "tartufoclassico": {
+              "position": 5,
+              "price": 4,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftartufo-classico-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftartufo-classico-thumb.jpg?alt=media"
+              }
+            },
+            "tartufocaffe": {
+              "position": 6,
+              "price": 4,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftartufo-caffe-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftartufo-caffe-thumb.jpg?alt=media"
+              }
+            },
+            "tartufolimoncello": {
+              "position": 7,
+              "price": 4,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftartufo-limoncello-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftartufo-limoncello-thumb.jpg?alt=media"
+              }
+            },
+            "tartufobianco": {
+              "position": 8,
+              "price": 4,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftartufo-bianco-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftartufo-bianco-thumb.jpg?alt=media"
+              }
+            },
+            "sorbetto": {
+              "position": 9,
+              "price": 4,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fsorbetto-limone-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fsorbetto-limone-thumb.jpg?alt=media"
+              }
+            },
+            "torroncino": {
+              "position": 10,
+              "price": 4,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftorroncino-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftorroncino-thumb.jpg?alt=media"
+              }
+            },
+            "meringa": {
+              "position": 11,
+              "price": 5,
+              "images": {
+                "mobile": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmeringa-mob.jpg?alt=media",
+                "thumb": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmeringa-thumb.jpg?alt=media"
+              }
+            }
+          }
+        },
+        "vinibianchi": {
+          "position": 10,
+          "products": {
+            "filinebianco": {
+              "position": 0,
+              "price": 16
+            },
+            "selemebianco": {
+              "position": 1,
+              "price": 16
+            },
+            "terrebianchebianco": {
+              "position": 2,
+              "price": 22
+            },
+            "branubianco": {
+              "position": 3,
+              "price": 20
+            },
+            "balaribianco": {
+              "position": 4,
+              "price": 15
+            },
+            "costamolinobianco": {
+              "position": 5,
+              "price": 16
+            },
+            "costamolinopiccolobianco": {
+              "position": 6,
+              "price": 9
+            },
+            "funtanalirasbianco": {
+              "position": 7,
+              "price": 22
+            },
+            "canajlibianco": {
+              "position": 8,
+              "price": 20
+            }
+          }
+        },
+        "vinirose": {
+          "position": 11,
+          "products": {
+            "barberinorosato": {
+              "position": 0,
+              "price": 15
+            },
+            "filierirosato": {
+              "position": 1,
+              "price": 15
+            }
+          }
+        },
+        "vinirossi": {
+          "position": 12,
+          "products": {
+            "filierirosso": {
+              "position": 0,
+              "price": 15
+            },
+            "cannonaurosso": {
+              "position": 1,
+              "price": 15
+            },
+            "nepenterosso": {
+              "position": 2,
+              "price": 22
+            },
+            "nebbiolorosso": {
+              "position": 3,
+              "price": 15
+            },
+            "capocacciarosso": {
+              "position": 4,
+              "price": 15
+            },
+            "costerarosso": {
+              "position": 5,
+              "price": 18
+            },
+            "perderarosso": {
+              "position": 6,
+              "price": 18
+            },
+            "perderapiccolorosso": {
+              "position": 7,
+              "price": 9
+            }
+          }
+        },
+        "vinispumanti": {
+          "position": 13,
+          "products": {
+            "spumantebrut": {
+              "position": 0,
+              "price": 20
+            },
+            "moscatobrut": {
+              "position": 1,
+              "price": 20
+            },
+            "proseccobrut": {
+              "position": 2,
+              "price": 18
+            }
+          }
+        },
+        "vinidellacasa": {
+          "position": 13,
+          "products": {
+            "quartinodellacasa": {
+              "position": 0,
+              "price": 3.5
+            },
+            "mezzodellacasa": {
+              "position": 1,
+              "price": 5
+            },
+            "litrodellacasa": {
+              "position": 2,
+              "price": 10
             }
           }
         },
         "coperto": {
           "section": "Coperto",
-          "position": 8,
+          "position": 15,
           "products": {
             "copertoprodotto": {
               "name": null,

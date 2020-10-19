@@ -17,7 +17,7 @@ const MotionHeader = () => {
           <div className="col-3 text-center">
             <FontAwesomeIcon icon={faInfoCircle} />
           </div>
-          <div className="col-9">Your menu with a mobile APP feeling</div>
+          <div className="col-9">Your digital menu with like a mobile App.</div>
         </div>
         <motion.img
           animate={{ translateY: [0, 5, 0] }}
@@ -53,7 +53,7 @@ const MotionHeader = () => {
           <div className="col-3 text-center">
             <FontAwesomeIcon icon={faInfoCircle} />
           </div>
-          <div className="col-9">Customisable QR for your brand</div>
+          <div className="col-9">Customisable QR to match your brand.</div>
         </div>
       </div>
     </div>

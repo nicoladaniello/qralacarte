@@ -14,8 +14,9 @@ const HomeHeader = () => (
             served hot.
           </h1>
           <p className="mb-3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            We provide modern looking, app-like digital menus for your business.
+            Let customers scan your personalised QR code and bring their menu
+            live on their devices without downloads.
           </p>
           <p>
             <Link href="/signup">

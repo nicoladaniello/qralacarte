@@ -29,15 +29,13 @@ const Home = () => (
           </div>
           <h5>Personalised QR code to match your brand.</h5>
           <p>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-            blanditiis praesentium voluptatum deleniti atque corrupti quos
-            dolores
+            Consistency is a must for a good business. With our service you can
+            create a good visual-looking QR code that fits your brand design,
+            and is a pleasure for your customer to see.
           </p>
           <p>
-            <Link href="/">
-              <a className="btn btn-outline-tertiary">
-                Create your QR for free
-              </a>
+            <Link href="/signup">
+              <a className="btn btn-outline-tertiary">Start for free</a>
             </Link>
           </p>
         </div>
@@ -48,14 +46,14 @@ const Home = () => (
               icon={faMobile}
             />
           </div>
-          <h5>Responsive online menu with a mobile app styling.</h5>
+          <h5>Modern APP-like digital menu.</h5>
           <p>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-            blanditiis praesentium voluptatum deleniti atque corrupti quos
-            dolores
+            Yes high tech, but cheap, fast and easy. Your menu will look and
+            feel like a modern mobile APP, but without downloads. It works
+            offline too!
           </p>
           <p>
-            <Link href="/">
+            <Link href="/signup">
               <a className="btn btn-outline-primary">Upload your menu</a>
             </Link>
           </p>
@@ -67,11 +65,11 @@ const Home = () => (
               icon={faPepperHot}
             />
           </div>
-          <h5>Changes on menu made easy with our online tool.</h5>
+          <h5>Instant editing with the online tool.</h5>
           <p>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-            blanditiis praesentium voluptatum deleniti atque corrupti quos
-            dolores
+            Need to change a price? Add in pictures? Not a problem. Just login
+            from your device and bring all your changes you want to your menu,
+            synchronizes in real time.
           </p>
           <p>
             <Link href="/">
@@ -95,9 +93,9 @@ const Home = () => (
           <div className="col-12 col-lg-6">
             <h2 className="h1">Free trial, no contract</h2>
             <p className="lead d-none d-lg-block mb-3">
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores
+              It takes 3 minutes to register, personalise your QR code and start
+              creating your menu. All for free for the first week, then pay as
+              you go.
             </p>
             <div className="d-lg-none" style={{ height: "180px" }}></div>
             <p>
@@ -114,30 +112,42 @@ const Home = () => (
       <div className="row">
         <div className="col-12 col-lg-6 px-lg-3 mb-3">
           <div className="display-1">1</div>
-          <h4>We provide you a personalised QR code</h4>
-          <p>Lorem ispum dolor sit.</p>
+          <h4>Personalise your QR code.</h4>
+          <p>
+            Create an account in seconds and personalise your QR code with our
+            online editing tool.
+          </p>
         </div>
         <div className="col-12 col-lg-6 px-lg-3 mb-3">
           <div className="display-1">2</div>
-          <h4>Place the QR where customers can see it.</h4>
-          <p>Lorem ispum dolor sit.</p>
+          <h4>Place it where customers can see it.</h4>
+          <p>
+            Place your QR code where customer can see it and scan it with the
+            camera of their smartphones.
+          </p>
         </div>
         <div className="col-12 col-lg-6 px-lg-3 mb-3">
           <div className="display-1">3</div>
-          <h4>Your customers will scan it with their phones.</h4>
-          <p>Lorem ispum dolor sit.</p>
+          <h4>Create your digital menu.</h4>
+          <p>
+            Use the online tool to upload images, update informations and prices
+            and create your digital menu.
+          </p>
         </div>
         <div className="col-12 col-lg-6 px-lg-3 mb-3">
           <div className="display-1">4</div>
-          <h4>Your menu becames accessible.</h4>
-          <p>Lorem ispum dolor sit.</p>
+          <h4>Take your orders.</h4>
+          <p>
+            That’s it, simple. Customers will have access to your menu
+            everywhere at any time.
+          </p>
         </div>
       </div>
     </div>
-    <div className="container text-center text-lg-left mb-3 mb-lg-5">
+    {/* <div className="container text-center text-lg-left mb-3 mb-lg-5">
       <h2 className="h1">Pricing</h2>
       <h4>Work in progress...</h4>
-    </div>
+    </div> */}
   </Layout>
 );
 
