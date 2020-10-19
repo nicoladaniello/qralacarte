@@ -39,34 +39,42 @@ const AppLayout = ({ data }) => {
   };
 
   return (
-    <div className="card border-0 bg-light">
-      <AppTopNav data={{ translations, language, title: info.title }} />
-      <AppHeader
-        data={{ ...info, translations, language }}
-        onShowModal={() => null}
-      />
-      <main>
-        <AppMenuNav
-          data={menu}
-          activeKey={activeKey}
-          refs={navRefs}
-          onClick={handleNavItemClick}
+    <div
+      className="bg-primary d-flex flex-column mx-auto"
+      style={{ maxWidth: "740px" }}
+    >
+      <div
+        className="card border-0 bg-light mx-auto"
+        style={{ maxWidth: "420px" }}
+      >
+        <AppTopNav data={{ translations, language, title: info.title }} />
+        <AppHeader
+          data={{ ...info, translations, language }}
+          onShowModal={() => null}
         />
+        <main>
+          <AppMenuNav
+            data={menu}
+            activeKey={activeKey}
+            refs={navRefs}
+            onClick={handleNavItemClick}
+          />
 
-        <AppMenu
-          data={menu}
-          onScrolledTo={handleScrollTo}
-          refs={sectionRefs}
-          onItemCLick={handleMenuItemClick}
-        />
+          <AppMenu
+            data={menu}
+            onScrolledTo={handleScrollTo}
+            refs={sectionRefs}
+            onItemCLick={handleMenuItemClick}
+          />
 
-        <BottomSheet
-          data={modalData}
-          show={showModal}
-          onHide={() => setShowModal(false)}
-        />
-      </main>
-      <AppFooter />
+          <BottomSheet
+            data={modalData}
+            show={showModal}
+            onHide={() => setShowModal(false)}
+          />
+        </main>
+        <AppFooter />
+      </div>
     </div>
   );
 };
