@@ -1,61 +1,67 @@
-import React from "react";
 import Link from "next/link";
+import React from "react";
+import {
+  Container,
+  Nav,
+  Navbar as BSNavbar,
+  NavDropdown,
+} from "react-bootstrap";
+import useAuth from "./auth/useAuth";
 
 const Navbar = () => {
+  const { currentUser, signOut } = useAuth();
+
   return (
-    <nav className="navbar px-2 navbar-expand-lg navbar-light bg-transparent">
-      <div className="container">
-        <Link href="/">
-          <a className="navbar-brand">
+    <BSNavbar bg="transparent" variant="light" expand="lg">
+      <Container>
+        <Link href="/" passHref>
+          <BSNavbar.Brand>
             <b>
               <span className="border-primary border-top border-bottom py-1">
                 QR
               </span>
               alacarte
             </b>
-          </a>
+          </BSNavbar.Brand>
         </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item active">
-              <Link href="/">
-                <a className="nav-link">
-                  How it works
-                  {/* <span className="sr-only">(current)</span> */}
-                </a>
+        <BSNavbar.Toggle aria-controls="top-navbar" />
+        <BSNavbar.Collapse id="top-navbar">
+          <Nav className="ml-auto">
+            <Link href="/" passHref>
+              <Nav.Link>Home</Nav.Link>
+            </Link>
+            <Link href="/" passHref>
+              <Nav.Link>How it works</Nav.Link>
+            </Link>
+            <Link href="/" passHref>
+              <Nav.Link>Pricing</Nav.Link>
+            </Link>
+            <Link href="/" passHref>
+              <Nav.Link>About</Nav.Link>
+            </Link>
+            <Link href="/" passHref>
+              <Nav.Link>Contact us</Nav.Link>
+            </Link>
+            {!currentUser && (
+              <Link href="/signin" passHref>
+                <Nav.Link>Sign in</Nav.Link>
               </Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/">
-                <a className="nav-link">Pricing</a>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/">
-                <a className="nav-link">About us</a>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/">
-                <a className="nav-link">Contact</a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+            )}
+            {currentUser && (
+              <NavDropdown
+                title={<b>{currentUser.displayName}</b>}
+                id="navbar-dropdown-user"
+              >
+                <Link href="/admin" passHref>
+                  <NavDropdown.Item>Admin</NavDropdown.Item>
+                </Link>
+                <NavDropdown.Item onClick={signOut}>Logout</NavDropdown.Item>
+              </NavDropdown>
+            )}
+          </Nav>
+        </BSNavbar.Collapse>
+      </Container>
+    </BSNavbar>
   );
 };
 
