@@ -1,25 +1,27 @@
-import Head from "next/head";
+import Link from "next/link";
 import React from "react";
+import AdminLayout from "../../components/admin/AdminLayout";
 import withAuth from "../../components/auth/withAuth";
-import Layout from "../../components/layout";
 
 const AdminPage = () => {
   return (
-    <Layout>
-      <Head>
-        <title>QRalacarte | Admin board</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <div
-        className="row no-gutters justify-content-stretch"
-        style={{
-          height: "100vh",
-        }}
-      >
-        <p>Welcome to the admin page</p>
+    <AdminLayout>
+      <h1 className="h2 mb-4">Dashboard</h1>
+      <div className="row no-gutters">
+        <div className="col-4">
+          <Link href="admin/restaurants">
+            <a>
+              <div className="card bg-info text-white border-0 shadow-sm mb-4">
+                <div className="card-body">
+                  <h5 className="card-title">Manage your restaurants</h5>
+                  <p className="card-text">Some quick example text.</p>
+                </div>
+              </div>
+            </a>
+          </Link>
+        </div>
       </div>
-    </Layout>
+    </AdminLayout>
   );
 };
 

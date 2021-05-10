@@ -1,22 +1,16 @@
-import React from "react";
-import Link from "next/link";
-import Head from "next/head";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faQrcode,
   faMobile,
   faPepperHot,
+  faQrcode
 } from "@fortawesome/free-solid-svg-icons";
-import Layout from "../components/layout";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+import React from "react";
+import Page from "../components/common/Page";
 import HomeHeader from "../components/homeHeader";
 
 const Home = () => (
-  <Layout>
-    <Head>
-      <title>QRalacarte | Make your QR menu</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+  <Page title="Make your QR menu">
     <HomeHeader />
     <div className="container mb-3 mb-lg-5">
       <div className="row mx-lg-n2 text-center text-lg-left">
@@ -148,7 +142,7 @@ const Home = () => (
       <h2 className="h1">Pricing</h2>
       <h4>Work in progress...</h4>
     </div> */}
-  </Layout>
+  </Page>
 );
 
 export default Home;

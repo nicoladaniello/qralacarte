@@ -1,21 +1,29 @@
 import classnames from "classnames";
 import firebase from "firebase/app";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 
 const SignUp = ({ className }) => {
+  const router = useRouter();
+
   // Configure FirebaseUI.
   const uiConfig = {
-    // Popup signin flow rather than redirect flow.
     signInFlow: "popup",
-    // Redirect to /admin after sign in is successful. Alternatively you can provide a callbacks.signInSuccess function.
     signInSuccessUrl: "/admin",
-    // We will display Google and Facebook as auth providers.
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
       firebase.auth.FacebookAuthProvider.PROVIDER_ID,
     ],
+    callbacks: {
+      signInSuccessWithAuthResult: (authResult) => {
+        // Upsert user details
+        const { uid, displayName, email } = authResult.user;
+        firebase.database().ref(`users/${uid}`).set({ email, displayName });
+        router.push("/admin");
+      },
+    },
   };
 
   return (

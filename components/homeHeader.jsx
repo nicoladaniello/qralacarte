@@ -25,7 +25,7 @@ const HomeHeader = () => (
           </p>
         </div>
         <div className="col-12 col-lg-7">
-          <MotionHeader />
+          {/* <MotionHeader /> */}
         </div>
       </div>
     </div>

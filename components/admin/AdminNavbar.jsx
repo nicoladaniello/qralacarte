@@ -1,12 +1,12 @@
 import classnames from "classnames";
 import Link from "next/link";
-import React from "react";
-import useAuth from "./auth/useAuth";
-import Brand from "./common/Brand";
-import Dropdown from "./common/Dropdown";
 import { PropTypes } from "prop-types";
+import React from "react";
+import useAuth from "../auth/useAuth";
+import Brand from "../common/Brand";
+import Dropdown from "../common/Dropdown";
 
-const Navbar = ({ fluid, className }) => {
+const AdminNavbar = ({ fluid, className }) => {
   const { currentUser, signOut } = useAuth();
 
   return (
@@ -25,7 +25,7 @@ const Navbar = ({ fluid, className }) => {
         >
           <Link href="/">
             <a className="navbar-brand">
-              <Brand />
+              <Brand /> Admin
             </a>
           </Link>
           <button
@@ -41,45 +41,6 @@ const Navbar = ({ fluid, className }) => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link href="/">
-                  <a className="nav-link active" aria-current={"page"}>
-                    Home
-                  </a>
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link href="/" passHref>
-                  <a className="nav-link">How it works</a>
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link href="/" passHref>
-                  <a className="nav-link">Pricing</a>
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link href="/" passHref>
-                  <a className="nav-link">About</a>
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link href="/" passHref>
-                  <a className="nav-link">Contact us</a>
-                </Link>
-              </li>
-              {!currentUser && (
-                <li className="nav-item">
-                  <Link href="/signin" passHref>
-                    <a className="nav-link">Sign in</a>
-                  </Link>
-                </li>
-              )}
-
               {!!currentUser && (
                 <Dropdown
                   id="navbarDropdownUser"
@@ -107,9 +68,9 @@ const Navbar = ({ fluid, className }) => {
   );
 };
 
-Navbar.propTypes = {
+AdminNavbar.propTypes = {
   fluid: PropTypes.bool,
   className: PropTypes.string,
 };
 
-export default Navbar;
+export default AdminNavbar;
