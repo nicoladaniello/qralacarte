@@ -1,6 +1,6 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import { Slide, toast } from "react-toastify";
-import productService from "../../services/ProductService";
+import productService from "../../services/productService";
 
 async function showMessages(
   { queryFulfilled, requestId },
