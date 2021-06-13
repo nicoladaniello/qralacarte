@@ -1,5 +1,5 @@
 import { createApi } from '@reduxjs/toolkit/query/react'
-import menusService from "../../services/MenuService";
+import menusService from "../../services/menuService";
 import { toast } from "react-toastify";
 
 // Define a service using a base URL and expected endpoints

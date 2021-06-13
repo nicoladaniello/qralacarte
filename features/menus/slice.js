@@ -9,7 +9,7 @@ import {
   updateMenu,
   updateMenuProducts,
   updateMenuSections,
-} from "../../../services/MenuService";
+} from "../../../services/menuService";
 
 export const getMenuAction = createAsyncThunk("menus/get", (data) =>
   getMenu(data)
