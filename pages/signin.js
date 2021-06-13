@@ -5,12 +5,12 @@ import SignIn from "../components/auth/SignIn";
 import useAuth from "../components/auth/useAuth";
 
 const SignInPage = () => {
-  const { currentUser } = useAuth();
+  const { user } = useAuth();
   const router = useRouter();
 
   useEffect(() => {
-    if (currentUser) router.push("/admin");
-  }, [currentUser]);
+    if (user) router.push("/admin");
+  }, [user]);
 
   return (
     <>

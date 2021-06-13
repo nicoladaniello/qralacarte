@@ -1,17 +1,25 @@
-import React from "react";
 import firebase from "firebase/app";
+import React from "react";
+import { useForm } from "react-hook-form";
 
-const RestaurantInfoForm = ({ data }) => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const RestaurantInfoForm = ({ values }) => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm({});
 
-    firebase.database().ref(`restaurants/${data.slug}`).set({});
+  const onSubmit = (data) => {
+    console.log(data);
+
+    firebase.database().ref(`restaurants/${values.slug}`).set({});
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <div className="row align-items-center mb-3">
-        <label for="profile-img" className="col-sm-2 col-form-label">
+        <label htmlFor="profile-img" className="col-sm-2 col-form-label">
           Immagine del profilo
         </label>
         <div className="col-sm-10 text-center">
@@ -19,12 +27,13 @@ const RestaurantInfoForm = ({ data }) => {
             id="profile-img"
             className="img-fluid img-thumbnail"
             style={{ width: "180px" }}
-            src={data.img}
+            src={values.img}
           />
         </div>
+        <input type="hidden" {...register("img")} defaultValue={values.img} />
       </div>
       <div className="row align-items-center mb-3">
-        <label for="title" className="col-sm-2 col-form-label">
+        <label htmlFor="title" className="col-sm-2 col-form-label">
           Nome
         </label>
         <div className="col-sm-10">
@@ -32,31 +41,24 @@ const RestaurantInfoForm = ({ data }) => {
             type="text"
             id="title"
             className="form-control"
-            value={data.title}
+            {...register("title")}
+            defaultValue={values.title}
           />
         </div>
       </div>
       <div className="row align-items-center mb-3">
-        <label for="title" className="col-sm-2 col-form-label">
+        <label htmlFor="title" className="col-sm-2 col-form-label">
           URL
         </label>
         <div className="col-sm-10">
-          <div className="input-group">
-            <span className="input-group-text" id="url-prefix">
-              qralacarte.com/r/
-            </span>
-            <input
-              type="text"
-              className="form-control"
-              id="slug"
-              aria-describedby="url-prefix"
-              value={data.slug}
-            />
-          </div>
+          <span className="lead">
+            qralacarte.com/r/
+            <span className="fw-bold">{values.slug}</span>
+          </span>
         </div>
       </div>
       <div className="row align-items-center mb-3">
-        <label for="email" className="col-sm-2 col-form-label">
+        <label htmlFor="email" className="col-sm-2 col-form-label">
           Email
         </label>
         <div className="col-sm-10">
@@ -64,12 +66,13 @@ const RestaurantInfoForm = ({ data }) => {
             type="email"
             id="email"
             className="form-control"
-            value={data.email}
+            {...register("email")}
+            defaultValue={values.email}
           />
         </div>
       </div>
       <div className="row align-items-center mb-3">
-        <label for="tel" className="col-sm-2 col-form-label">
+        <label htmlFor="tel" className="col-sm-2 col-form-label">
           Telefono
         </label>
         <div className="col-sm-10">
@@ -77,7 +80,8 @@ const RestaurantInfoForm = ({ data }) => {
             type="tel"
             id="tel"
             className="form-control"
-            value={data.phone}
+            {...register("tel")}
+            defaultValue={values.tel}
           />
         </div>
       </div>

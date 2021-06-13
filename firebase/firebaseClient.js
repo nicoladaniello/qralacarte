@@ -1,6 +1,8 @@
 import fb from "firebase/app";
 import "firebase/auth";
+import "firebase/firestore";
 import "firebase/database";
+import "firebase/storage"
 
 const configs = {
   apiKey: process.env.NEXT_PUBLIC_API_KEY,

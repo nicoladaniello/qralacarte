@@ -1,19 +1,50 @@
-import classnames from "classnames";
 import Head from "next/head";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useEffect } from "react";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import { Slide, ToastContainer } from "react-toastify";
+import useAuth from "./auth/useAuth";
 
 const Layout = ({ title, className, children }) => {
+  const { signIn, signOut, onAuthStateChanged } = useAuth();
+
+  // Load user status to state when user changes.
+  useEffect(
+    () =>
+      onAuthStateChanged(
+        (user) => {
+          // console.log("user changed.", user);
+          if (user) signIn(user);
+          else signOut();
+        },
+        (err) => {
+          setUser();
+          console.error(err);
+        }
+      ),
+    []
+  );
+
   return (
-    <div
-      className={classnames(className, "d-flex flex-column")}
-      style={{ height: "100vh", overflow: "auto" }}
-    >
+    <div>
       <Head>
-        <title>QRalacarte | {title}</title>
+        <meta property="og:title" content={title} key="title" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {children}
+
+      <DndProvider backend={HTML5Backend}>{children}</DndProvider>
+      <ToastContainer
+        hideProgressBar
+        newestOnTop
+        position="bottom-center"
+        limit={3}
+        transition={Slide}
+      />
     </div>
   );
 };

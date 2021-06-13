@@ -1,4 +1,3 @@
-// import { Dropdown as BSDropdown } from "bootstrap";
 import classnames from "classnames";
 import { PropTypes } from "prop-types";
 import React, { useEffect, useRef } from "react";

@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Antipasti",
+    "position": 0
+  },
+  {
+    "title": "Secondi di carne",
+    "position": 1
+  },
+  {
+    "title": "Contorni",
+    "position": 2
+  },
+  {
+    "title": "Coperto",
+    "position": 3
+  },
+  {
+    "title": "Dolci della casa",
+    "position": 4
+  },
+  {
+    "title": "Dolci semifreddi",
+    "position": 5
+  },
+  {
+    "title": "Formaggi Sardi & Nazionali",
+    "position": 6
+  },
+  {
+    "title": "Secondi di pesce",
+    "position": 7
+  },
+  {
+    "title": "Pizze",
+    "position": 8
+  },
+  {
+    "title": "Primi Piatti",
+    "position": 9
+  },
+  {
+    "title": "Specialità della casa",
+    "position": 10
+  },
+  {
+    "title": "Vini Bianchi",
+    "position": 11
+  },
+  {
+    "title": "Vini della casa",
+    "position": 12
+  },
+  {
+    "title": "Vini Rosé",
+    "position": 13
+  },
+  {
+    "title": "Vini Rossi",
+    "position": 14
+  },
+  {
+    "title": "Vini Spumanti",
+    "position": 15
+  }
+]

@@ -1,37 +1,40 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
-import firebase from "../../firebase/firebaseClient";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  setUserCredentials,
+  signOutAction,
+} from "../../features/auth/slice";
+import { onAuthStateChanged } from "../../services/authService";
 
-const authContext = createContext();
-
-const useAuth = () => useContext(authContext);
-
-const AuthProvider = ({ children }) => {
-  const [auth, setAuth] = useState({ isLoading: true });
-
-  const signOut = () => {
-    firebase.auth().signOut();
-  };
-
-  const value = {
-    ...auth,
-    signOut,
-  };
-
-  useEffect(
-    () =>
-      firebase.auth().onAuthStateChanged(
-        (user) =>
-          void setAuth({
-            currentUser: user,
-            isLoading: false,
-          }),
-        (err) => console.error(err)
-      ),
-    []
+const useAuth = (options) => {
+  const { currentUser, isInitialized, isLoggedIn } = useSelector(
+    (state) => state.auth
   );
+  const dispatch = useDispatch();
+  const router = useRouter();
 
-  return <authContext.Provider value={value}>{children}</authContext.Provider>;
+  const { redirectTo } = options || {};
+
+  useEffect(() => {
+    if (redirectTo && isInitialized && !isLoggedIn) {
+      router.push(redirectTo);
+    }
+  }, [redirectTo, isInitialized, isLoggedIn, router]);
+
+  const signIn = ({ uid, email, displayName }) =>
+    dispatch(setUserCredentials({ uid, email, displayName }));
+
+  const signOut = () => dispatch(signOutAction());
+
+  return {
+    currentUser,
+    isInitialized,
+    isLoggedIn,
+    signIn,
+    signOut,
+    onAuthStateChanged,
+  };
 };
 
 export default useAuth;
-export { AuthProvider };

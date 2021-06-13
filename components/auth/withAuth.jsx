@@ -1,18 +1,15 @@
 import React from "react";
-import Layout from "../Layout";
 import SignIn from "./SignIn";
 import useAuth from "./useAuth";
 
 const withAuth = (Component) => {
   const Auth = (props) => {
-    const { isLoading, currentUser } = useAuth();
+    const { currentUser } = useAuth();
 
-    return isLoading ? (
-      <Layout>loading...</Layout>
+    return currentUser === undefined ? (
+      <p>loading...</p>
     ) : !currentUser ? (
-      <Layout>
-        <SignIn />
-      </Layout>
+      <SignIn />
     ) : (
       <Component {...props} currentUser={currentUser} />
     );

@@ -1,0 +1,898 @@
+[
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Farchipelago-mob.jpg?alt=media",
+    "section": "CUsgfBHGtuTpgk8WUBJb",
+    "position": 11,
+    "price": 17,
+    "title": "Archipelago di antipasti"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fbruschette-mob.jpg?alt=media",
+    "section": "CUsgfBHGtuTpgk8WUBJb",
+    "position": 0,
+    "price": 2.5,
+    "description": "Pane tostato con pomodoro fresco.",
+    "title": "Bruschette"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcaprese-mob.jpg?alt=media",
+    "section": "CUsgfBHGtuTpgk8WUBJb",
+    "position": 6,
+    "price": 6,
+    "title": "Insalata caprese"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcocktail-mob.jpg?alt=media",
+    "section": "CUsgfBHGtuTpgk8WUBJb",
+    "position": 8,
+    "price": 6,
+    "title": "Cocktail di gamberi"
+  },
+  {
+    "section": "CUsgfBHGtuTpgk8WUBJb",
+    "position": 7,
+    "price": 9,
+    "title": "Crudo & melone"
+  },
+  {
+    "section": "CUsgfBHGtuTpgk8WUBJb",
+    "position": 5,
+    "price": 8,
+    "title": "Crudo & mozzarella"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Finsalata-mare-mob.jpg?alt=media",
+    "section": "CUsgfBHGtuTpgk8WUBJb",
+    "position": 1,
+    "price": 9,
+    "title": "Insalata di mare"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Finsalata-polpo-mob.jpg?alt=media",
+    "section": "CUsgfBHGtuTpgk8WUBJb",
+    "position": 2,
+    "price": 9,
+    "title": "Insalata di polpo"
+  },
+  {
+    "section": "CUsgfBHGtuTpgk8WUBJb",
+    "position": 4,
+    "price": 8,
+    "title": "Prosciutto crudo"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Frazza-mob.jpg?alt=media",
+    "section": "CUsgfBHGtuTpgk8WUBJb",
+    "position": 9,
+    "price": 6,
+    "title": "Razza alla catalana"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fsalumi-misti-mob.jpg?alt=media",
+    "section": "CUsgfBHGtuTpgk8WUBJb",
+    "position": 3,
+    "price": 7,
+    "title": "Salumi misti"
+  },
+  {
+    "section": "CUsgfBHGtuTpgk8WUBJb",
+    "position": 10,
+    "price": 8,
+    "title": "Spada affumicato & radicchio rosso"
+  },
+  {
+    "section": "ZCu6131bDnCNMbCwDgRs",
+    "position": 3,
+    "price": 8,
+    "title": "Costata di maiale"
+  },
+  {
+    "section": "ZCu6131bDnCNMbCwDgRs",
+    "position": 2,
+    "price": 5,
+    "priceForGrams": 100,
+    "title": "Costata di vitello"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcostolette-agnello-mob.jpg?alt=media",
+    "section": "ZCu6131bDnCNMbCwDgRs",
+    "position": 8,
+    "price": 9,
+    "title": "Costatine di agnello"
+  },
+  {
+    "section": "ZCu6131bDnCNMbCwDgRs",
+    "position": 7,
+    "price": 8,
+    "title": "Fettina vit.ne"
+  },
+  {
+    "section": "ZCu6131bDnCNMbCwDgRs",
+    "position": 0,
+    "price": 16,
+    "title": "Filetto alla griglia"
+  },
+  {
+    "section": "ZCu6131bDnCNMbCwDgRs",
+    "position": 1,
+    "price": 16,
+    "title": "Filetto al pepe verde"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmilanese-mob.jpg?alt=media",
+    "section": "ZCu6131bDnCNMbCwDgRs",
+    "position": 6,
+    "price": 8,
+    "title": "Milanese"
+  },
+  {
+    "section": "ZCu6131bDnCNMbCwDgRs",
+    "position": 5,
+    "price": 8,
+    "title": "Petto di pollo"
+  },
+  {
+    "section": "ZCu6131bDnCNMbCwDgRs",
+    "position": 4,
+    "price": 8,
+    "title": "Scaloppine"
+  },
+  {
+    "title": ["Carote", "Carote"],
+    "section": "95Vapbz3iVIv1vR0qY3O",
+    "position": 6,
+    "price": 3
+  },
+  {
+    "section": "95Vapbz3iVIv1vR0qY3O",
+    "position": 0,
+    "price": 3,
+    "title": "Crocchette di patate"
+  },
+  {
+    "title": ["Insalata mista", "Insalata mista"],
+    "section": "95Vapbz3iVIv1vR0qY3O",
+    "position": 3,
+    "price": 3
+  },
+  {
+    "title": ["Insalata verde", "Insalata verde"],
+    "section": "95Vapbz3iVIv1vR0qY3O",
+    "position": 2,
+    "price": 3
+  },
+  {
+    "title": ["Patate fritte", "Patate fritte"],
+    "section": "95Vapbz3iVIv1vR0qY3O",
+    "position": 1,
+    "price": 3
+  },
+  {
+    "title": ["Pomodori", "Pomodori"],
+    "section": "95Vapbz3iVIv1vR0qY3O",
+    "position": 5,
+    "price": 3
+  },
+  {
+    "title": ["Rucola", "Rucola"],
+    "section": "95Vapbz3iVIv1vR0qY3O",
+    "position": 4,
+    "price": 4
+  },
+  {
+    "title": ["Spinaci", "Spinaci"],
+    "section": "95Vapbz3iVIv1vR0qY3O",
+    "position": 7,
+    "price": 3
+  },
+  {
+    "title": ["Verdure alla griglia", "Verdure alla griglia"],
+    "section": "95Vapbz3iVIv1vR0qY3O",
+    "position": 8,
+    "price": 4
+  },
+  {
+    "description": [
+      "Costo per pane e servizio, non cancellabile.",
+      "Costo per pane e servizio, non cancellabile."
+    ],
+    "section": "TnmTAJpLT8Gf048VJVlk",
+    "position": 0,
+    "price": 2,
+    "pricePerPerson": true
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcrema-catalana-mob.jpg?alt=media",
+    "section": "YZp8RCiBc6ig3hOnB8Yx",
+    "position": 6,
+    "price": 4,
+    "title": "Crema catalana"
+  },
+  {
+    "section": "YZp8RCiBc6ig3hOnB8Yx",
+    "position": 0,
+    "price": 4,
+    "title": "Frutta di stagione"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmillefoglie-bosco-mob.jpg?alt=media",
+    "section": "YZp8RCiBc6ig3hOnB8Yx",
+    "position": 4,
+    "price": 4,
+    "title": "Millefoglie ai frutti di bosco"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmillefoglie-choc-mob.jpg?alt=media",
+    "section": "YZp8RCiBc6ig3hOnB8Yx",
+    "position": 3,
+    "price": 4,
+    "title": "Millefoglie al cioccolato"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpannacotta-bosco-mob.jpg?alt=media",
+    "section": "YZp8RCiBc6ig3hOnB8Yx",
+    "position": 5,
+    "price": 4,
+    "title": "Pannacotta"
+  },
+  {
+    "section": "YZp8RCiBc6ig3hOnB8Yx",
+    "position": 2,
+    "price": 5,
+    "description": "Dolce sardo tradizionale, servito con miele o zucchero.",
+    "title": "Seadas"
+  },
+  {
+    "section": "YZp8RCiBc6ig3hOnB8Yx",
+    "position": 1,
+    "price": 4,
+    "title": "Tiramis\u00fa"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmeringa-mob.jpg?alt=media",
+    "section": "AIuHkaRD91MuST5BAu5H",
+    "position": 11,
+    "price": 5,
+    "title": "Meringa"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmousse-bosco-mob.jpg?alt=media",
+    "section": "AIuHkaRD91MuST5BAu5H",
+    "position": 1,
+    "price": 4,
+    "title": "Mousse ai frutti di bosco"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fmousse-stracciatella-mob.jpg?alt=media",
+    "section": "AIuHkaRD91MuST5BAu5H",
+    "position": 0,
+    "price": 4,
+    "title": "Mousse alla stracciatella"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fprofiterol-mob.jpg?alt=media",
+    "section": "AIuHkaRD91MuST5BAu5H",
+    "position": 3,
+    "price": 4,
+    "title": "Profiterol"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fsorbetto-limone-mob.jpg?alt=media",
+    "section": "AIuHkaRD91MuST5BAu5H",
+    "position": 9,
+    "price": 4,
+    "title": "Sorbetto al limone"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftartufo-bianco-mob.jpg?alt=media",
+    "section": "AIuHkaRD91MuST5BAu5H",
+    "position": 8,
+    "price": 4,
+    "title": "Tartufo bianco"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftartufo-caffe-mob.jpg?alt=media",
+    "section": "AIuHkaRD91MuST5BAu5H",
+    "position": 6,
+    "price": 4,
+    "title": "Tartufo al caff\u00e9"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftartufo-classico-mob.jpg?alt=media",
+    "section": "AIuHkaRD91MuST5BAu5H",
+    "position": 5,
+    "price": 4,
+    "title": "Tartufo classico"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftartufo-limoncello-mob.jpg?alt=media",
+    "section": "AIuHkaRD91MuST5BAu5H",
+    "position": 7,
+    "price": 4,
+    "title": "Tartufo al limoncello"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftartufo-nocciola-mob.jpg?alt=media",
+    "section": "AIuHkaRD91MuST5BAu5H",
+    "position": 4,
+    "price": 4,
+    "title": "Tartufo alla nocciola"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftorroncino-mob.jpg?alt=media",
+    "section": "AIuHkaRD91MuST5BAu5H",
+    "position": 10,
+    "price": 4,
+    "title": "Torroncino"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftorta-nonna-mob.jpg?alt=media",
+    "section": "AIuHkaRD91MuST5BAu5H",
+    "position": 2,
+    "price": 4,
+    "title": "Torta della nonna"
+  },
+  {
+    "section": "nL6wSDzoRlLgXlIb98wA",
+    "position": 1,
+    "price": 3.5,
+    "title": "Caprino Sardo"
+  },
+  {
+    "section": "nL6wSDzoRlLgXlIb98wA",
+    "position": 5,
+    "price": 7,
+    "title": "Formaggi misti"
+  },
+  {
+    "section": "nL6wSDzoRlLgXlIb98wA",
+    "position": 2,
+    "price": 3.5,
+    "title": "Gorgonzola"
+  },
+  {
+    "section": "nL6wSDzoRlLgXlIb98wA",
+    "position": 3,
+    "price": 3.5,
+    "title": "Gruviera o Fontina"
+  },
+  {
+    "section": "nL6wSDzoRlLgXlIb98wA",
+    "position": 4,
+    "price": 3.5,
+    "title": "Mozzarella"
+  },
+  {
+    "section": "nL6wSDzoRlLgXlIb98wA",
+    "position": 0,
+    "price": 3.5,
+    "title": "Pecorino Sardo"
+  },
+  {
+    "section": "T4tjEcVKCSMQuMTqdTZO",
+    "position": 13,
+    "preordered": true,
+    "title": "Aragosta"
+  },
+  {
+    "section": "T4tjEcVKCSMQuMTqdTZO",
+    "position": 2,
+    "price": 11,
+    "title": "Calamari fritti"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcalamari-griglia-mob.jpg?alt=media",
+    "section": "T4tjEcVKCSMQuMTqdTZO",
+    "position": 1,
+    "price": 11,
+    "title": "Calamari alla griglia"
+  },
+  {
+    "section": "T4tjEcVKCSMQuMTqdTZO",
+    "position": 0,
+    "price": 11,
+    "title": "Calamaro in umido"
+  },
+  {
+    "section": "T4tjEcVKCSMQuMTqdTZO",
+    "position": 12,
+    "price": 10,
+    "title": "Carpaccio d tonno"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fcozze-marinara-mob.jpg?alt=media",
+    "section": "T4tjEcVKCSMQuMTqdTZO",
+    "position": 9,
+    "price": 13,
+    "title": "Cozze alla marinara"
+  },
+  {
+    "section": "T4tjEcVKCSMQuMTqdTZO",
+    "position": 3,
+    "price": 11,
+    "title": "Fritto misto"
+  },
+  {
+    "section": "T4tjEcVKCSMQuMTqdTZO",
+    "position": 4,
+    "price": 16,
+    "title": "Gamberoni alla griglia"
+  },
+  {
+    "section": "T4tjEcVKCSMQuMTqdTZO",
+    "position": 10,
+    "price": 16,
+    "title": "Grigliata mista"
+  },
+  {
+    "section": "T4tjEcVKCSMQuMTqdTZO",
+    "position": 7,
+    "price": 6,
+    "priceForGrams": 100,
+    "title": "Spigole, Saraghi, Orate"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpesce-spada-mob.jpg?alt=media",
+    "section": "T4tjEcVKCSMQuMTqdTZO",
+    "position": 8,
+    "price": 11,
+    "title": "Trancio di pesce spada"
+  },
+  {
+    "section": "T4tjEcVKCSMQuMTqdTZO",
+    "position": 5,
+    "price": 16,
+    "title": "Scampi alla griglia"
+  },
+  {
+    "section": "T4tjEcVKCSMQuMTqdTZO",
+    "position": 11,
+    "price": 18,
+    "title": "Zuppa di pesce"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fvongole-mob.jpg?alt=media",
+    "section": "T4tjEcVKCSMQuMTqdTZO",
+    "position": 6,
+    "price": 14,
+    "title": "Zuppa di vongole"
+  },
+  {
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 10,
+    "price": 6.5,
+    "description": "Pomodoro, mozzarella e formaggi vari.",
+    "title": "4 Formaggi"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-quattro-stagioni-mob.jpg?alt=media",
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 4,
+    "price": 6.5,
+    "description": "Pomodoro, mozzarella, prosciutto, carciofi, funghi e olive.",
+    "title": "4 Stagioni"
+  },
+  {
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 21,
+    "price": 2,
+    "title": "Prosciutto crudo in aggiunta"
+  },
+  {
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 15,
+    "price": 7,
+    "description": "Pomodoro, mozzarella e patatine fritte.",
+    "title": "Americana"
+  },
+  {
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 9,
+    "price": 6.5,
+    "description": "Pomodoro, mozzarella, cipolla e funghi.",
+    "title": "Boscaiola"
+  },
+  {
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 13,
+    "price": 6.5,
+    "description": "Pomodoro, mozzarella, prosciutto, salame, carciofi e funghi.",
+    "title": "Calzone"
+  },
+  {
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 3,
+    "price": 6.5,
+    "description": "Pomodoro, mozzarella, salame, carciofi, funghi e olive.",
+    "title": "Capricciosa"
+  },
+  {
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 6,
+    "price": 6.5,
+    "description": "Pomodoro, mozzarella, zucchine e mais.",
+    "title": "Contadina"
+  },
+  {
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 14,
+    "price": 7,
+    "description": "Pomodoro, mozzarella, prosciutto, salsiccia, funghi e carciofi.",
+    "title": "Della casa"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-diavola-mob.jpg?alt=media",
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 7,
+    "price": 6.5,
+    "description": "Pomodoro, mozzarella, salsiccia piccante.",
+    "title": "Diavola"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-garibaldina-mob.jpg?alt=media",
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 12,
+    "price": 8,
+    "description": "Pomodoro fresco, mozzarella, spada affumicato e radicchio rosso.",
+    "title": "Garibaldina"
+  },
+  {
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 16,
+    "price": 6.5,
+    "description": "Mozzarella, gorgonzola e noci.",
+    "title": "Gheriglio"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-margherita-mob.jpg?alt=media",
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 0,
+    "price": 5,
+    "description": "Pomodoro e mozzarella.",
+    "title": "Margherita"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-napoli-mob.jpg?alt=media",
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 1,
+    "price": 6.5,
+    "description": "Pomodoro, mozzarella, capperi, acciughe e olive.",
+    "title": "Napoletana"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-pescatora-mob.jpg?alt=media",
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 8,
+    "price": 8,
+    "description": "Pomodoro, mozzarella e frutti di mare.",
+    "title": "Pescatora"
+  },
+  {
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 19,
+    "price": 6.5,
+    "description": "Pomodoro, mozzarella, pecorino e salsiccia sarda.",
+    "title": "Sarda"
+  },
+  {
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 18,
+    "price": 6.5,
+    "description": "Pomodoro, mozzarella e tonno.",
+    "title": "Tonno"
+  },
+  {
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 2,
+    "price": 7,
+    "description": "Pomodoro fresco, mozzarella e rucola.",
+    "title": "Primavera"
+  },
+  {
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 11,
+    "price": 7,
+    "description": "Pomodoro, mozzarella, salmone e bottarga.",
+    "title": "Reale"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-rustica-mob.jpg?alt=media",
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 5,
+    "price": 6.5,
+    "description": "Pomodoro, mozzarella, peperoni, melanzane e spinaci.",
+    "title": "Rustica"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-vesuvius-mob.jpg?alt=media",
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 20,
+    "price": 6.5,
+    "description": "Mozzarella, friarielli e salsiccia fresca.",
+    "title": "Vesuvius"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fpizza-wrustel-mob.jpg?alt=media",
+    "section": "1f26uKmwprPWulOCWY6m",
+    "position": 17,
+    "price": 6.5,
+    "description": "Pomodoro, mozzarella e w\u00fcrstel.",
+    "title": "W\u00fcrstel"
+  },
+  {
+    "section": "0HaJjNulopLvLTDTNISZ",
+    "position": 8,
+    "price": 8,
+    "title": "Gnocchi di patate con la mozzarella"
+  },
+  {
+    "section": "0HaJjNulopLvLTDTNISZ",
+    "position": 7,
+    "price": 8,
+    "title": "Gnochetti sardi"
+  },
+  {
+    "section": "0HaJjNulopLvLTDTNISZ",
+    "position": 6,
+    "price": 8,
+    "title": "Penne al salmone"
+  },
+  {
+    "section": "0HaJjNulopLvLTDTNISZ",
+    "position": 5,
+    "price": 8,
+    "title": "Spaghetti all'arrabbiata"
+  },
+  {
+    "section": "0HaJjNulopLvLTDTNISZ",
+    "position": 4,
+    "price": 8,
+    "title": "Spaghetti alla bottarga"
+  },
+  {
+    "section": "0HaJjNulopLvLTDTNISZ",
+    "position": 2,
+    "price": 8,
+    "title": "Spaghetti alla carbonara"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fspa-cozze-vongole-mob.jpg?alt=media",
+    "section": "0HaJjNulopLvLTDTNISZ",
+    "position": 3,
+    "price": 9,
+    "title": "Spaghetti alle cozze & vongole"
+  },
+  {
+    "section": "0HaJjNulopLvLTDTNISZ",
+    "position": 0,
+    "price": 8,
+    "title": "Spaghetti al pomodoro"
+  },
+  {
+    "section": "0HaJjNulopLvLTDTNISZ",
+    "position": 1,
+    "price": 8,
+    "title": "Spaghetti al rag\u00fa"
+  },
+  {
+    "section": "nl9cxj92fyUr4DsT3Qat",
+    "position": 8,
+    "price": 12,
+    "title": "Fregola vongole & bottarga"
+  },
+  {
+    "section": "nl9cxj92fyUr4DsT3Qat",
+    "position": 9,
+    "price": 10,
+    "title": "Gnocchi di patate fagioli e cozze"
+  },
+  {
+    "section": "nl9cxj92fyUr4DsT3Qat",
+    "position": 2,
+    "price": 10,
+    "title": "Gnochetti al pesce spada"
+  },
+  {
+    "section": "nl9cxj92fyUr4DsT3Qat",
+    "position": 7,
+    "price": 10,
+    "title": "Kulurgiones"
+  },
+  {
+    "section": "nl9cxj92fyUr4DsT3Qat",
+    "position": 5,
+    "price": 9,
+    "title": "Ravioli Sardi"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Friso-nero-mob.jpg?alt=media",
+    "section": "nl9cxj92fyUr4DsT3Qat",
+    "position": 3,
+    "price": 11,
+    "title": "Riso al nero di seppia"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Friso-pescatora-mob.jpg?alt=media",
+    "section": "nl9cxj92fyUr4DsT3Qat",
+    "position": 4,
+    "price": 11,
+    "title": "Riso alla pescatora"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fspa-cartoccio-mob.jpg?alt=media",
+    "section": "nl9cxj92fyUr4DsT3Qat",
+    "position": 0,
+    "price": 11,
+    "title": "Spaghetti al cartoccio"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Fspa-pescatora-mob.jpg?alt=media",
+    "section": "nl9cxj92fyUr4DsT3Qat",
+    "position": 1,
+    "price": 11,
+    "title": "Spaghetti alla pescatora"
+  },
+  {
+    "image": "https://firebasestorage.googleapis.com/v0/b/qralacarte.appspot.com/o/restaurants%2Faragosta%2Fmenu%2Ftagliatelle-isolana-mob.jpg?alt=media",
+    "section": "nl9cxj92fyUr4DsT3Qat",
+    "position": 6,
+    "price": 10,
+    "title": "Tagliatelle Isolane"
+  },
+  {
+    "section": "npwSBjKF4Wz3dujea4it",
+    "position": 4,
+    "price": 15,
+    "title": "Balari, Vermentino frizzante di Monti"
+  },
+  {
+    "section": "npwSBjKF4Wz3dujea4it",
+    "position": 3,
+    "price": 20,
+    "title": "Branu, Vermentino Vigne Surrau Arzachena"
+  },
+  {
+    "section": "npwSBjKF4Wz3dujea4it",
+    "position": 8,
+    "price": 20,
+    "title": "Canajli, Vermentino Superiore di Monti"
+  },
+  {
+    "section": "npwSBjKF4Wz3dujea4it",
+    "position": 5,
+    "price": 16,
+    "description": "Bottiglia da 75cl",
+    "title": "Costamolino, Vermentino cantine Argiolas"
+  },
+  {
+    "section": "npwSBjKF4Wz3dujea4it",
+    "position": 6,
+    "price": 9,
+    "description": "Bottiglia piccola da 37,5cl",
+    "title": "Costamolino, Vermentino cantine Argiolas"
+  },
+  {
+    "section": "npwSBjKF4Wz3dujea4it",
+    "position": 0,
+    "price": 16,
+    "title": "Filine, Vermentino di Dorgali"
+  },
+  {
+    "section": "npwSBjKF4Wz3dujea4it",
+    "position": 7,
+    "price": 22,
+    "title": "Funtanaliras, Vermentino di Monti"
+  },
+  {
+    "section": "npwSBjKF4Wz3dujea4it",
+    "position": 1,
+    "price": 16,
+    "title": "S'eleme, Vermentino di Gallura"
+  },
+  {
+    "section": "npwSBjKF4Wz3dujea4it",
+    "position": 2,
+    "price": 22,
+    "title": "Terre Bianche, Torbato di Alghero"
+  },
+  {
+    "section": "fI09PKyqlZjxESBbPQBm",
+    "position": 2,
+    "price": 10,
+    "title": "Rosso o bianco da 1l"
+  },
+  {
+    "section": "fI09PKyqlZjxESBbPQBm",
+    "position": 1,
+    "price": 5,
+    "title": "Rosso o bianco da 50cl"
+  },
+  {
+    "section": "fI09PKyqlZjxESBbPQBm",
+    "position": 0,
+    "price": 3.5,
+    "title": "Rosso o bianco da 25cl"
+  },
+  {
+    "section": "Z6vIoIgZAf4KaPcoR7pR",
+    "position": 0,
+    "price": 15,
+    "description": "Rosato frizzante.",
+    "title": "Barberino"
+  },
+  {
+    "section": "Z6vIoIgZAf4KaPcoR7pR",
+    "position": 1,
+    "price": 15,
+    "description": "Rosato Dry.",
+    "title": "Filieri Rosato"
+  },
+  {
+    "section": "886kLJXyNGcsI4cFp2yT",
+    "position": 1,
+    "price": 15,
+    "title": "Cannonau, Cantine di Jerzu"
+  },
+  {
+    "section": "886kLJXyNGcsI4cFp2yT",
+    "position": 4,
+    "price": 15,
+    "title": "Capocaccia, Cantine di Alghero"
+  },
+  {
+    "section": "886kLJXyNGcsI4cFp2yT",
+    "position": 5,
+    "price": 18,
+    "title": "Costera, Cantine di Argiolas"
+  },
+  {
+    "section": "886kLJXyNGcsI4cFp2yT",
+    "position": 0,
+    "price": 15,
+    "title": "Filieri Rosso, Cannonau di Dorgali"
+  },
+  {
+    "section": "886kLJXyNGcsI4cFp2yT",
+    "position": 3,
+    "price": 15,
+    "title": "Nebbiolo, Cantine di Tempio"
+  },
+  {
+    "section": "886kLJXyNGcsI4cFp2yT",
+    "position": 2,
+    "price": 22,
+    "title": "Nepente, Cannonau di Oliena"
+  },
+  {
+    "section": "886kLJXyNGcsI4cFp2yT",
+    "position": 7,
+    "price": 9,
+    "description": "Bottiglia piccola da 37,5cl.",
+    "title": "Perdera, Cantine di Argiolas"
+  },
+  {
+    "section": "886kLJXyNGcsI4cFp2yT",
+    "position": 6,
+    "price": 18,
+    "description": "Bottiglia da 75cl.",
+    "title": "Perdera, Cantine di Argiolas"
+  },
+  {
+    "section": "b9mqoyKMzgtDjKyhyqsi",
+    "position": 1,
+    "price": 20,
+    "title": "Moscato"
+  },
+  {
+    "section": "b9mqoyKMzgtDjKyhyqsi",
+    "position": 2,
+    "price": 18,
+    "title": "Prosecco"
+  },
+  {
+    "section": "b9mqoyKMzgtDjKyhyqsi",
+    "position": 0,
+    "price": 20,
+    "title": "Spumante Brut"
+  }
+]

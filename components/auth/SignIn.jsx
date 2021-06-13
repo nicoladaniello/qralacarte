@@ -1,12 +1,13 @@
 import classnames from "classnames";
 import firebase from "firebase/app";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React from "react";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
+import { useDispatch } from "react-redux";
+import { updateUserAction } from "../../features/users/slice";
 
 const SignIn = ({ className }) => {
-  const router = useRouter();
+  const dispatch = useDispatch();
 
   // Configure FirebaseUI.
   const uiConfig = {
@@ -17,11 +18,13 @@ const SignIn = ({ className }) => {
       firebase.auth.FacebookAuthProvider.PROVIDER_ID,
     ],
     callbacks: {
-      signInSuccessWithAuthResult: (authResult) => {
-        // Upsert user details
+      signInSuccessWithAuthResult: function (authResult) {
         const { uid, displayName, email } = authResult.user;
-        firebase.database().ref(`users/${uid}`).set({ email, displayName });
-        router.push("/admin");
+
+        dispatch(updateUserAction({ uid, displayName, email }));
+
+        // continue with the redirect.
+        return false;
       },
     },
   };
@@ -37,7 +40,7 @@ const SignIn = ({ className }) => {
           <a>Sign up</a>
         </Link>
         .
-      </p>{" "}
+      </p>
     </div>
   );
 };

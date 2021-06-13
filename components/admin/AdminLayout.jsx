@@ -1,21 +1,20 @@
 import React from "react";
-import Layout from "../Layout";
+import useAuth from "../auth/useAuth";
+import Loading from "../common/Loading";
 import AdminNavbar from "./AdminNavbar";
-import AdminSidebar from "./AminSidebar";
 
 const AdminLayout = ({ children }) => {
+  const { isLoggedIn } = useAuth({ redirectTo: "/signin" });
+
   return (
-    <Layout title="Admin board">
+    <>
       <AdminNavbar fluid className="shadow-sm" />
-      <div className="row no-gutters h-100">
-        <div className="col-auto h-100" style={{ overflowY: "auto" }}>
-          <AdminSidebar />
-        </div>
-        <div className="col h-100" style={{ overflowY: "auto" }}>
-          <div className="container py-4">{children}</div>
-        </div>
-      </div>
-    </Layout>
+      {!isLoggedIn ? (
+        <Loading />
+      ) : (
+        <div className="flex-grow-1">{children}</div>
+      )}
+    </>
   );
 };
 
