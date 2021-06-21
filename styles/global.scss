@@ -7,7 +7,7 @@
 
 // scss-docs-start gray-color-variables
 $white: #fff;
-$gray-100: #FCFCFC;
+$gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
 $gray-400: #ced4da;
@@ -75,6 +75,8 @@ $warning: $yellow;
 $danger: $red;
 $light: $gray-100;
 $dark: $gray-900;
+
+$body-bg: #fcfcfc;
 
 // Options
 //
@@ -157,4 +159,11 @@ $rt-font-family: $font-family-base;
 
 .card-footer.btn-primary {
   background-color: $primary;
+}
+
+@include media-breakpoint-down(lg) {
+  .card-list-item {
+    border-bottom: none !important;
+    border-radius: 0px !important;
+  }
 }

@@ -20,7 +20,7 @@ const DeleteProductModal = ({ onConfirm }) => {
   };
 
   return (
-    <Modal small isOpen={isOpen} onClose={close}>
+    <Modal scrollable small isOpen={isOpen} onClose={close}>
       <Modal.Header>Delete product</Modal.Header>
       <Modal.Body>Permanently delete this product?</Modal.Body>
       <Modal.Footer>

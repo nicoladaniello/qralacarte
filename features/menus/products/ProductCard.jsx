@@ -1,26 +1,27 @@
+import classnames from "classnames";
 import React from "react";
 import AppImage from "../../../components/AppImage";
 
-const ProductCard = ({ product, onClick }) => {
+const ProductCard = ({ product, className, onClick }) => {
   const { image, title, description, price } = product || {};
 
   return (
-    <div className="card h-100" onClick={() => onClick(product)}>
-      <div className="card-body">
+    <div
+      className={classnames(className, "card")}
+      onClick={() => onClick(product)}
+    >
+      <div className="card-body p-2 p-lg-3">
         <div className="row g-0">
-          <div className="col">
-            <h5 className="card-title mb-1">{title}</h5>
-            <p
-              className="card-text text-muted mb-1"
-              style={{ lineHeight: 1.3 }}
-            >
+          <div className="col-9 pe-2">
+            <h6 className="card-title mb-1">{title}</h6>
+            <p className="card-text text-muted text-truncate small lh-sm mb-1">
               {description}
             </p>
-            <p className="card-text text-muted">€{price}</p>
+            <p className="card-text text-muted small">€{price}</p>
           </div>
           {!!image && (
             <div className="col-3">
-              <AppImage alt={title} src={image} />
+              <AppImage squared alt={title} src={image} />
             </div>
           )}
         </div>

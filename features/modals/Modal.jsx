@@ -13,7 +13,15 @@ export const modalContext = createContext({});
 /**
  * Modal component
  */
-const Modal = ({ isOpen, onClose, fullScreen, small, large, children }) => {
+const Modal = ({
+  isOpen,
+  scrollable,
+  small,
+  large,
+  className,
+  children,
+  onClose,
+}) => {
   const modalRef = useRef();
 
   useEffect(() => {
@@ -23,11 +31,11 @@ const Modal = ({ isOpen, onClose, fullScreen, small, large, children }) => {
     let modal = BSModal.getInstance(modalRef.current);
     if (!modal) modal = new BSModal(modalRef.current);
 
-    modalRef.current.addEventListener("hide.bs.modal", onClose);
+    modalRef.current.addEventListener("hidden.bs.modal", onClose);
 
     return () => {
       if (modalRef.current)
-        modalRef.current.removeEventListener("hide.bs.modal", onClose);
+        modalRef.current.removeEventListener("hidden.bs.modal", onClose);
 
       modal.dispose();
     };
@@ -46,7 +54,7 @@ const Modal = ({ isOpen, onClose, fullScreen, small, large, children }) => {
 
   return (
     <ClientOnlyPortal selector="#modal-container">
-      <modalContext.Provider value={{ onClose, fullScreen }}>
+      <modalContext.Provider value={{ onClose }}>
         <div
           ref={modalRef}
           className="modal fade"
@@ -57,9 +65,10 @@ const Modal = ({ isOpen, onClose, fullScreen, small, large, children }) => {
         >
           <div
             className={classnames(
-              "modal-dialog modal-dialog-centered modal-dialog-scrollable",
+              className,
+              "modal-dialog modal-dialog-centered",
               {
-                "modal-fullscreen": fullScreen,
+                "modal-dialog-scrollable": scrollable,
                 "modal-sm": small,
                 "modal-lg": large,
               }

@@ -40,7 +40,7 @@ const UpsertSectionModal = () => {
   useEffect(() => void reset(values), [props]);
 
   return (
-    <Modal isOpen={isOpen} onClose={close}>
+    <Modal scrollable isOpen={isOpen} onClose={close}>
       <Modal.Header>{defaultValues._key ? "Edit" : "Add"} section</Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleSubmit(onSubmit)}>

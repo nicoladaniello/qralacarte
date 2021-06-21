@@ -27,10 +27,7 @@ const Layout = ({ title, children }) => {
   const isClient = typeof window === "object";
 
   return (
-    <div
-      className="overflow-auto d-flex flex-column"
-      style={{ height: "100vh" }}
-    >
+    <div className="d-flex flex-column">
       <Head>
         <meta property="og:title" content={title} key="title" />
         <meta

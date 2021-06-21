@@ -1,5 +1,4 @@
 import classnames from "classnames";
-import { PropTypes } from "prop-types";
 import React, { useEffect, useRef } from "react";
 
 const SectionTab = ({ section, active, setActive, onScrollTo }) => {
@@ -8,7 +7,6 @@ const SectionTab = ({ section, active, setActive, onScrollTo }) => {
 
   useEffect(() => {
     if (active && ref.current) {
-      console.log(`Scrolling tab "${title}" into view.`);
       onScrollTo(ref.current.offsetLeft);
     }
   }, [active]);
@@ -18,8 +16,7 @@ const SectionTab = ({ section, active, setActive, onScrollTo }) => {
       ref={ref}
       onClick={() => {}} //setActive(_key)
       className={classnames("nav-link btn-link", {
-        "link-primary bg-light": active,
-        "link-secondary": !active,
+        active,
       })}
     >
       {title}
@@ -38,37 +35,29 @@ const SectionTabs = ({ sections, active, setActive, className }) => {
     scrollRef.current?.scrollTo({ left: offset, behavior: "smooth" });
   };
 
+  const { ids = [], entities = [] } = sections || {};
+
   return (
-    <div className={classnames(className, "card")}>
-      <div className="card card-body p-1 pb-0">
+    <div className={classnames(className, "card small")}>
+      <div className="card-body p-1 pb-0">
         <nav
           ref={scrollRef}
           className={"nav nav-pills flex-nowrap overflow-auto pb-1"}
           style={{ whiteSpace: "nowrap" }}
         >
-          {[...sections]
-            .sort((a, b) => a.position - b.position)
-            .map((section) => (
-              <SectionTab
-                key={section._key}
-                section={section}
-                active={active === section._key}
-                setActive={setActive}
-                onScrollTo={scrollToOffset}
-              />
-            ))}
+          {ids.map((sid) => (
+            <SectionTab
+              key={sid}
+              section={entities.find((e) => e._key === sid)}
+              active={active === sid}
+              setActive={setActive}
+              onScrollTo={scrollToOffset}
+            />
+          ))}
         </nav>
       </div>
     </div>
   );
-};
-
-SectionTabs.propTypes = {
-  sections: PropTypes.array,
-};
-
-SectionTabs.defaultProps = {
-  sections: [],
 };
 
 export default SectionTabs;

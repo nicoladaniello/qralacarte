@@ -2,11 +2,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import {
-  DnDContainer,
-  Draggable,
-  Droppable,
-} from "../../../components/dnd";
+import { DnDContainer, Draggable, Droppable } from "../../../components/dnd";
 import Form from "../../../components/Form";
 import Modal, { useModal } from "../../modals";
 import { useUpsertSectionMutation } from "../api";
@@ -38,7 +34,7 @@ const ReorderProductsModal = () => {
   }, [props]);
 
   return (
-    <Modal isOpen={isOpen} onClose={close}>
+    <Modal scrollable isOpen={isOpen} onClose={close}>
       <Modal.Header>Reorder products</Modal.Header>
       <Modal.Body>
         <form onSubmit={handleSubmit(onSubmit)}>

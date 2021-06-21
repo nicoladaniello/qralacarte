@@ -20,7 +20,7 @@ const DeleteSectionModal = ({ onConfirm }) => {
   };
 
   return (
-    <Modal small isOpen={isOpen} onClose={close}>
+    <Modal scrollable small isOpen={isOpen} onClose={close}>
       <Modal.Header>Delete section</Modal.Header>
       <Modal.Body>
         Permanently delete section "<i>{props?.section?.title}</i>"?

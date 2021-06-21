@@ -1,3 +1,4 @@
+import classnames from "classnames";
 import React, { useEffect, useRef } from "react";
 import useOnScreen from "../../../hooks/useOnScreen";
 import ProductCard from "../products/ProductCard";
@@ -11,7 +12,7 @@ const SectionView = ({
   const ref = useRef();
   const isOnScreen = useOnScreen(ref);
 
-  const { _key, title, description } = section;
+  const { _key, title, description, productIds = [] } = section;
 
   // useEffect(() => {
   //   if (active && ref.current) {
@@ -30,14 +31,20 @@ const SectionView = ({
 
   return (
     <div className="mb-4">
-      <div className="ps-3">
-        <h2 className="h1">{title}</h2>
-        <p className="text-muted mb-3">{description}</p>
+      <div className="ps-2 ps-lg-0">
+        <h4 className="mb-0">{title}</h4>
+        <p className="text-muted small mb-1">{description}</p>
       </div>
-      <div ref={ref} className="row g-0 g-sm-1 border-top">
-        {products.map((product) => (
-          <div key={product._key} className="col-lg-4 mb-lg-3">
-            <ProductCard product={product} onClick={onProductClick} />
+      <div ref={ref} className="row g-0 g-lg-3">
+        {productIds.map((pid, idx) => (
+          <div key={pid} className="col-lg-6">
+            <ProductCard
+              className={classnames("h-100", {
+                "card-list-item": idx !== productIds.length - 1,
+              })}
+              product={products.find((p) => p._key === pid)}
+              onClick={onProductClick}
+            />
           </div>
         ))}
       </div>

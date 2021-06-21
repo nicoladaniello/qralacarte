@@ -73,7 +73,7 @@ const UpdateMenuModal = () => {
   }, [props]);
 
   return (
-    <Modal isOpen={isOpen} onClose={close}>
+    <Modal scrollable isOpen={isOpen} onClose={close}>
       <Modal.Header>Update menu information</Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleSubmit(console.log)}>

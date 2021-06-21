@@ -1,77 +1,97 @@
 import { faMapMarkerAlt, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import AppImage from "../../components/AppImage";
+import Collapse from "../../components/Collapse";
 import Layout from "../../components/Layout";
 import Navbar from "../../components/Navbar";
-import SectionView from "../../features/menus/sections/SectionView";
-import SectionTabs from "../../features/menus/sections/SectionTabs";
-import useModal from "../../features/modals/useModal";
 import ProductModal from "../../features/menus/products/ProductModal";
+import SectionTabs from "../../features/menus/sections/SectionTabs";
+import SectionView from "../../features/menus/sections/SectionView";
+import useModal from "../../features/modals/useModal";
 import admin from "../../firebase/firebaseAdmin";
-import AppImage from "../../components/AppImage";
 
 const Restaurant = ({ menu }) => {
   const [activeSection, setActiveSection] = useState();
-  const { image, title, address, tel, sections, products } = menu || {};
+  const {
+    image,
+    title,
+    description,
+    address,
+    tel,
+    sectionIds,
+    sections,
+    products,
+  } = menu || {};
   const productModal = useModal(ProductModal);
 
   return (
     <Layout>
-      <Navbar className="border-bottom" />
-      <div className="bg-light">
-        <div className="bg-white">
-          <AppImage src={image} />
-          <div className="container g-3 py-3">
-            <div className="">
-              <h1 className="display-5 fw-bold">{title}</h1>
-              <ul className="list-inline mb-0">
-                <li className="list-inline-item col-12">
-                  <p className="text-muted text-truncate mb-0">
-                    <FontAwesomeIcon icon={faMapMarkerAlt} />{" "}
-                    <a
-                      className="text-reset"
-                      href={`http://maps.google.com/?q=${address}`}
-                    >
-                      {address}
-                    </a>
-                  </p>
-                </li>
-                <li className="list-inline-item col-12">
-                  <p className="text-muted text-truncate mb-0">
-                    <FontAwesomeIcon icon={faPhone} />{" "}
-                    <a className="text-reset" href={`tel:0039${tel}`}>
-                      +39 {tel}
-                    </a>
-                  </p>
-                </li>
-              </ul>
+      <Navbar className="border-bottom mb-lg-4" />
+      <div className="bg-white pb-4">
+        <div className="container g-xl-5">
+          <div className="card border-0">
+            <div className="row no-gutters">
+              <div className="col-lg-5 order-lg-last">
+                <AppImage src={image} className="mb-2" />
+                <ul className="fa-ul small text-muted ms-3 mb-0">
+                  <li>
+                    <p className="text-truncate mb-0">
+                      <span className="fa-li">
+                        <FontAwesomeIcon icon={faMapMarkerAlt} />
+                      </span>
+                      <a
+                        className="text-reset"
+                        href={`http://maps.google.com/?q=${address}`}
+                      >
+                        {address}
+                      </a>
+                    </p>
+                  </li>
+                  <li className="">
+                    <p className="text-truncate mb-0">
+                      <span className="fa-li">
+                        <FontAwesomeIcon icon={faPhone} />
+                      </span>
+                      <a className="text-reset" href={`tel:0039${tel}`}>
+                        +39 {tel}
+                      </a>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-lg-7 pe-lg-5">
+                <h1 className="fw-bold">{title}</h1>
+                <Collapse>
+                  <p className="text-muted">{description}</p>
+                </Collapse>
+              </div>
             </div>
           </div>
         </div>
-
-        <SectionTabs
-          className="border-top-0 mb-4 sticky-top"
-          sections={sections}
-          active={activeSection}
-          setActive={setActiveSection}
-        />
-
-        <div className="container-lg g-0 g-sm-2">
-          {[...sections]
-            .sort((a, b) => a.position - b.position)
-            .map((section) => (
-              <SectionView
-                key={section._key}
-                section={section}
-                products={[...products]
-                  .filter((p) => p.section === section._key)
-                  .sort((a, b) => a.position - b.position)}
-                active={activeSection === section._key}
-                setActive={setActiveSection}
-                onProductClick={(product) => productModal.open({ product })}
-              />
-            ))}
+      </div>
+      <div className="bg-white sticky-top border-top border-bottom mb-4">
+        <div className="container g-0 g-xl-5">
+          <SectionTabs
+            className="border-0"
+            sections={{ ids: sectionIds, entities: sections }}
+            active={activeSection}
+            setActive={setActiveSection}
+          />
         </div>
+      </div>
+
+      <div className="container g-0 g-xl-5">
+        {sectionIds?.map((sid) => (
+          <SectionView
+            key={sid}
+            section={sections.find((s) => s._key === sid)}
+            products={products}
+            active={activeSection === sid}
+            setActive={setActiveSection}
+            onProductClick={(product) => productModal.open({ product })}
+          />
+        ))}
       </div>
       <ProductModal />
     </Layout>

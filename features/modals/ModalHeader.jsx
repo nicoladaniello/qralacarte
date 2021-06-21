@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import { modalContext } from "./Modal";
 
-const ModalHeader = ({ closable, onClose, children }) => {
+const ModalHeader = ({ closable, children }) => {
+  const { onClose } = useContext(modalContext);
   return (
     <div className="modal-header">
       <h6 className="modal-title">{children}</h6>
