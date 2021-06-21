@@ -1,12 +1,12 @@
 import React from "react";
-import classNames from "classNames";
+import classnames from "classnames";
 
 const DropdownItem = ({ href, className, children, onClick, ...rest }) => {
   return (
     <li {...rest}>
       <button
         type="button"
-        className={classNames(className, "dropdown-item")}
+        className={classnames(className, "dropdown-item")}
         onClick={onClick}
       >
         {children}

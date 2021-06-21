@@ -1,4 +1,4 @@
-import classNames from "classNames";
+import classnames from "classnames";
 import uniqueId from "lodash/uniqueId";
 import React from "react";
 import DropdownItem from "./DropdownItem";
@@ -23,7 +23,7 @@ const Dropdown = ({ as: Component, className, children }) => {
 
   // UI
   return (
-    <Component className={classNames(className, "dropdown")}>
+    <Component className={classnames(className, "dropdown")}>
       {childrenWithId}
     </Component>
   );

@@ -1,4 +1,4 @@
-import classNames from "classNames";
+import classnames from "classnames";
 import Link from "next/link";
 import { PropTypes } from "prop-types";
 import React, { useState } from "react";
@@ -13,7 +13,7 @@ const Navbar = ({ className, children }) => {
     <>
       <SideNav isOpen={isOpen} onClose={() => setIsOpen(false)} />
       <nav
-        className={classNames(
+        className={classnames(
           className,
           "navbar navbar-expand-lg navbar-light bg-white"
         )}

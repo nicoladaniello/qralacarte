@@ -1,4 +1,4 @@
-import classNames from "classNames";
+import classnames from "classnames";
 import { PropTypes } from "prop-types";
 import React, { useEffect, useRef } from "react";
 
@@ -17,7 +17,7 @@ const SectionTab = ({ section, active, setActive, onScrollTo }) => {
     <button
       ref={ref}
       onClick={() => {}} //setActive(_key)
-      className={classNames("nav-link btn-link", {
+      className={classnames("nav-link btn-link", {
         "link-primary bg-light": active,
         "link-secondary": !active,
       })}
@@ -39,7 +39,7 @@ const SectionTabs = ({ sections, active, setActive, className }) => {
   };
 
   return (
-    <div className={classNames(className, "card")}>
+    <div className={classnames(className, "card")}>
       <div className="card card-body p-1 pb-0">
         <nav
           ref={scrollRef}

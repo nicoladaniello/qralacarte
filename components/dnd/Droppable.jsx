@@ -1,4 +1,4 @@
-import classNames from "classNames";
+import classnames from "classnames";
 import { useDrop } from "react-dnd";
 
 const Droppable = ({
@@ -25,7 +25,7 @@ const Droppable = ({
   return (
     <Component
       {...rest}
-      className={classNames(className, { [isOverClass]: isOver })}
+      className={classnames(className, { [isOverClass]: isOver })}
       ref={dropRef}
     >
       {children}

@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from "classNames";
+import classnames from "classnames";
 
 const FormSubmit = React.forwardRef(
   ({ className, block, children, ...rest }, ref) => {
@@ -8,7 +8,7 @@ const FormSubmit = React.forwardRef(
         {...rest}
         ref={ref}
         type="submit"
-        className={classNames(className, "btn btn-primary", {
+        className={classnames(className, "btn btn-primary", {
           "btn-block": block,
         })}
       >

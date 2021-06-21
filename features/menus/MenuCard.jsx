@@ -4,7 +4,7 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import classNames from "classNames";
+import classnames from "classnames";
 import Link from "next/link";
 import React from "react";
 import AppImage from "../../components/AppImage";
@@ -13,7 +13,7 @@ const MenuCard = ({ menu, className }) => {
   const { _key, image, title, description, address, tel } = menu || {};
 
   return (
-    <div className={classNames(className, "card")}>
+    <div className={classnames(className, "card")}>
       <div className="row g-0 align-items-center">
         <div className="col-sm-5 mb-3 mb-sm-0">
           <Link href="/admin/menus/[slug]" as={`/admin/menus/${_key}`}>

@@ -1,4 +1,4 @@
-import classNames from "classNames";
+import classnames from "classnames";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
@@ -43,7 +43,7 @@ const NewMenuPage = () => {
                 <label className="form-label">Business name</label>
                 <input
                   type="text"
-                  className={classNames("form-control", {
+                  className={classnames("form-control", {
                     "is-invalid": errors.title,
                   })}
                   {...register("title", { required: "Inserisci un titolo." })}
@@ -61,7 +61,7 @@ const NewMenuPage = () => {
                   </span>
                   <input
                     type="text"
-                    className={classNames("form-control fw-bold", {
+                    className={classnames("form-control fw-bold", {
                       "is-invalid": errors.slug,
                     })}
                     {...register("slug", {

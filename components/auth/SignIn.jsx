@@ -1,4 +1,4 @@
-import classNames from "classNames";
+import classnames from "classnames";
 import firebase from "firebase/app";
 import Link from "next/link";
 import React from "react";
@@ -30,7 +30,7 @@ const SignIn = ({ className }) => {
   };
 
   return (
-    <div className={classNames("text-center", className)}>
+    <div className={classnames("text-center", className)}>
       <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
       <hr />
       <p className="mb-2 text-muted">

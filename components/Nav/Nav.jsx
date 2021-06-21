@@ -1,10 +1,10 @@
 import React from "react";
 import NavItem from "./NavItem";
-import classNames from "classNames";
+import classnames from "classnames";
 
 const Nav = ({ className, children }) => {
   return (
-    <nav className={classNames(className, "nav nav-pills small")}>
+    <nav className={classnames(className, "nav nav-pills small")}>
       {children}
     </nav>
   );

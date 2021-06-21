@@ -1,9 +1,9 @@
-import classNames from "classNames";
+import classnames from "classnames";
 import React from "react";
 
 const DropdownMenu = ({ id, className, children }) => {
   return (
-    <ul className={classNames(className, "dropdown-menu")} aria-labelledby={id}>
+    <ul className={classnames(className, "dropdown-menu")} aria-labelledby={id}>
       {children}
     </ul>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from "classNames";
+import classnames from "classnames";
 
 const FormButton = React.forwardRef(
   ({ className, block, children, ...rest }, ref) => {
@@ -8,7 +8,7 @@ const FormButton = React.forwardRef(
         {...rest}
         ref={ref}
         type="button"
-        className={classNames(className, "btn btn-light", {
+        className={classnames(className, "btn btn-light", {
           "btn-block": block,
         })}
       >

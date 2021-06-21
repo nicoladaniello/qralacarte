@@ -4,7 +4,7 @@ import {
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import classNames from "classNames";
+import classnames from "classnames";
 import React from "react";
 import AppImage from "../../../components/AppImage";
 import Dropdown from "../../../components/Dropdown";
@@ -13,7 +13,7 @@ const EditProductCard = ({ product, className, onEdit, onDelete }) => {
   const { _key, image, title, description, price } = product || {};
 
   return (
-    <div className={classNames(className, "card")}>
+    <div className={classnames(className, "card")}>
       <div className="row g-0 align-items-center">
         <div className="col-lg-4">
           <AppImage alt={title} src={image} />

@@ -1,4 +1,4 @@
-import classNames from "classNames";
+import classnames from "classnames";
 import Link from "next/link";
 import React from "react";
 import Brand from "../Brand";
@@ -9,12 +9,12 @@ const SideNav = ({ className, isOpen, onClose }) => {
     <>
       {isOpen && (
         <div
-          className={classNames("modal-backdrop show")}
+          className={classnames("modal-backdrop show")}
           onClick={onClose}
         ></div>
       )}
       <aside
-        className={classNames(
+        className={classnames(
           className,
           "position-fixed h-100 bg-white overflow-hidden d-flex flex-column flex-shrink-0 shadow-lg"
         )}

@@ -6,7 +6,7 @@ import {
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import classNames from "classNames";
+import classnames from "classnames";
 import PropTypes from "prop-types";
 import React from "react";
 import Dropdown from "../../../components/Dropdown";
@@ -23,7 +23,7 @@ const EditSectionCard = ({
   const { title, description } = section || {};
 
   return (
-    <div className={classNames(className, "card")}>
+    <div className={classnames(className, "card")}>
       <div className="card-body">
         <div className="row g-0 align-items-center mb-0">
           <div className="col-lg-4 order-lg-last mb-2 mb-lg-0">

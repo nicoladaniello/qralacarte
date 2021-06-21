@@ -1,4 +1,4 @@
-import classNames from "classNames";
+import classnames from "classnames";
 import React, { createContext, useEffect, useRef } from "react";
 import ClientOnlyPortal from "../../components/ClientOnlyPortal";
 import ModalBody from "./ModalBody";
@@ -56,7 +56,7 @@ const Modal = ({ isOpen, onClose, fullScreen, small, large, children }) => {
           role="dialog"
         >
           <div
-            className={classNames(
+            className={classnames(
               "modal-dialog modal-dialog-centered modal-dialog-scrollable",
               {
                 "modal-fullscreen": fullScreen,

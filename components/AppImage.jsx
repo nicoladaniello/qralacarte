@@ -1,4 +1,4 @@
-import classNames from "classNames";
+import classnames from "classnames";
 import NextImage from "next/image";
 import React from "react";
 
@@ -6,7 +6,7 @@ const AppImage = ({ className, src, alt, squared, ...rest }) => {
   return (
     <div
       {...rest}
-      className={classNames(className, "position-relative overflow-hidden")}
+      className={classnames(className, "position-relative overflow-hidden")}
       style={{ paddingBottom: squared ? "100%" : "66.6666%" }}
     >
       <NextImage

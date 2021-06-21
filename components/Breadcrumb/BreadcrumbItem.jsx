@@ -1,10 +1,10 @@
-import classNames from "classNames";
+import classnames from "classnames";
 import Link from "next/link";
 import React from "react";
 
 const BreadcrumbItem = ({ as, href, className, children }) => {
   return (
-    <li className={classNames(className, "breadcrumb-item")}>
+    <li className={classnames(className, "breadcrumb-item")}>
       {href ? (
         <Link href={href} as={as}>
           <a className="text-secondary">{children}</a>

@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from "classNames";
+import classnames from "classnames";
 
 const FormField = React.forwardRef(({ label, children, ...rest }, ref) => {
   return (
@@ -33,7 +33,7 @@ const FormFieldInput = React.forwardRef(
       <input
         {...rest}
         ref={ref}
-        className={classNames("form-control", {
+        className={classnames("form-control", {
           "is-invalid": invalid,
         })}
       />
@@ -47,7 +47,7 @@ const FormFieldTextArea = React.forwardRef(
       <textarea
         {...rest}
         ref={ref}
-        className={classNames("form-control", {
+        className={classnames("form-control", {
           "is-invalid": invalid,
         })}
       />
@@ -64,7 +64,7 @@ const FormFieldSelect = React.forwardRef(
       <select
         {...rest}
         ref={ref}
-        className={classNames("form-select", {
+        className={classnames("form-select", {
           "is-invalid": invalid,
         })}
       >

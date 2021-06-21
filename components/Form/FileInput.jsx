@@ -1,4 +1,4 @@
-import classNames from "classNames";
+import classnames from "classnames";
 import React, { createRef, useState } from "react";
 import { useEffect } from "react";
 
@@ -29,7 +29,7 @@ const FileInput = ({ className, onChange, children, ...rest }) => {
       <button
         {...rest}
         type="button"
-        className={classNames(className, "btn btn-primary")}
+        className={classnames(className, "btn btn-primary")}
         onClick={handleClick}
       >
         {children}

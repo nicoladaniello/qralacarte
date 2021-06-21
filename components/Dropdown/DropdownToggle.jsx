@@ -1,4 +1,4 @@
-import classNames from "classNames";
+import classnames from "classnames";
 import React, { useEffect, useRef } from "react";
 
 const isClient = typeof window !== "undefined";
@@ -18,7 +18,7 @@ const DropdownToggle = ({ id, className, children }) => {
     <a
       ref={ref}
       id={id}
-      className={classNames(className, "dropdown-toggle")}
+      className={classnames(className, "dropdown-toggle")}
       role="button"
       href="#"
       // data-bs-toggle is required

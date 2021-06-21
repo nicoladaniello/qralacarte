@@ -1,4 +1,4 @@
-import classNames from "classNames";
+import classnames from "classnames";
 import { PropTypes } from "prop-types";
 import React from "react";
 import Navbar from "./Navbar";
@@ -9,7 +9,7 @@ const Page = ({ className, children }) => {
   return (
     <>
       <Navbar MenuComponent={NavMenu} />
-      <main className={classNames(className, "flex-grow-1")}>{children}</main>
+      <main className={classnames(className, "flex-grow-1")}>{children}</main>
       <Footer />
     </>
   );

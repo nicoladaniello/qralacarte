@@ -1,4 +1,4 @@
-import classNames from "classNames";
+import classnames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
@@ -12,7 +12,7 @@ const NavItem = ({ href, as, className, children, ...rest }) => {
     <Link href={href} as={as}>
       <a
         {...rest}
-        className={classNames(
+        className={classnames(
           className,
           "nav-link",
           active ? "active" : "text-secondary"
