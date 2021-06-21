@@ -14,7 +14,6 @@ const Restaurant = ({ menu }) => {
   const [activeSection, setActiveSection] = useState();
   const { image, title, address, tel, sections, products } = menu || {};
   const productModal = useModal(ProductModal);
-  console.log(menu);
 
   return (
     <Layout>
@@ -79,28 +78,56 @@ const Restaurant = ({ menu }) => {
   );
 };
 
-export async function getServerSideProps({ params, query }) {
+export async function getServerSideProps({ params }) {
   const { slug } = params;
-  // Fetch data from external API
-  // const res = await fetch(`https://jsonplaceholder.typicode.com/todos/1`);
-  // const data = await res.json();
 
-  // console.log(req.headers["accept-language"]);
+  try {
+    const db = admin.firestore();
+    const menuRef = db.collection("menus").doc(slug);
 
-  const db = admin.firestore();
-  const menuRef = db.collection("menus").doc(slug);
+    const infoPromise = menuRef.collection("public").doc("info").get();
+    const sectionDocsPromise = menuRef.collection("sections").get();
+    const productDocsPromise = menuRef.collection("products").get();
 
-  const infoPromise = menuRef.collection("public").doc("info").get();
-  const sectionDocsPromise = menuRef.collection("sections").get();
-  const productDocsPromise = menuRef.collection("products").get();
+    const [infoSnap, sectionsSnap, productsSnap] = await Promise.all([
+      infoPromise,
+      sectionDocsPromise,
+      productDocsPromise,
+    ]);
 
-  const [infoSnap, sectionsSnap, productsSnap] = await Promise.all([
-    infoPromise,
-    sectionDocsPromise,
-    productDocsPromise,
-  ]);
+    if (!infoSnap.exists) {
+      return {
+        redirect: {
+          permanent: false,
+          destination: "/404",
+        },
+      };
+    }
 
-  if (!infoSnap.exists) {
+    const menu = infoSnap.data();
+    const sections = sectionsSnap.docs.map((doc) => ({
+      _key: doc.id,
+      ...doc.data(),
+    }));
+    const products = productsSnap.docs.map((doc) => ({
+      _key: doc.id,
+      ...doc.data(),
+    }));
+
+    // console.log(menu, sections, products);
+
+    // Pass data to the page via props
+    return {
+      props: {
+        menu: {
+          ...menu,
+          sections,
+          products,
+        },
+      },
+    };
+  } catch (e) {
+    console.error(e);
     return {
       redirect: {
         permanent: false,
@@ -108,29 +135,6 @@ export async function getServerSideProps({ params, query }) {
       },
     };
   }
-
-  const menu = infoSnap.data();
-  const sections = sectionsSnap.docs.map((doc) => ({
-    _key: doc.id,
-    ...doc.data(),
-  }));
-  const products = productsSnap.docs.map((doc) => ({
-    _key: doc.id,
-    ...doc.data(),
-  }));
-
-  // console.log(menu, sections, products);
-
-  // Pass data to the page via props
-  return {
-    props: {
-      menu: {
-        ...menu,
-        sections,
-        products,
-      },
-    },
-  };
 }
 
 export default Restaurant;
