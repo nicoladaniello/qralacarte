@@ -1,4 +1,4 @@
-const generateId = () => {
+const generateId = (prefix = "") => {
   const CHARS =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
@@ -7,7 +7,7 @@ const generateId = () => {
   for (let i = 0; i < 20; i++) {
     autoId += CHARS.charAt(Math.floor(Math.random() * CHARS.length));
   }
-  return autoId;
+  return prefix + autoId;
 };
 
 export default generateId;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import Page from "../components/common/Page";
+import Page from "../components/Page";
 
 const NotFoundPage = () => {
   return (

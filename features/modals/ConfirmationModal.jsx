@@ -1,15 +1,31 @@
 import React from "react";
 import Modal from ".";
-import useModal from "./useModal";
 
-const ConfirmationModal = () => {
-  const modal = useModal(ConfirmationModal);
-
+const ConfirmationModal = ({
+  isOpen,
+  onClose,
+  title,
+  danger,
+  children,
+  onConfirm,
+  ...rest
+}) => {
   return (
-    <Modal isOpen={modal.state.isOpen} onClose={() => modal.close()}>
-      <Modal.Header>Confirmation</Modal.Header>
-      <Modal.Body>Do you onfirm?</Modal.Body>
-      <Modal.Footer />
+    <Modal {...rest} isOpen={isOpen} onClose={onClose}>
+      <Modal.Header>{title}</Modal.Header>
+      <Modal.Body>{children}</Modal.Body>
+      <Modal.Footer>
+        <button type="button" className="btn btn-light" onClick={onClose}>
+          Dismiss
+        </button>
+        <button
+          type="button"
+          className={`btn btn-${danger ? "danger" : "primary"}`}
+          onClick={() => onConfirm()}
+        >
+          Confirm
+        </button>
+      </Modal.Footer>
     </Modal>
   );
 };

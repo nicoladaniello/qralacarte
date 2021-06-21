@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "qralacarte",
+    "development": "qralacarte-testing"
+  }
+}

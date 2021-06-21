@@ -1,18 +1,18 @@
 import React from "react";
 import useAuth from "../auth/useAuth";
-import Loading from "../common/Loading";
-import AdminNavbar from "./AdminNavbar";
+import Loading from "../Loading";
+import Navbar from "../Navbar";
 
 const AdminLayout = ({ children }) => {
   const { isLoggedIn } = useAuth({ redirectTo: "/signin" });
 
   return (
     <>
-      <AdminNavbar fluid className="shadow-sm" />
+      <Navbar />
       {!isLoggedIn ? (
         <Loading />
       ) : (
-        <div className="flex-grow-1">{children}</div>
+        <div className="bg-light h-100">{children}</div>
       )}
     </>
   );

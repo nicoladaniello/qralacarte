@@ -3,44 +3,31 @@ import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import SignUp from "../components/auth/SignUp";
 import useAuth from "../components/auth/useAuth";
+import Page from "../components/Page";
 
 const SignUpPage = () => {
-  const { user } = useAuth();
+  const { currentUser } = useAuth();
   const router = useRouter();
 
   useEffect(() => {
-    if (user) router.push("/admin");
-  }, [user]);
+    if (currentUser) router.push("/admin");
+  }, [currentUser]);
 
   return (
-    <>
+    <Page>
       <Head>
         <title>QRalacarte | sign up</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div
-        className="row no-gutters justify-content-stretch"
-        style={{
-          height: "100vh",
-        }}
-      >
-        <div className="col-12 col-lg-4 h-100">
-          <div className="jumbotron jumbotron-fluid h-100">
-            <div className="container">
-              <h5>QRalacarte</h5>
-              <p className="lead">
-                A few clicks away from creating your digital menu.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="col-12 col-lg-8 h-100">
-          <div className="container h-100 d-flex">
+      <div className="d-flex h-100 bg-light">
+        <div className="card m-auto">
+          <div className="card-body">
+            <h1 className="h3 mb-4">Sign-up to QRalacarte</h1>
             <SignUp className="m-auto" />
           </div>
         </div>
       </div>
-    </>
+    </Page>
   );
 };
 

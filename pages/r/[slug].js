@@ -3,22 +3,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import Layout from "../../components/Layout";
 import Navbar from "../../components/Navbar";
-import Section from "../../features/menus/sections/Section";
+import SectionView from "../../features/menus/sections/SectionView";
 import SectionTabs from "../../features/menus/sections/SectionTabs";
 import useModal from "../../features/modals/useModal";
-import ProductModal from "../../features/products/ProductModal";
-import admin from "../../firebase/adminApp";
+import ProductModal from "../../features/menus/products/ProductModal";
+import admin from "../../firebase/firebaseAdmin";
+import AppImage from "../../components/AppImage";
 
 const Restaurant = ({ menu }) => {
   const [activeSection, setActiveSection] = useState();
-  const { title, address, tel, sections, products } = menu || {};
+  const { image, title, address, tel, sections, products } = menu || {};
   const productModal = useModal(ProductModal);
+  console.log(menu);
 
   return (
-    <>
+    <Layout>
       <Navbar className="border-bottom" />
       <div className="bg-light">
         <div className="bg-white">
+          <AppImage src={image} />
           <div className="container g-3 py-3">
             <div className="">
               <h1 className="display-5 fw-bold">{title}</h1>
@@ -58,7 +61,7 @@ const Restaurant = ({ menu }) => {
           {[...sections]
             .sort((a, b) => a.position - b.position)
             .map((section) => (
-              <Section
+              <SectionView
                 key={section._key}
                 section={section}
                 products={[...products]
@@ -72,7 +75,7 @@ const Restaurant = ({ menu }) => {
         </div>
       </div>
       <ProductModal />
-    </>
+    </Layout>
   );
 };
 
@@ -86,17 +89,18 @@ export async function getServerSideProps({ params, query }) {
 
   const db = admin.firestore();
   const menuRef = db.collection("menus").doc(slug);
-  const menuPromise = menuRef.get();
+
+  const infoPromise = menuRef.collection("public").doc("info").get();
   const sectionDocsPromise = menuRef.collection("sections").get();
   const productDocsPromise = menuRef.collection("products").get();
 
-  const [menuSnap, sectionsSnap, productsSnap] = await Promise.all([
-    menuPromise,
+  const [infoSnap, sectionsSnap, productsSnap] = await Promise.all([
+    infoPromise,
     sectionDocsPromise,
     productDocsPromise,
   ]);
 
-  if (!menuSnap.exists) {
+  if (!infoSnap.exists) {
     return {
       redirect: {
         permanent: false,
@@ -105,7 +109,7 @@ export async function getServerSideProps({ params, query }) {
     };
   }
 
-  const menu = menuSnap.data();
+  const menu = infoSnap.data();
   const sections = sectionsSnap.docs.map((doc) => ({
     _key: doc.id,
     ...doc.data(),

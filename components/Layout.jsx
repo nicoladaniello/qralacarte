@@ -1,12 +1,10 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
 import React, { useEffect } from "react";
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
 import { Slide, ToastContainer } from "react-toastify";
 import useAuth from "./auth/useAuth";
 
-const Layout = ({ title, className, children }) => {
+const Layout = ({ title, children }) => {
   const { signIn, signOut, onAuthStateChanged } = useAuth();
 
   // Load user status to state when user changes.
@@ -26,8 +24,13 @@ const Layout = ({ title, className, children }) => {
     []
   );
 
+  const isClient = typeof window === "object";
+
   return (
-    <div>
+    <div
+      className="overflow-auto d-flex flex-column"
+      style={{ height: "100vh" }}
+    >
       <Head>
         <meta property="og:title" content={title} key="title" />
         <meta
@@ -37,7 +40,8 @@ const Layout = ({ title, className, children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <DndProvider backend={HTML5Backend}>{children}</DndProvider>
+      {children}
+      <div id="modal-container"></div>
       <ToastContainer
         hideProgressBar
         newestOnTop

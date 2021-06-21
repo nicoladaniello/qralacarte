@@ -1,4 +1,5 @@
 import React from "react";
+import Loading from "../Loading";
 import SignIn from "./SignIn";
 import useAuth from "./useAuth";
 
@@ -7,7 +8,7 @@ const withAuth = (Component) => {
     const { currentUser } = useAuth();
 
     return currentUser === undefined ? (
-      <p>loading...</p>
+      <Loading />
     ) : !currentUser ? (
       <SignIn />
     ) : (
