@@ -35,7 +35,7 @@ const SignInPage = () => {
 
   useEffect(() => {
     if (currentUser) router.push("/admin");
-  }, [currentUser]);
+  }, [currentUser, router]);
 
   return (
     <Page>

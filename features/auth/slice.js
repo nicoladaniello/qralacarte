@@ -1,16 +1,12 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { signOut } from "../../services/authService";
-
-export const signOutAction = createAsyncThunk("auth/signOut", async () => {
-  console.log("sign out");
-  return signOut();
-});
+import { createSlice } from "@reduxjs/toolkit";
 
 // initial state
 const initialState = {
-  isInitialized: false,
-  isLoggedIn: false,
   currentUser: undefined,
+  status: {
+    isSignedIn: false,
+    isAnonymous: false,
+  },
 };
 
 // slice
@@ -19,25 +15,21 @@ const slice = createSlice({
   initialState,
   reducers: {
     setUserCredentials(state, action) {
-      const { uid, email, displayName } = action.payload;
-
-      state.isInitialized = true;
-
-      if (uid && email && displayName) {
-        state.isLoggedIn = true;
-        state.currentUser = { uid, email, displayName };
-      }
+      state.currentUser = action.payload;
+      state.status.isSignedIn = true;
+      state.status.isAnonymous = false;
     },
-  },
-  extraReducers: {
-    [signOutAction.fulfilled]: (state) => {
-      state.isInitialized = true;
-      state.isLoggedIn = false;
-      state.currentUser = undefined;
+    setUserAnonymous(state) {
+      state.currentUser = null;
+      state.status.isSignedIn = false;
+      state.status.isAnonymous = true;
     },
   },
 });
 
-export const { setUserCredentials } = slice.actions;
+const selectAuth = (state) => state.auth;
+const { setUserCredentials, setUserAnonymous } = slice.actions;
+
+export { selectAuth, setUserCredentials, setUserAnonymous };
 
 export default slice.reducer;

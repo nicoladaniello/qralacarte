@@ -1,36 +1,16 @@
-import { useRouter } from "next/router";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setUserCredentials, signOutAction } from "./slice";
-import { onAuthStateChanged } from "../../services/authService";
+import { useSelector } from "react-redux";
+import firebase from "../../firebase/firebaseClient";
+import { selectAuth } from "./slice";
 
-const useAuth = (options) => {
-  const { currentUser, isInitialized, isLoggedIn } = useSelector(
-    (state) => state.auth
-  );
-  const dispatch = useDispatch();
-  const router = useRouter();
+const useAuth = () => {
+  const { currentUser, status } = useSelector(selectAuth);
 
-  const { redirectTo } = options || {};
-
-  useEffect(() => {
-    if (redirectTo && isInitialized && !isLoggedIn) {
-      router.push(redirectTo);
-    }
-  }, [redirectTo, isInitialized, isLoggedIn, router]);
-
-  const signIn = ({ uid, email, displayName }) =>
-    dispatch(setUserCredentials({ uid, email, displayName }));
-
-  const signOut = () => dispatch(signOutAction());
+  const signOut = () => firebase.auth().signOut();
 
   return {
     currentUser,
-    isInitialized,
-    isLoggedIn,
-    signIn,
+    status,
     signOut,
-    onAuthStateChanged,
   };
 };
 

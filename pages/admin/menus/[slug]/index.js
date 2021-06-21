@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import AdminLayout from "../../../../components/admin/AdminLayout";
 import Alert from "../../../../components/Alert";
 import Breadcrumb from "../../../../components/Breadcrumb";
+import Layout from "../../../../components/Layout";
 import Loading from "../../../../components/Loading";
 import Nav from "../../../../components/Nav";
+import Navbar from "../../../../components/Navbar/Navbar";
+import Authenticated from "../../../../features/auth/Authenticated";
 import { useGetFullMenuQuery } from "../../../../features/menus/api";
 import MenuInfo from "../../../../features/menus/MenuInfo";
 import UpdateMenuModal from "../../../../features/menus/UpdateMenuModal";
@@ -23,49 +25,52 @@ const AdminMenuPage = () => {
   };
 
   return (
-    <AdminLayout>
-      <div className="card border-0 border-bottom">
-        <div className="container pt-lg-2">
-          <Breadcrumb>
-            <Breadcrumb.Item href="/admin/menus">Menus</Breadcrumb.Item>
-            <Breadcrumb.Item>{slug}</Breadcrumb.Item>
-          </Breadcrumb>
-          <div className="d-flex">
-            <h1 className="h2 pb-lg-2 me-auto">{data?.title || slug}</h1>
-            <div>
-              <Link href="/r/[slug]" as={`/r/${slug}`}>
-                <a className="btn btn-primary">Visit menu</a>
-              </Link>
+    <Authenticated>
+      <Layout>
+        <Navbar />
+        <div className="card border-0 border-bottom">
+          <div className="container pt-lg-2">
+            <Breadcrumb>
+              <Breadcrumb.Item href="/admin/menus">Menus</Breadcrumb.Item>
+              <Breadcrumb.Item>{slug}</Breadcrumb.Item>
+            </Breadcrumb>
+            <div className="d-flex">
+              <h1 className="h2 pb-lg-2 me-auto">{data?.title || slug}</h1>
+              <div>
+                <Link href="/r/[slug]" as={`/r/${slug}`}>
+                  <a className="btn btn-primary">Visit menu</a>
+                </Link>
+              </div>
             </div>
+            <Nav className="mb-1">
+              <Nav.Item href="/admin/menus/[slug]" as={`/admin/menus/${slug}`}>
+                Info
+              </Nav.Item>
+              <Nav.Item
+                href="/admin/menus/[slug]/products"
+                as={`/admin/menus/${slug}/products`}
+              >
+                Products
+              </Nav.Item>
+              <Nav.Item
+                href="/admin/menus/[slug]/settings"
+                as={`/admin/menus/${slug}/settings`}
+              >
+                Settings
+              </Nav.Item>
+            </Nav>
           </div>
-          <Nav className="mb-1">
-            <Nav.Item href="/admin/menus/[slug]" as={`/admin/menus/${slug}`}>
-              Info
-            </Nav.Item>
-            <Nav.Item
-              href="/admin/menus/[slug]/products"
-              as={`/admin/menus/${slug}/products`}
-            >
-              Products
-            </Nav.Item>
-            <Nav.Item
-              href="/admin/menus/[slug]/settings"
-              as={`/admin/menus/${slug}/settings`}
-            >
-              Settings
-            </Nav.Item>
-          </Nav>
         </div>
-      </div>
 
-      <div className="container mt-4">
-        {isLoading && <Loading />}
-        {isError && <Alert danger>{error?.message}</Alert>}
-        {isSuccess && <MenuInfo menu={data} onEdit={handleEdit} />}
-      </div>
+        <div className="container mt-4">
+          {isLoading && <Loading />}
+          {isError && <Alert danger>{error?.message}</Alert>}
+          {isSuccess && <MenuInfo menu={data} onEdit={handleEdit} />}
+        </div>
 
-      <UpdateMenuModal />
-    </AdminLayout>
+        <UpdateMenuModal />
+      </Layout>
+    </Authenticated>
   );
 };
 

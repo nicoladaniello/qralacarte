@@ -1,31 +1,12 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
-import React, { useEffect } from "react";
+import React from "react";
 import { Slide, ToastContainer } from "react-toastify";
-import useAuth from "../features/auth/useAuth";
+import initAuth from "../features/auth/initAuth";
+
+initAuth();
 
 const Layout = ({ title, children }) => {
-  const { signIn, signOut, onAuthStateChanged } = useAuth();
-
-  // Load user status to state when user changes.
-  useEffect(
-    () =>
-      onAuthStateChanged(
-        (user) => {
-          // console.log("user changed.", user);
-          if (user) signIn(user);
-          else signOut();
-        },
-        (err) => {
-          setUser();
-          console.error(err);
-        }
-      ),
-    []
-  );
-
-  const isClient = typeof window === "object";
-
   return (
     <div
       className="overflow-auto d-flex flex-column"
