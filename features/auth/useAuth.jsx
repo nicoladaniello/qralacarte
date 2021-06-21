@@ -1,10 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  setUserCredentials,
-  signOutAction,
-} from "../../features/auth/slice";
+import { setUserCredentials, signOutAction } from "./slice";
 import { onAuthStateChanged } from "../../services/authService";
 
 const useAuth = (options) => {

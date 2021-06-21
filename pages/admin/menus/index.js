@@ -1,13 +1,15 @@
 import React from "react";
 import AdminLayout from "../../../components/admin/AdminLayout";
 import Alert from "../../../components/Alert";
-import withAuth from "../../../components/auth/withAuth";
 import Loading from "../../../components/Loading";
 import Nav from "../../../components/Nav";
+import useAuth from "../../../features/auth/useAuth";
+import withAuth from "../../../features/auth/withAuth";
 import { useGetUserMenusQuery } from "../../../features/menus/api";
 import MenuCard from "../../../features/menus/MenuCard";
 
-const AdminVenueListings = ({ currentUser }) => {
+const AdminVenueListings = () => {
+  const { currentUser } = useAuth();
   const { data, error, isLoading, isSuccess, isError } = useGetUserMenusQuery(
     currentUser.uid
   );

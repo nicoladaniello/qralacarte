@@ -1,16 +1,22 @@
-import React from "react";
-import Loading from "../Loading";
-import SignIn from "./SignIn";
+import { useRouter } from "next/router";
+import React, { useEffect } from "react";
+import Loading from "../../components/Loading";
 import useAuth from "./useAuth";
 
 const withAuth = (Component) => {
   const Auth = (props) => {
     const { currentUser } = useAuth();
 
-    return currentUser === undefined ? (
+    const router = useRouter();
+
+    useEffect(() => {
+      if (currentUser === null) {
+        router.replace("/signin");
+      }
+    }, [currentUser, router]);
+
+    return !currentUser ? (
       <Loading />
-    ) : !currentUser ? (
-      <SignIn />
     ) : (
       <Component {...props} currentUser={currentUser} />
     );

@@ -2,10 +2,10 @@ import classnames from "classnames";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import useAuth from "../../components/auth/useAuth";
 import Alert from "../../components/Alert";
 import Loading from "../../components/Loading";
 import Page from "../../components/Page";
+import useAuth from "../../features/auth/useAuth";
 import { useCreateMenuMutation } from "../../features/menus/api";
 
 const NewMenuPage = () => {

@@ -2,7 +2,7 @@ import Head from "next/head";
 import PropTypes from "prop-types";
 import React, { useEffect } from "react";
 import { Slide, ToastContainer } from "react-toastify";
-import useAuth from "./auth/useAuth";
+import useAuth from "../features/auth/useAuth";
 
 const Layout = ({ title, children }) => {
   const { signIn, signOut, onAuthStateChanged } = useAuth();
@@ -27,7 +27,10 @@ const Layout = ({ title, children }) => {
   const isClient = typeof window === "object";
 
   return (
-    <div className="d-flex flex-column">
+    <div
+      className="overflow-auto d-flex flex-column"
+      style={{ height: "100vh" }}
+    >
       <Head>
         <meta property="og:title" content={title} key="title" />
         <meta

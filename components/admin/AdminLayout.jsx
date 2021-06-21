@@ -1,5 +1,5 @@
 import React from "react";
-import useAuth from "../auth/useAuth";
+import useAuth from "../../features/auth/useAuth";
 import Loading from "../Loading";
 import Navbar from "../Navbar";
 
