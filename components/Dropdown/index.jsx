@@ -1,4 +1,4 @@
-import Dropdown from "./DropDown";
+import Dropdown from "./Dropdown";
 import DropdownItem from "./DropdownItem";
 import DropdownLink from "./DropdownLink";
 import DropdownMenu from "./DropdownMenu";
