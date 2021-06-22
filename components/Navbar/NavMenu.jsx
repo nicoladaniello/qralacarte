@@ -1,4 +1,8 @@
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCaretDown,
+  faSignOutAlt,
+  faUserCircle
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import React from "react";
@@ -50,14 +54,28 @@ const NavMenu = ({ className }) => {
       )}
       {!!currentUser && (
         <Dropdown as="li" className="nav-item">
-          <Dropdown.Toggle className="nav-link">
+          <Dropdown.Toggle
+            className="nav-link text-truncate"
+            style={{ width: "250px" }}
+          >
             <strong>
-              {currentUser.displayName} <FontAwesomeIcon icon={faCaretDown} />
+              {currentUser.displayName || currentUser.email}{" "}
+              <FontAwesomeIcon icon={faCaretDown} />
             </strong>
           </Dropdown.Toggle>
           <Dropdown.Menu>
-            <Dropdown.Link href="/admin">Admin</Dropdown.Link>
-            <Dropdown.Item onClick={() => signOut()}>Sign out</Dropdown.Item>
+            <Dropdown.Link href="/admin">
+              <span className="me-1">
+                <FontAwesomeIcon icon={faUserCircle} />
+              </span>{" "}
+              Admin page
+            </Dropdown.Link>
+            <Dropdown.Item onClick={() => signOut()}>
+              <span className="me-1">
+                <FontAwesomeIcon icon={faSignOutAlt} />
+              </span>{" "}
+              Sign out
+            </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       )}

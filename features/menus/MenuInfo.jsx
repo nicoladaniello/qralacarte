@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classnames from "classnames";
 import React from "react";
 import AppImage from "../../components/AppImage";
+import Collapse from "../../components/Collapse";
 
 const MenuInfo = ({ menu, className, onEdit }) => {
   const { image, title, description, address, tel } = menu || {};
@@ -32,13 +33,25 @@ const MenuInfo = ({ menu, className, onEdit }) => {
             <hr className="mt-1" />
 
             <h1 className="card-title h2">{title}</h1>
-            <p className="card-text mb-4">
-              {description ? description : "No description provided."}
-            </p>
+
+            {description ? (
+              <Collapse className="mb-4">
+                <p className="card-text">
+                  {description.split("\n").map((item, key) => (
+                    <span key={key}>
+                      {item}
+                      <br />
+                    </span>
+                  ))}
+                </p>
+              </Collapse>
+            ) : (
+              <p className="card-text mb-4">"No description provided."</p>
+            )}
 
             <ul className="card-text fa-ul ms-3">
               <li className="list-inline-item col-12 d-flex align-items-center">
-                <p className="text-muted text-truncate mb-0">
+                <p className="text-muted text-truncate small mb-0">
                   <span className="fa-li">
                     <FontAwesomeIcon className="me-1" icon={faMapMarkerAlt} />
                   </span>
@@ -55,7 +68,7 @@ const MenuInfo = ({ menu, className, onEdit }) => {
                 </p>
               </li>
               <li className="list-inline-item col-12">
-                <p className="text-muted text-truncate mb-0">
+                <p className="text-muted text-truncate small mb-0">
                   <span className="fa-li">
                     <FontAwesomeIcon className="me-1" icon={faPhone} />
                   </span>

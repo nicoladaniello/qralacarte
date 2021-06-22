@@ -1,13 +1,14 @@
 import {
   faCheckCircle,
   faExclamationTriangle,
-  faInfoCircle,
+  faInfoCircle
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import classnames from "classnames";
 import PropTypes from "prop-types";
 import React from "react";
 
-const Alert = ({ success, info, warning, danger, children }) => {
+const Alert = ({ success, info, warning, danger, className, children }) => {
   const type = success
     ? "success"
     : info
@@ -20,7 +21,10 @@ const Alert = ({ success, info, warning, danger, children }) => {
 
   return (
     <div
-      className={`alert alert-${type} d-flex align-items-center`}
+      className={classnames(
+        className,
+        `alert alert-${type} d-flex align-items-center`
+      )}
       role="alert"
     >
       <div className="me-2">

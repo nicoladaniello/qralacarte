@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 
 const isClient = typeof window !== "undefined";
 
-const DropdownToggle = ({ id, className, children }) => {
+const DropdownToggle = ({ id, className, children, ...rest }) => {
   const ref = useRef();
 
   // Initialize bootstrap dropdown
@@ -16,6 +16,7 @@ const DropdownToggle = ({ id, className, children }) => {
 
   return (
     <a
+      {...rest}
       ref={ref}
       id={id}
       className={classnames(className, "dropdown-toggle")}

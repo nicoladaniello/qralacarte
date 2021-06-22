@@ -8,6 +8,7 @@ import classnames from "classnames";
 import Link from "next/link";
 import React from "react";
 import AppImage from "../../components/AppImage";
+import Collapse from "../../components/Collapse";
 
 const MenuCard = ({ menu, className }) => {
   const { _key, image, title, description, address, tel } = menu || {};
@@ -32,9 +33,20 @@ const MenuCard = ({ menu, className }) => {
                 </a>
               </Link>
             </div>
-            <p className="card-text text-truncate" style={{ height: "2.2em" }}>
-              {description ? description : "No description provided."}
-            </p>
+            {description ? (
+              <Collapse className="mb-4">
+                <p className="card-text">
+                  {description.split("\n").map((item, key) => (
+                    <span key={key}>
+                      {item}
+                      <br />
+                    </span>
+                  ))}
+                </p>
+              </Collapse>
+            ) : (
+              <p className="card-text mb-4">"No description provided."</p>
+            )}
             <ul className="card-text fa-ul ms-3">
               <li className="list-inline-item col-12 d-flex align-items-center">
                 <p className="text-muted text-truncate small mb-0">

@@ -61,9 +61,18 @@ const Restaurant = ({ menu }) => {
               </div>
               <div className="col-lg-7 pe-lg-5">
                 <h1 className="fw-bold">{title}</h1>
-                <Collapse>
-                  <p className="text-muted">{description}</p>
-                </Collapse>
+                {description && (
+                  <Collapse>
+                    <p className="card-muted">
+                      {description.split("\n").map((item, key) => (
+                        <span key={key}>
+                          {item}
+                          <br />
+                        </span>
+                      ))}
+                    </p>
+                  </Collapse>
+                )}
               </div>
             </div>
           </div>

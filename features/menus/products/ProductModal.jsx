@@ -27,4 +27,6 @@ const ProductModal = () => {
   );
 };
 
+ProductModal.displayName = "ProductModal";
+
 export default ProductModal;

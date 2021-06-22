@@ -39,7 +39,6 @@ const UpdateMenuModal = () => {
 
   // Upsert product on form submission.
   const onSubmit = async (data) => {
-    console.log(data);
     try {
       const action = updateMenu(data);
       await action.unwrap();
@@ -110,7 +109,7 @@ const UpdateMenuModal = () => {
             </Form.Field>
             <Form.Field>
               <Form.Field.Label>Description</Form.Field.Label>
-              <Form.Field.TextArea {...register("description")} />
+              <Form.Field.TextArea {...register("description")} wrap="hard" />
             </Form.Field>
             <Form.Field>
               <Form.Field.Label>Address</Form.Field.Label>

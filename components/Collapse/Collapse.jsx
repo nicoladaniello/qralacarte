@@ -1,9 +1,11 @@
+import { ResizeObserver } from "@juggle/resize-observer";
 import classnames from "classnames";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
+import Measure from "react-measure";
 
-const Collapse = ({ height, children }) => {
-  const ref = useRef();
+const Collapse = ({ maxHeight, children, ...rest }) => {
   const [collapsed, setCollapsed] = useState(true);
+  const [height, setHeight] = useState();
 
   const toggle = (e) => {
     e.preventDefault();
@@ -11,34 +13,54 @@ const Collapse = ({ height, children }) => {
   };
 
   const collapsedStyle = {
-    height: height || "6em",
+    maxHeight,
     overflow: "hidden",
+    transition: "all 0.3s ease-out",
   };
 
+  useEffect(() => {
+    console.log(height, maxHeight);
+  }, [height]);
+
   return (
-    <>
+    <div {...rest}>
       <div className="position-relative">
-        <div ref={ref} style={collapsed ? collapsedStyle : null}>
-          {children}
-        </div>
-        <div
-          className={classnames({ "d-none": !collapsed })}
-          style={{
-            position: "absolute",
-            left: "0px",
-            right: "0px",
-            bottom: "0px",
-            height: "50%",
-            backgroundImage:
-              "linear-gradient(to bottom, rgba(255, 255, 255, 0.1), white)",
-          }}
-        />
+        <Measure bounds onResize={({ bounds }) => setHeight(bounds.height)}>
+          {({ measureRef }) => (
+            <div
+              ref={measureRef}
+              style={true && collapsed ? collapsedStyle : null}
+            >
+              {children}
+            </div>
+          )}
+        </Measure>
+        {height >= maxHeight && collapsed && (
+          <div
+            className={classnames({ "d-none": !collapsed })}
+            style={{
+              position: "absolute",
+              left: "0px",
+              right: "0px",
+              bottom: "0px",
+              height: "50%",
+              backgroundImage:
+                "linear-gradient(to bottom, rgba(255, 255, 255, 0.1), white)",
+            }}
+          />
+        )}
       </div>
-      <a className="small" href="#" onClick={toggle}>
-        {collapsed ? "Show more +" : "Show less -"}
-      </a>
-    </>
+      {height >= maxHeight && (
+        <a className="small" href="#" onClick={toggle}>
+          {collapsed ? "Show more +" : "Show less -"}
+        </a>
+      )}
+    </div>
   );
+};
+
+Collapse.defaultProps = {
+  maxHeight: 120,
 };
 
 export default Collapse;
