@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import AppImage from "../../components/AppImage";
 import Collapse from "../../components/Collapse";
-import Layout from "../../components/Layout";
 import Navbar from "../../components/Navbar";
 import ProductModal from "../../features/menus/products/ProductModal";
 import SectionTabs from "../../features/menus/sections/SectionTabs";
@@ -26,7 +25,7 @@ const Restaurant = ({ menu }) => {
   const productModal = useModal(ProductModal);
 
   return (
-    <Layout>
+    <>
       <Navbar className="border-bottom mb-lg-4" />
       <div className="bg-white pb-4">
         <div className="container g-xl-5">
@@ -94,7 +93,7 @@ const Restaurant = ({ menu }) => {
         ))}
       </div>
       <ProductModal />
-    </Layout>
+    </>
   );
 };
 

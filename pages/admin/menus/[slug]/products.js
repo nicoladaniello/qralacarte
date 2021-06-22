@@ -2,7 +2,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import Breadcrumb from "../../../../components/Breadcrumb";
-import Layout from "../../../../components/Layout";
 import Nav from "../../../../components/Nav";
 import Navbar from "../../../../components/Navbar";
 import Authenticated from "../../../../features/auth/Authenticated";
@@ -17,46 +16,44 @@ const AdminProductsPage = () => {
 
   return (
     <Authenticated>
-      <Layout>
-        <Navbar />
-        <div className="card border-0 border-bottom">
-          <div className="container pt-lg-2">
-            <Breadcrumb>
-              <Breadcrumb.Item href="/admin/menus">Menus</Breadcrumb.Item>
-              <Breadcrumb.Item>{slug}</Breadcrumb.Item>
-            </Breadcrumb>
-            <div className="d-flex">
-              <h1 className="h2 pb-lg-2 me-auto">{data?.title || slug}</h1>
-              <div>
-                <Link href="/r/[slug]" as={`/r/${slug}`}>
-                  <a className="btn btn-primary">Visit menu</a>
-                </Link>
-              </div>
+      <Navbar />
+      <div className="card border-0 border-bottom">
+        <div className="container pt-lg-2">
+          <Breadcrumb>
+            <Breadcrumb.Item href="/admin/menus">Menus</Breadcrumb.Item>
+            <Breadcrumb.Item>{slug}</Breadcrumb.Item>
+          </Breadcrumb>
+          <div className="d-flex">
+            <h1 className="h2 pb-lg-2 me-auto">{data?.title || slug}</h1>
+            <div>
+              <Link href="/r/[slug]" as={`/r/${slug}`}>
+                <a className="btn btn-primary">Visit menu</a>
+              </Link>
             </div>
-            <Nav className="mb-1">
-              <Nav.Item href="/admin/menus/[slug]" as={`/admin/menus/${slug}`}>
-                Info
-              </Nav.Item>
-              <Nav.Item
-                href="/admin/menus/[slug]/products"
-                as={`/admin/menus/${slug}/products`}
-              >
-                Products
-              </Nav.Item>
-              <Nav.Item
-                href="/admin/menus/[slug]/settings"
-                as={`/admin/menus/${slug}/settings`}
-              >
-                Settings
-              </Nav.Item>
-            </Nav>
           </div>
+          <Nav className="mb-1">
+            <Nav.Item href="/admin/menus/[slug]" as={`/admin/menus/${slug}`}>
+              Info
+            </Nav.Item>
+            <Nav.Item
+              href="/admin/menus/[slug]/products"
+              as={`/admin/menus/${slug}/products`}
+            >
+              Products
+            </Nav.Item>
+            <Nav.Item
+              href="/admin/menus/[slug]/settings"
+              as={`/admin/menus/${slug}/settings`}
+            >
+              Settings
+            </Nav.Item>
+          </Nav>
         </div>
+      </div>
 
-        <div className="container mt-4">
-          <ProductsManager menu={data} />
-        </div>
-      </Layout>
+      <div className="container mt-4">
+        <ProductsManager menu={data} />
+      </div>
     </Authenticated>
   );
 };
