@@ -60,7 +60,7 @@ const SignInPage = () => {
                 firebaseAuth={firebase.auth()}
               />
             </div>
-            {!process.env.DEVELOPMENT && (
+            {process.env.NEXT_PUBLIC_DEVELOPMENT && (
               <Alert info className="text-start small">
                 <h6 className="alert-heading">
                   Welcome to the development instance!

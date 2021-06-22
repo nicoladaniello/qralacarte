@@ -12,7 +12,7 @@ const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(menusApi.middleware),
 
-  devTools: process.env.PRODUCTION,
+  devTools: process.env.NEXT_PUBLIC_DEVELOPMENT,
 });
 
 export default store;
