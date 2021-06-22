@@ -20,6 +20,6 @@ const slice = createSlice({
 
 export const { openModal, closeModal } = slice.actions;
 
-export const selectModal = (state, modal) => state.modals[modal.name];
+export const selectModal = (state, modal) => state.modals[modal.displayName];
 
 export default slice.reducer;
