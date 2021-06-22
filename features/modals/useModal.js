@@ -16,7 +16,7 @@ const useModal = (modal) => {
     return dispatch(openModal({ modal: modal.displayName, props }));
   };
 
-  const close = () => dispatch(closeModal(modal.name));
+  const close = () => dispatch(closeModal(modal.displayName));
 
   return {
     isOpen,
