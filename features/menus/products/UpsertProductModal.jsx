@@ -149,4 +149,6 @@ const UpsertProductModal = () => {
   );
 };
 
+UpsertProductModal.displayName = "UpsertProductModal";
+
 export default UpsertProductModal;

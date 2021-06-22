@@ -85,4 +85,6 @@ const ReorderSectionsModal = () => {
   );
 };
 
+ReorderSectionsModal.displayName = "ReorderSectionsModal";
+
 export default ReorderSectionsModal;

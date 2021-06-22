@@ -42,4 +42,6 @@ const DeleteSectionModal = ({ onConfirm }) => {
   );
 };
 
+DeleteSectionModal.displayName = "DeleteSectionModal";
+
 export default DeleteSectionModal;

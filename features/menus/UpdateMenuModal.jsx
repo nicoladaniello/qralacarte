@@ -133,4 +133,6 @@ const UpdateMenuModal = () => {
   );
 };
 
+UpdateMenuModal.displayName = "UpdateMenuModal";
+
 export default UpdateMenuModal;

@@ -83,4 +83,6 @@ const ReorderProductsModal = () => {
   );
 };
 
+ReorderProductsModal.displayName = "ReorderProductsModal";
+
 export default ReorderProductsModal;

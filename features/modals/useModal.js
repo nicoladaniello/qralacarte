@@ -6,7 +6,15 @@ const useModal = (modal) => {
     useSelector((state) => selectModal(state, modal)) || {};
   const dispatch = useDispatch();
 
-  const open = (props) => dispatch(openModal({ modal: modal.name, props }));
+  const open = (props) => {
+    if (!modal.displayName) {
+      console.warn(
+        "modal displayName is missing. This can cause issues in the modal."
+      );
+      return;
+    }
+    return dispatch(openModal({ modal: modal.displayName, props }));
+  };
 
   const close = () => dispatch(closeModal(modal.name));
 

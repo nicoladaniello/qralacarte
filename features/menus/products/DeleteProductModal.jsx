@@ -40,4 +40,6 @@ const DeleteProductModal = ({ onConfirm }) => {
   );
 };
 
+DeleteProductModal.displayName = "DeleteProductModal";
+
 export default DeleteProductModal;

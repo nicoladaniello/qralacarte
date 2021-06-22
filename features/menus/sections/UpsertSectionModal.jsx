@@ -75,4 +75,6 @@ const UpsertSectionModal = () => {
   );
 };
 
+UpsertSectionModal.displayName = "UpsertSectionModal";
+
 export default UpsertSectionModal;
