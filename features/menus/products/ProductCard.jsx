@@ -9,6 +9,7 @@ const ProductCard = ({ product, className, onClick }) => {
     <div
       className={classnames(className, "card")}
       onClick={() => onClick(product)}
+      style={{ cursor: "pointer" }}
     >
       <div className="card-body p-2 p-lg-3">
         <div className="row g-0">

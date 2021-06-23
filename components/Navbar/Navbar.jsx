@@ -11,6 +11,13 @@ const Navbar = ({ className, children }) => {
 
   return (
     <>
+      {process.env.NEXT_PUBLIC_DEVELOPMENT && (
+        <div className="py-1 small bg-dark text-white text-center">
+          <small className=" text-center">
+            Welcome to the development instance
+          </small>
+        </div>
+      )}
       <SideNav isOpen={isOpen} onClose={() => setIsOpen(false)} />
       <nav
         className={classnames(

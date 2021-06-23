@@ -46,14 +46,22 @@ const AdminVenueListings = () => {
         </div>
       </div>
       <div className="container mt-4">
+        {process.env.NEXT_PUBLIC_DEVELOPMENT &&
+          currentUser?.uid === "cPK4bcvTdHYKHEiNtDfAm6A2uCE2" && (
+            <Alert info className="text-start small mb-4">
+              <h6 className="alert-heading">This account is sandboxed.</h6>
+              Every time someone signs in to this account, the data will be
+              restored.
+            </Alert>
+          )}
         {isLoading && <Loading />}
         {isError && <Alert danger>{error?.message}</Alert>}
         {isSuccess && (
           <div className="row align-items-stretch">
             {!!data?.length ? (
               data.map((menu) => (
-                <div key={menu._key} className="col-lg-6 mb-4">
-                  <MenuCard menu={menu} />
+                <div key={menu._key} className="col-lg-4 mb-4">
+                  <MenuCard className="mb-4" menu={menu} />
                 </div>
               ))
             ) : (

@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import Alert from "../components/Alert";
 import Page from "../components/Page";
 import useAuth from "../features/auth/useAuth";
+import { restoreDeveloperAccount } from "../features/development/slice";
 
 const SignInPage = () => {
   const { currentUser } = useAuth();
@@ -16,7 +17,6 @@ const SignInPage = () => {
   // Configure FirebaseUI.
   const uiConfig = {
     signInFlow: "popup",
-    signInSuccessUrl: "/admin",
     signInOptions: [
       firebase.auth.EmailAuthProvider.PROVIDER_ID,
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -24,11 +24,16 @@ const SignInPage = () => {
     ],
     callbacks: {
       signInSuccessWithAuthResult: function (authResult) {
-        const { uid, displayName, email } = authResult.user;
+        console.log("NEXT_PUBLIC_DEVELOPMENT", process.env.NEXT_PUBLIC_DEVELOPMENT);
+        if (process.env.NEXT_PUBLIC_DEVELOPMENT) {
+          console.log("restoreDeveloperAccount");
+          dispatch(restoreDeveloperAccount());
+        }
 
+        const { uid, displayName, email } = authResult.user;
         dispatch(updateUserAction({ uid, displayName, email }));
 
-        // continue with the redirect.
+        // stop the redirect
         return false;
       },
     },

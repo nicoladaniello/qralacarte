@@ -1,6 +1,7 @@
 {
-  "name": "qralacarte",
-  "version": "2.1.10",
+  "name": "QRalacarte",
+  "description": "Create your contactless menu.",
+  "version": "2.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

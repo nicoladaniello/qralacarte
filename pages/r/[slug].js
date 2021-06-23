@@ -24,6 +24,19 @@ const Restaurant = ({ menu }) => {
   } = menu || {};
   const productModal = useModal(ProductModal);
 
+  const sectionRefs = sectionIds.reduce((obj, sid) => {
+    obj[sid] = React.createRef();
+    return obj;
+  }, {});
+
+  const scrollToSection = (key) => {
+    sectionRefs[key]?.current?.scrollIntoView({
+      behavior: "auto",
+      block: "start",
+    });
+    setActiveSection(key);
+  };
+
   return (
     <>
       <Navbar className="border-bottom mb-lg-4" />
@@ -33,7 +46,7 @@ const Restaurant = ({ menu }) => {
             <div className="row no-gutters">
               <div className="col-lg-5 order-lg-last">
                 <AppImage src={image} className="mb-2" />
-                <ul className="fa-ul small text-muted ms-3 mb-0">
+                <ul className="fa-ul small text-muted ms-3 mb-2 mb-lg-0">
                   <li>
                     <p className="text-truncate mb-0">
                       <span className="fa-li">
@@ -84,7 +97,7 @@ const Restaurant = ({ menu }) => {
             className="border-0"
             sections={{ ids: sectionIds, entities: sections }}
             active={activeSection}
-            setActive={setActiveSection}
+            setActive={scrollToSection}
           />
         </div>
       </div>
@@ -92,6 +105,7 @@ const Restaurant = ({ menu }) => {
       <div className="container g-0 g-xl-5">
         {sectionIds?.map((sid) => (
           <SectionView
+            ref={sectionRefs[sid]}
             key={sid}
             section={sections.find((s) => s._key === sid)}
             products={products}

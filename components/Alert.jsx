@@ -1,14 +1,22 @@
 import {
   faCheckCircle,
   faExclamationTriangle,
-  faInfoCircle
+  faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import React from "react";
 
-const Alert = ({ success, info, warning, danger, className, children }) => {
+const Alert = ({
+  success,
+  info,
+  warning,
+  danger,
+  dark,
+  className,
+  children,
+}) => {
   const type = success
     ? "success"
     : info
@@ -17,6 +25,8 @@ const Alert = ({ success, info, warning, danger, className, children }) => {
     ? "warning"
     : danger
     ? "danger"
+    : dark
+    ? "dark"
     : "";
 
   return (

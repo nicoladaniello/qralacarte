@@ -1,14 +1,17 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import Alert from "../../../../components/Alert";
 import Breadcrumb from "../../../../components/Breadcrumb";
 import Nav from "../../../../components/Nav";
 import Navbar from "../../../../components/Navbar";
 import Authenticated from "../../../../features/auth/Authenticated";
+import useAuth from "../../../../features/auth/useAuth";
 import { useGetFullMenuQuery } from "../../../../features/menus/api";
 import ProductsManager from "../../../../features/menus/ProductsManager";
 
 const AdminProductsPage = () => {
+  const { currentUser } = useAuth();
   const router = useRouter();
   const { slug } = router.query;
   const { data, error, isLoading, isSuccess, isError } =
@@ -51,7 +54,15 @@ const AdminProductsPage = () => {
         </div>
       </div>
 
-      <div className="container mt-4">
+      <div className="container my-4">
+        {process.env.NEXT_PUBLIC_DEVELOPMENT &&
+          currentUser?.uid === "cPK4bcvTdHYKHEiNtDfAm6A2uCE2" && (
+            <Alert info className="text-start small mb-4">
+              <h6 className="alert-heading">This account is sandboxed.</h6>
+              Every time someone signs in to this account, the data will be
+              restored.
+            </Alert>
+          )}
         <ProductsManager menu={data} />
       </div>
     </Authenticated>

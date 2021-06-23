@@ -14,7 +14,7 @@ const SectionTab = ({ section, active, setActive, onScrollTo }) => {
   return (
     <button
       ref={ref}
-      onClick={() => {}} //setActive(_key)
+      onClick={() => setActive(_key)} //setActive(_key)
       className={classnames("nav-link btn-link", {
         active,
       })}

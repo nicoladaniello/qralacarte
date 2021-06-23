@@ -66,22 +66,9 @@ const ProductsManager = ({ menu }) => {
   return (
     <>
       <div className="mb-2 text-end">
-        <div className="d-flex justify-content-between">
-          <button className="btn btn-link btn-sm" onClick={addSection}>
-            <FontAwesomeIcon icon={faPlus} /> add section
-          </button>
-          <Dropdown>
-            <Dropdown.Toggle className="btn btn-link link-dark">
-              <FontAwesomeIcon icon={faEllipsisV} />
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item className="" onClick={reorderSections}>
-                <FontAwesomeIcon className="me-1" icon={faBars} /> reorder
-                sections
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-        </div>
+        <button className="btn btn-outline-dark btn-sm" onClick={addSection}>
+          <FontAwesomeIcon icon={faPlus} /> add section
+        </button>
       </div>
       <div className="row">
         {sectionIds.map((sectionId) => {
@@ -92,9 +79,9 @@ const ProductsManager = ({ menu }) => {
                 <EditSectionCard
                   section={section}
                   onAddProduct={addProduct}
+                  onReorder={reorderSections}
                   onEdit={editSection}
                   onDelete={deleteSection}
-                  onReorderProducts={reorderProducts}
                 >
                   <div className="row align-items-stretch">
                     {section.productIds?.map((productId) => {
@@ -106,6 +93,7 @@ const ProductsManager = ({ menu }) => {
                           <EditProductCard
                             className="h-100"
                             product={product}
+                            onReorder={() => reorderProducts(section)}
                             onEdit={editProduct}
                             onDelete={deleteProduct}
                           />

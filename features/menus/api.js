@@ -16,9 +16,9 @@ import {
   upsertSection,
 } from "../../services/menuService";
 
-const menuType = "Menu";
-const sectionType = "Menu";
-const productType = "Menu";
+export const menuType = "Menu";
+export const sectionType = "Menu";
+export const productType = "Menu";
 
 // Show an updatable toast message.
 async function showMessages(
@@ -89,6 +89,12 @@ export const menusApi = createApi({
           onSuccess: "Menu updated!",
           onError: "Error while updating the menu.",
         }),
+    }),
+    invalidateCachedMenu: builder.mutation({
+      queryFn: (menuId) => ({ data: { menuId } }),
+      invalidatesTags: (result, error, menuId) => [
+        { type: menuType, id: menuId },
+      ],
     }),
     uploadMenuImage: builder.mutation({
       queryFn: ({ menu, fileUrl }) => uploadMenuImage(menu, fileUrl),
@@ -202,6 +208,7 @@ export const {
   useGetFullMenuQuery,
   useCreateMenuMutation,
   useUpdateMenuInfoMutation,
+  useInvalidateCachedMenuMutation,
   useUploadMenuImageMutation,
   useDeleteMenuImageMutation,
   useUpsertSectionMutation,
@@ -211,3 +218,5 @@ export const {
   useUploadProductImageMutation,
   useDeleteProductImageMutation,
 } = menusApi;
+
+export default menusApi;

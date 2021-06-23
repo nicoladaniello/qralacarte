@@ -14,41 +14,10 @@ const MenuInfo = ({ menu, className, onEdit }) => {
 
   return (
     <div className={classnames(className, "card")}>
-      <div className="row g-0 align-items-center">
-        <div className="col-lg-5 mb-3 mb-lg-0">
-          <AppImage src={image} />
-        </div>
-        <div className="col-lg-7">
-          <div className="card-body">
-            <div className="h6 d-flex align-items-center mb-0">
-              <span className="text-muted me-auto">Menu information</span>
-              <button
-                className="btn btn-link btn-sm"
-                onClick={() => onEdit(menu)}
-              >
-                <FontAwesomeIcon className="me-1" icon={faPencilAlt} />
-                Edit info
-              </button>
-            </div>
-            <hr className="mt-1" />
-
-            <h1 className="card-title h2">{title}</h1>
-
-            {description ? (
-              <Collapse className="mb-4">
-                <p className="card-text">
-                  {description.split("\n").map((item, key) => (
-                    <span key={key}>
-                      {item}
-                      <br />
-                    </span>
-                  ))}
-                </p>
-              </Collapse>
-            ) : (
-              <p className="card-text mb-4">"No description provided."</p>
-            )}
-
+      <div className="card-body">
+        <div className="row g-0">
+          <div className="col-lg-5 mb-3 mb-lg-0 pe-lg-3">
+            <AppImage className="mb-2" src={image} />
             <ul className="card-text fa-ul ms-3">
               <li className="list-inline-item col-12 d-flex align-items-center">
                 <p className="text-muted text-truncate small mb-0">
@@ -82,6 +51,36 @@ const MenuInfo = ({ menu, className, onEdit }) => {
                 </p>
               </li>
             </ul>
+          </div>
+          <div className="col-lg-7">
+            <div className="h6 d-flex align-items-center mb-0">
+              <span className="text-muted me-auto">Menu information</span>
+              <button
+                className="btn btn-outline-dark btn-sm"
+                onClick={() => onEdit(menu)}
+              >
+                <FontAwesomeIcon className="me-1" icon={faPencilAlt} />
+                Edit info
+              </button>
+            </div>
+            <hr className="mt-1" />
+
+            <h1 className="card-title h2">{title}</h1>
+
+            {description ? (
+              <Collapse className="mb-4">
+                <p className="card-text">
+                  {description.split("\n").map((item, key) => (
+                    <span key={key}>
+                      {item}
+                      <br />
+                    </span>
+                  ))}
+                </p>
+              </Collapse>
+            ) : (
+              <p className="card-text mb-4">"No description provided."</p>
+            )}
           </div>
         </div>
       </div>

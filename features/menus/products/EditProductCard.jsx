@@ -1,7 +1,8 @@
 import {
+  faBars,
   faEllipsisV,
   faPencilAlt,
-  faTrash,
+  faTrash
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classnames from "classnames";
@@ -9,7 +10,13 @@ import React from "react";
 import AppImage from "../../../components/AppImage";
 import Dropdown from "../../../components/Dropdown";
 
-const EditProductCard = ({ product, className, onEdit, onDelete }) => {
+const EditProductCard = ({
+  product,
+  className,
+  onReorder,
+  onEdit,
+  onDelete,
+}) => {
   const { _key, image, title, description, price } = product || {};
 
   return (
@@ -27,6 +34,13 @@ const EditProductCard = ({ product, className, onEdit, onDelete }) => {
                     <FontAwesomeIcon icon={faEllipsisV} />
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
+                    <Dropdown.Item
+                      className="btn-sm"
+                      onClick={() => onReorder()}
+                    >
+                      <FontAwesomeIcon className="me-1" icon={faBars} />
+                      reorder products
+                    </Dropdown.Item>
                     <Dropdown.Item
                       className="btn-sm"
                       onClick={() => onEdit(product)}

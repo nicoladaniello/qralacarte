@@ -16,9 +16,9 @@ const EditSectionCard = ({
   className,
   children,
   onAddProduct,
+  onReorder,
   onEdit,
   onDelete,
-  onReorderProducts,
 }) => {
   const { title, description } = section || {};
 
@@ -29,7 +29,7 @@ const EditSectionCard = ({
           <div className="col-lg-4 order-lg-last mb-2 mb-lg-0">
             <div className="d-flex justify-content-end">
               <button
-                className="btn btn-link btn-sm me-2"
+                className="btn btn-outline-dark btn-sm me-2"
                 onClick={() => onAddProduct(section)}
               >
                 <FontAwesomeIcon className="me-1" icon={faPlus} /> add product
@@ -39,12 +39,9 @@ const EditSectionCard = ({
                   <FontAwesomeIcon icon={faEllipsisV} />
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                  <Dropdown.Item
-                    className="btn-sm"
-                    onClick={() => onReorderProducts(section)}
-                  >
+                  <Dropdown.Item className="btn-sm" onClick={() => onReorder()}>
                     <FontAwesomeIcon className="me-1" icon={faBars} /> reorder
-                    products
+                    sections
                   </Dropdown.Item>
                   <Dropdown.Item
                     className="btn-sm"

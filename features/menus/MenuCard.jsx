@@ -1,87 +1,29 @@
 import {
-  faMapMarkerAlt,
-  faPencilAlt,
-  faPhone,
+  faPencilAlt
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classnames from "classnames";
 import Link from "next/link";
 import React from "react";
 import AppImage from "../../components/AppImage";
-import Collapse from "../../components/Collapse";
 
 const MenuCard = ({ menu, className }) => {
-  const { _key, image, title, description, address, tel } = menu || {};
+  const { _key, image, title } = menu || {};
 
   return (
-    <div className={classnames(className, "card")}>
-      <div className="row g-0 align-items-center">
-        <div className="col-sm-5 mb-3 mb-sm-0">
-          <Link href="/admin/menus/[slug]" as={`/admin/menus/${_key}`}>
-            <a>
-              <AppImage src={image} />
-            </a>
-          </Link>
-        </div>
-        <div className="col-sm-7">
-          <div className="card-body py-1">
-            <div className="d-flex align-items-center justify-content-between">
-              <h5 className="card-title mb-0">{title}</h5>
-              <Link href="/admin/menus/[slug]" as={`/admin/menus/${_key}`}>
-                <a className="small">
-                  <FontAwesomeIcon icon={faPencilAlt} /> Edit
-                </a>
-              </Link>
-            </div>
-            {description ? (
-              <Collapse className="mb-4">
-                <p className="card-text">
-                  {description.split("\n").map((item, key) => (
-                    <span key={key}>
-                      {item}
-                      <br />
-                    </span>
-                  ))}
-                </p>
-              </Collapse>
-            ) : (
-              <p className="card-text mb-4">"No description provided."</p>
-            )}
-            <ul className="card-text fa-ul ms-3">
-              <li className="list-inline-item col-12 d-flex align-items-center">
-                <p className="text-muted text-truncate small mb-0">
-                  <span className="fa-li">
-                    <FontAwesomeIcon className="me-1" icon={faMapMarkerAlt} />
-                  </span>
-                  {!!address ? (
-                    <a
-                      className="text-reset"
-                      href={`http://maps.google.com/?q=${address}`}
-                    >
-                      {address}
-                    </a>
-                  ) : (
-                    "No address provided"
-                  )}
-                </p>
-              </li>
-              <li className="list-inline-item col-12">
-                <p className="text-muted text-truncate small mb-0">
-                  <span className="fa-li">
-                    <FontAwesomeIcon className="me-1" icon={faPhone} />
-                  </span>
-                  {!!tel ? (
-                    <a className="text-reset" href={`tel:0039${tel}`}>
-                      +39 {tel}
-                    </a>
-                  ) : (
-                    "No phone number provided"
-                  )}
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <div className={classnames(className, "card shadow-sm")}>
+      <Link href="/admin/menus/[slug]" as={`/admin/menus/${_key}`}>
+        <a>
+          <AppImage className="card-img-top" src={image} />
+        </a>
+      </Link>
+      <div className="card-body d-flex flex-row align-items-center">
+        <h5 className="card-title mb-0 me-auto">{title}</h5>
+        <Link href="/admin/menus/[slug]" as={`/admin/menus/${_key}`}>
+          <a className="btn btn-outline-dark btn-sm">
+            <FontAwesomeIcon icon={faPencilAlt} /> Edit
+          </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
-import { ResizeObserver } from "@juggle/resize-observer";
 import classnames from "classnames";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Measure from "react-measure";
 
 const Collapse = ({ maxHeight, children, ...rest }) => {
@@ -17,10 +16,6 @@ const Collapse = ({ maxHeight, children, ...rest }) => {
     overflow: "hidden",
     transition: "all 0.3s ease-out",
   };
-
-  useEffect(() => {
-    console.log(height, maxHeight);
-  }, [height]);
 
   return (
     <div {...rest}>
