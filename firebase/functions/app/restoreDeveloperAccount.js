@@ -5,26 +5,26 @@ const db = admin.firestore();
 const storage = admin.storage().bucket();
 const auth = admin.auth();
 
+DEVELOPER_ACCOUNT = "develop@qralacarte.com";
+DEVELOPER_ACCOUNT_MENU = "osteria-luigi";
+
 exports.restoreDeveloperAccount = functions.https.onCall(
   async (data, context) => {
-    const accountUid = (await auth.getUserByEmail("develop@qralacarte.com"))
-      .uid;
+    const devAccountId = (await auth.getUserByEmail(DEVELOPER_ACCOUNT)).uid;
+    const uid = context.auth.uid;
+    const menuId = DEVELOPER_ACCOUNT_MENU;
 
-    if (!accountUid)
+    if (!devAccountId)
       throw new functions.https.HttpsError(
         "internal",
         "The test user account was not found."
       );
 
-    const uid = context.auth.uid;
-
-    if (accountUid !== uid)
+    if (devAccountId !== uid)
       throw new functions.https.HttpsError(
         "permission-denied",
         "Permission denied."
       );
-
-    const menuId = "osteria-luigi";
 
     try {
       await restoreMenuDataFromBackup(menuId);
@@ -44,6 +44,15 @@ exports.restoreDeveloperAccount = functions.https.onCall(
       );
     }
 
+    try {
+      await deleteUserMenusExcept(devAccountId, menuId);
+    } catch (error) {
+      throw new functions.https.HttpsError(
+        "internal",
+        "An error occurred while deleting user menus."
+      );
+    }
+
     return {
       success: true,
       menuId,
@@ -54,8 +63,8 @@ exports.restoreDeveloperAccount = functions.https.onCall(
 /**
  * Restore a menu from a backup location.
  *
- * @param {*} menuId - Required. The menu ID.
- * @returns A promise of firestore.writeResult.
+ * @param {string} menuId - Required. The menu ID.
+ * @returns A promise of firestore.WriteResult
  */
 async function restoreMenuDataFromBackup(menuId) {
   const menuRef = db.collection("menus").doc(menuId);
@@ -88,8 +97,8 @@ async function restoreMenuDataFromBackup(menuId) {
 /**
  * Copies all files from menus/[menuId] to backups/sandbox
  *
- * @param {*} menuId - Required. The menu ID.
- * @returns A promise of firestore.writeResult.
+ * @param {string} menuId - Required. The menu ID.
+ * @returns A promise of firestore.WriteResult
  */
 async function copyImagesToBackup(menuId) {
   const backupFolder = "backups/sandbox/";
@@ -110,8 +119,8 @@ async function copyImagesToBackup(menuId) {
 /**
  * Copies all files from backups/sandbox/menus/[menuId] to menus/[menuId]
  *
- * @param {*} menuId - Required. The menu ID.
- * @returns A promise of firestore.writeResult.
+ * @param {string} menuId - Required. The menu ID.
+ * @returns A promise of firestore.WriteResult
  */
 async function restoreImagesFromBackup(menuId) {
   const backupFolder = "backups/sandbox/";
@@ -127,4 +136,27 @@ async function restoreImagesFromBackup(menuId) {
 
   const copiedFileNames = results.map((res) => res[0].name);
   return copiedFileNames;
+}
+
+/**
+ * Deletes all user menus except the given one.
+ *
+ * @param {string} menuId - Required. The menu ID.
+ * @param {string} uid - Required. The user ID.
+ * @returns A promise of firestore.WriteResult
+ */
+async function deleteUserMenusExcept(uid, menuId) {
+  // Find all user menus
+  const userMenus = await db
+    .collection("menus")
+    .where("userId", "==", uid)
+    .get();
+
+  const menusToDelete = userMenus.docs.filter((doc) => doc.id !== menuId);
+
+  const batch = db.batch();
+
+  menusToDelete.forEach((doc) => batch.delete(doc.ref));
+
+  return batch.commit();
 }

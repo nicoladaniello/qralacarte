@@ -9,22 +9,14 @@ import Page from "../../../../components/Page";
 import Authenticated from "../../../../features/auth/Authenticated";
 import useAuth from "../../../../features/auth/useAuth";
 import { useGetFullMenuQuery } from "../../../../features/menus/api";
-import MenuInfo from "../../../../features/menus/MenuInfo";
-import QRCodeModal from "../../../../features/menus/QRCodeModal";
-import UpdateMenuModal from "../../../../features/menus/UpdateMenuModal";
-import { useModal } from "../../../../features/modals";
+import MenuQrCode from "../../../../features/menus/MenuQrCode";
 
 const AdminMenuPage = () => {
   const { currentUser } = useAuth();
   const router = useRouter();
-  const { slug, showCongratsModal } = router.query;
+  const { slug } = router.query;
   const { data, error, isLoading, isSuccess, isError } =
     useGetFullMenuQuery(slug);
-  const updateMenuModal = useModal(UpdateMenuModal);
-
-  const handleEdit = (defaultValues) => {
-    updateMenuModal.open({ defaultValues });
-  };
 
   return (
     <Authenticated>
@@ -33,7 +25,13 @@ const AdminMenuPage = () => {
           <div className="container pt-lg-2">
             <Breadcrumb>
               <Breadcrumb.Item href="/admin/menus">Menus</Breadcrumb.Item>
-              <Breadcrumb.Item>{slug}</Breadcrumb.Item>
+              <Breadcrumb.Item
+                href="/admin/menus/[slug]"
+                as={`/admin/menus/${slug}`}
+              >
+                {slug}
+              </Breadcrumb.Item>
+              <Breadcrumb.Item>Sharing</Breadcrumb.Item>
             </Breadcrumb>
             <div className="d-flex">
               <h1 className="h2 pb-lg-2 me-auto">{data?.title || slug}</h1>
@@ -82,11 +80,8 @@ const AdminMenuPage = () => {
             )}
           {isLoading && <Loading />}
           {isError && <Alert danger>{error?.message}</Alert>}
-          {isSuccess && <MenuInfo menu={data} onEdit={handleEdit} />}
+          {isSuccess && <MenuQrCode menu={data} />}
         </div>
-
-        <UpdateMenuModal />
-        <QRCodeModal />
       </Page>
     </Authenticated>
   );

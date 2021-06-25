@@ -7,7 +7,6 @@ import { useDispatch } from "react-redux";
 import Alert from "../components/Alert";
 import Page from "../components/Page";
 import useAuth from "../features/auth/useAuth";
-import { restoreDeveloperAccount } from "../features/development/slice";
 
 const SignInPage = () => {
   const { currentUser } = useAuth();
@@ -24,15 +23,6 @@ const SignInPage = () => {
     ],
     callbacks: {
       signInSuccessWithAuthResult: function (authResult) {
-        console.log("NEXT_PUBLIC_DEVELOPMENT", process.env.NEXT_PUBLIC_DEVELOPMENT);
-        if (process.env.NEXT_PUBLIC_DEVELOPMENT) {
-          console.log("restoreDeveloperAccount");
-          dispatch(restoreDeveloperAccount());
-        }
-
-        const { uid, displayName, email } = authResult.user;
-        dispatch(updateUserAction({ uid, displayName, email }));
-
         // stop the redirect
         return false;
       },
@@ -40,6 +30,7 @@ const SignInPage = () => {
   };
 
   useEffect(() => {
+    // redirect if signed in
     if (currentUser) router.push("/admin");
   }, [currentUser, router]);
 
@@ -65,17 +56,15 @@ const SignInPage = () => {
                 firebaseAuth={firebase.auth()}
               />
             </div>
-            {process.env.NEXT_PUBLIC_DEVELOPMENT && (
-              <Alert info className="text-start small">
-                <h6 className="alert-heading">
-                  Welcome to the development instance!
-                </h6>
-                Try out a pre-made account by signing in with{" "}
-                <b>develop@qralacarte.com</b>
-                <br />
-                and <b>password</b> as credentials.
-              </Alert>
-            )}
+            <Alert developmentOnly info className="text-start small">
+              <h6 className="alert-heading">
+                Welcome to the development instance!
+              </h6>
+              Try out a pre-made account by signing in with{" "}
+              <b>{process.env.NEXT_PUBLIC_DEVELOPER_ACCOUNT}</b>
+              <br />
+              and <b>password</b> as credentials.
+            </Alert>
           </div>
         </div>
       </div>

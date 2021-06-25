@@ -8,6 +8,9 @@ import Loading from "../../components/Loading";
 import Page from "../../components/Page";
 import useAuth from "../../features/auth/useAuth";
 import { useCreateMenuMutation } from "../../features/menus/api";
+import QRCodeModal from "../../features/menus/QRCodeModal";
+import { useModal } from "../../features/modals";
+import { slugify } from "../../utils/utils";
 
 const NewMenuPage = () => {
   const { currentUser } = useAuth();
@@ -17,8 +20,13 @@ const NewMenuPage = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
-  } = useForm();
+    watch,
+    setValue,
+    formState: { errors, dirtyFields },
+  } = useForm({ mode: "onChange" });
+  const qrCodeModal = useModal(QRCodeModal);
+
+  const watchTitle = watch("title");
 
   // Handle form submit.
   const onSubmit = (data) => {
@@ -26,77 +34,87 @@ const NewMenuPage = () => {
   };
 
   useEffect(() => {
-    if (isSuccess)
-      router.push("/admin/menus/[slug]", `/admin/menus/${data._key}`);
-  }, [isSuccess, router]);
+    if (!dirtyFields.slug && watchTitle) setValue("slug", slugify(watchTitle));
+  }, [watchTitle, dirtyFields, setValue]);
+
+  useEffect(() => {
+    if (!isSuccess) return;
+    qrCodeModal.open({ slug: data._key });
+    router.push("/admin/menus/[slug]", `/admin/menus/${data._key}`);
+  }, [isSuccess, data, router]);
 
   return (
     <Page title="Create a contactless menu">
-      <div className="row g-0 h-100 align-items-stretch bg-white">
-        <div className="col-sm-5 d-none d-sm-block">
-          <div className="position-relative h-100">
-            <Image
-              alt="Sign in"
-              src="/images/illustrations/qr-code.svg"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-        </div>
-        <div className="col-sm-7 p-lg-4 d-flex">
-          <div className="m-auto">
-            <div className="text-center text-lg-start">
-              <h1>Add your online menu</h1>
-              <p className="lead">Create your contactless menu in seconds.</p>
+      <div className="container h-100 g-lg-0">
+        <div className="row g-0 h-100 align-items-stretch">
+          <div className="col-12 col-lg-5 d-none d-lg-block">
+            <div className="position-relative h-100">
+              <Image
+                alt="Sign in"
+                src="/images/illustrations/qr-code.svg"
+                layout="fill"
+                objectFit="cover"
+              />
             </div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="d-grid gap-2">
-                {isError && <Alert danger>{error?.message}</Alert>}
-                <div>
-                  <label className="form-label">Business name</label>
-                  <input
-                    type="text"
-                    className={classnames("form-control", {
-                      "is-invalid": errors.title,
-                    })}
-                    {...register("title", { required: "Inserisci un titolo." })}
-                  />
-                  <div className="invalid-feedback">
-                    {errors?.title?.message}
-                  </div>
-                </div>
-                <div>
-                  <label className="form-label">Page URL</label>
-                  <div className="input-group">
-                    <span
-                      className="input-group-text bg-transparent border-end-0"
-                      style={{ boxShadow: "inset 0 1px 2px rgb(0 0 0 / 8%)" }}
-                    >
-                      https://qralacarte.com/r/
-                    </span>
+          </div>
+          <div className="col-12 col-lg-7 p-lg-4 d-flex">
+            <div className="m-auto">
+              <div className="text-center text-lg-start">
+                <h1 className="fw-bold mb-0">Create your digital menu</h1>
+                <p className="lead">Fill in the form below to get started.</p>
+              </div>
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <div className="d-grid gap-2">
+                  {isError && <Alert danger>{error?.message}</Alert>}
+                  <div>
+                    <label className="form-label">Business name</label>
                     <input
                       type="text"
-                      className={classnames("form-control fw-bold", {
-                        "is-invalid": errors.slug,
+                      className={classnames("form-control", {
+                        "is-invalid": errors.title,
                       })}
-                      {...register("slug", {
-                        required: "Inserisci un indirizzo.",
+                      placeholder="E.g.: Restaurant Bellavista"
+                      {...register("title", {
+                        required: "Inserisci un titolo.",
                       })}
                     />
                     <div className="invalid-feedback">
-                      {errors?.slug?.message}
+                      {errors?.title?.message}
                     </div>
                   </div>
+                  <div>
+                    <label className="form-label">Page URL</label>
+                    <div className="input-group">
+                      <span
+                        className="input-group-text bg-transparent border-end-0"
+                        style={{ boxShadow: "inset 0 1px 2px rgb(0 0 0 / 8%)" }}
+                      >
+                        {process.env.NEXT_PUBLIC_MENU_BASE_URL}
+                      </span>
+                      <input
+                        type="text"
+                        className={classnames("form-control fw-bold", {
+                          "is-invalid": errors.slug,
+                        })}
+                        {...register("slug", {
+                          required: "Inserisci un indirizzo.",
+                        })}
+                      />
+                      <div className="invalid-feedback">
+                        {errors?.slug?.message}
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    className="btn btn-primary"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? <Loading /> : "Create Menu"}
+                  </button>
                 </div>
-                <button
-                  type="submit"
-                  className="btn btn-primary"
-                  disabled={isLoading}
-                >
-                  {isLoading ? <Loading /> : "Create Menu"}
-                </button>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>

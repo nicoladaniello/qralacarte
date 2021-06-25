@@ -14,6 +14,7 @@ const Alert = ({
   warning,
   danger,
   dark,
+  developmentOnly,
   className,
   children,
 }) => {
@@ -28,6 +29,9 @@ const Alert = ({
     : dark
     ? "dark"
     : "";
+
+  // Only visible in development instance
+  if (developmentOnly && !process.env.NEXT_PUBLIC_DEVELOPMENT) return null;
 
   return (
     <div

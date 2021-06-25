@@ -36,9 +36,9 @@ const AdminVenueListings = () => {
           </div>
           <Nav className="mb-1">
             <Nav.Item href="/admin/menus">Menus</Nav.Item>
-            <Nav.Item href="/admin/invoices" className="disabled">
+            {/* <Nav.Item href="/admin/invoices" className="disabled">
               Invoices
-            </Nav.Item>
+            </Nav.Item> */}
             <Nav.Item href="/admin/settings" className="disabled">
               Settings
             </Nav.Item>

@@ -14,15 +14,15 @@ const NavMenu = ({ className }) => {
 
   return (
     <ul className={className}>
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <Link href="/">
           <a className="nav-link active" aria-current={"page"}>
             Home
           </a>
         </Link>
-      </li>
+      </li> */}
 
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <Link href="/" passHref>
           <a className="nav-link">How it works</a>
         </Link>
@@ -44,7 +44,7 @@ const NavMenu = ({ className }) => {
         <Link href="/" passHref>
           <a className="nav-link">Contact us</a>
         </Link>
-      </li>
+      </li> */}
       {!currentUser && (
         <li className="nav-item">
           <Link href="/signin" passHref>

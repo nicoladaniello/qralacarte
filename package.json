@@ -1,7 +1,7 @@
 {
   "name": "QRalacarte",
   "description": "Create your contactless menu.",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -33,6 +33,7 @@
     "react-number-format": "^4.5.5",
     "react-redux": "^7.2.4",
     "react-toastify": "^7.0.4",
-    "sass": "^1.26.10"
+    "sass": "^1.26.10",
+    "swiper": "^6.7.1"
   }
 }

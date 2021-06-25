@@ -1,11 +1,12 @@
+import classnames from "classnames";
 import React, { useContext } from "react";
 import { modalContext } from "./Modal";
 
-const ModalHeader = ({ closable, children }) => {
+const ModalHeader = ({ closable, as: Tag, className, children }) => {
   const { onClose } = useContext(modalContext);
   return (
     <div className="modal-header">
-      <h6 className="modal-title">{children}</h6>
+      <Tag className={classnames(className, "modal-title")}>{children}</Tag>
       {closable && (
         <button
           type="button"
@@ -18,8 +19,9 @@ const ModalHeader = ({ closable, children }) => {
   );
 };
 
-ModalHeader.defaultValues = {
+ModalHeader.defaultProps = {
   closable: true,
+  as: "h6",
 };
 
 export default ModalHeader;

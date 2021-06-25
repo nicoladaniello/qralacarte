@@ -1,170 +1,226 @@
-import {
-  faMobile,
-  faPepperHot,
-  faQrcode
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import classnames from "classnames";
+import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import SwiperCore, { Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Page from "../components/Page";
+import useViewport from "../hooks/useViewport";
 
-const Home = () => (
-  <Page title="Make your QR menu">
-    <header className="container pt-lg-1 pb-lg-3">
-      <div className="position-relative jumbotron mb-3 mb-lg-5">
-        <div className="row">
-          <div className="col-12 col-lg-5">
-            <h1 className="display-lg-4">
-              Your QR code,
-              <br />
-              served hot.
-            </h1>
-            <p className="mb-3">
-              We provide modern looking, app-like digital menus for your
-              business. Let customers scan your personalised QR code and bring
-              their menu live on their devices without downloads.
-            </p>
+SwiperCore.use([Pagination]);
+
+const hero = {
+  image: {
+    alt: "QRalacarte example menu app",
+    src: "/images/menu.svg",
+  },
+  title: "Create your<br />contactless menu<br />in seconds",
+  description:
+    "Build an interactive digital menu for your customers with just a few clicks. Try it now!",
+  cta: "Get started",
+};
+
+const sections = [
+  {
+    image: {
+      alt: "QR Code illustration",
+      src: "/images/illustrations/qr-code.svg",
+    },
+    title: "Auto-generated QR code",
+    description:
+      "We generate a unique QR code to give your customers easy access to your menu.",
+  },
+  {
+    image: {
+      alt: "Menu manager illustration",
+      src: "/images/illustrations/edit-menu.svg",
+    },
+    title: "Edits on the fly",
+    description:
+      "Edit your menu instantly with the easy-to-use Menu Manager tool.",
+  },
+  {
+    image: {
+      alt: "App illustration",
+      src: "/images/illustrations/mobile.svg",
+    },
+    title: "Modern App-like interface",
+    description:
+      "Your menu will have a modern, easy-to-use interface. It works like a mobile app, without needs for download.",
+  },
+];
+
+const footer = {
+  title: "Let's get started",
+  description: "Takes only one easy step to create your new digital menu.",
+  cta: "Get started",
+};
+
+const HomeHero = React.memo(({ hero, className, slideNext }) => {
+  const { image, title, description, cta } = hero;
+
+  return (
+    <div className={classnames(className, "container")}>
+      <div className="row align-items-center justify-content-center">
+        <div className="col-12 col-lg-6">
+          <div className="text-center text-lg-start">
+            <h1
+              className="display-4 fw-bold mb-3"
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
+            <p
+              className="lead lh-sm mb-3 mx-auto ms-lg-0"
+              style={{ maxWidth: "29rem" }}
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
             <p>
-              <Link href="/signup">
-                <a className="btn btn-primary btn-lg">Get started now</a>
+              <Link href="/new">
+                <a className="btn btn-primary px-3 shadow">{cta}</a>
               </Link>
+              <button
+                className="d-lg-none btn btn-outline-dark px-3 ms-3"
+                onClick={slideNext}
+              >
+                Learn more
+              </button>
             </p>
           </div>
-          <div className="col-12 col-lg-7">{/* <MotionHeader /> */}</div>
         </div>
-      </div>
-    </header>
-    <div className="container mb-3 mb-lg-5">
-      <div className="row mx-lg-n2 text-center text-lg-left">
-        <div className="col-12 col-lg-4 px-lg-3">
-          <div className="d-inline-block p-2 rounded-circle shadow mb-2">
-            <FontAwesomeIcon
-              style={{ fontSize: "1.5rem", color: "#ff9234" }}
-              icon={faQrcode}
-            />
-          </div>
-          <h5>Personalised QR code to match your brand.</h5>
-          <p>
-            Consistency is a must for a good business. With our service you can
-            create a good visual-looking QR code that fits your brand design,
-            and is a pleasure for your customer to see.
-          </p>
-          <p>
-            <Link href="/signup">
-              <a className="btn btn-outline-tertiary">Start for free</a>
-            </Link>
-          </p>
-        </div>
-        <div className="col-12 col-lg-4 px-lg-3">
-          <div className="d-inline-block p-2 rounded-circle shadow mb-2">
-            <FontAwesomeIcon
-              style={{ fontSize: "1.5rem", color: "#84a9ac" }}
-              icon={faMobile}
-            />
-          </div>
-          <h5>Modern APP-like digital menu.</h5>
-          <p>
-            Yes high tech, but cheap, fast and easy. Your menu will look and
-            feel like a modern mobile APP, but without downloads. It works
-            offline too!
-          </p>
-          <p>
-            <Link href="/signup">
-              <a className="btn btn-outline-primary">Upload your menu</a>
-            </Link>
-          </p>
-        </div>
-        <div className="col-12 col-lg-4 px-lg-3">
-          <div className="d-inline-block p-2 rounded-circle shadow mb-2">
-            <FontAwesomeIcon
-              style={{ fontSize: "1.5rem", color: "#e84a5f" }}
-              icon={faPepperHot}
-            />
-          </div>
-          <h5>Instant editing with the online tool.</h5>
-          <p>
-            Need to change a price? Add in pictures? Not a problem. Just login
-            from your device and bring all your changes you want to your menu,
-            synchronizes in real time.
-          </p>
-          <p>
-            <Link href="/">
-              <a className="btn btn-outline-secondary">Try it now</a>
-            </Link>
-          </p>
+        <div className="col-12 col-lg-auto d-none d-lg-block">
+          <Image
+            alt={image.alt}
+            src={image.src}
+            width={350}
+            height={600}
+            layout="intrinsic"
+            className="pt-4"
+          />
         </div>
       </div>
     </div>
-    <div
-      className="jumbotron mb-3 mb-lg-5 bg-light"
-      style={{
-        backgroundImage: `url(images/pineapple.jpg)`,
-        backgroundRepeat: "none",
-        backgroundSize: "cover",
-        backgroundPosition: "100% 50%",
-      }}
-    >
+  );
+});
+
+const HomeSection = React.memo(({ section, idx, className, slideNext }) => {
+  const { image, title, description } = section;
+  const isEven = idx % 2 !== 0;
+
+  return (
+    <div className={classnames(className, "container py-lg-5")}>
+      <div className="row align-items-center justify-content-center">
+        <div
+          className={classnames("col-12 col-lg-auto", {
+            "order-lg-last": isEven,
+          })}
+        >
+          <div className={`text-center text-lg-${isEven ? "start" : "end"}`}>
+            <Image
+              alt={image.alt}
+              src={image.src}
+              width={400}
+              height={300}
+              layout="intrinsic"
+            />
+          </div>
+        </div>
+        <div className="col-lg-6">
+          <div className="text-center mx-auto" style={{ maxWidth: "30rem" }}>
+            <h2 className="h1 fw-bold">{title}</h2>
+            <p className="lead lh-sm mb-0">{description}</p>
+          </div>
+        </div>
+        <div className="d-lg-none text-center mt-3">
+          <button
+            className="btn btn-outline-dark"
+            style={{ minWidth: "160px" }}
+            onClick={slideNext}
+          >
+            continue
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+});
+
+const HomeFooter = React.memo(({ footer }) => {
+  const { title, description, cta } = footer;
+
+  return (
+    <div className="bg-light py-5">
       <div className="container">
-        <div className="row text-center text-lg-left">
-          <div className="col-12 col-lg-6">
-            <h2 className="h1">Free trial, no contract</h2>
-            <p className="lead d-none d-lg-block mb-3">
-              It takes 3 minutes to register, personalise your QR code and start
-              creating your menu. All for free for the first week, then pay as
-              you go.
-            </p>
-            <div className="d-lg-none" style={{ height: "180px" }}></div>
-            <p>
-              <Link href="/aragosta">
-                <a className="btn btn-secondary">Get started for free</a>
-              </Link>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="container text-center text-lg-left mb-3 mb-lg-5">
-      <h2 className="h1">How it works</h2>
-      <div className="row">
-        <div className="col-12 col-lg-6 px-lg-3 mb-3">
-          <div className="display-1">1</div>
-          <h4>Personalise your QR code.</h4>
+        <div className="card-body text-center">
+          <h2
+            className="h1 fw-bold mb-4"
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
+          <p
+            className="lead lh-sm mb-4 mx-auto ms-lg-0"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
           <p>
-            Create an account in seconds and personalise your QR code with our
-            online editing tool.
-          </p>
-        </div>
-        <div className="col-12 col-lg-6 px-lg-3 mb-3">
-          <div className="display-1">2</div>
-          <h4>Place it where customers can see it.</h4>
-          <p>
-            Place your QR code where customer can see it and scan it with the
-            camera of their smartphones.
-          </p>
-        </div>
-        <div className="col-12 col-lg-6 px-lg-3 mb-3">
-          <div className="display-1">3</div>
-          <h4>Create your digital menu.</h4>
-          <p>
-            Use the online tool to upload images, update informations and prices
-            and create your digital menu.
-          </p>
-        </div>
-        <div className="col-12 col-lg-6 px-lg-3 mb-3">
-          <div className="display-1">4</div>
-          <h4>Take your orders.</h4>
-          <p>
-            That’s it, simple. Customers will have access to your menu
-            everywhere at any time.
+            <Link href="/new">
+              <a className="btn btn-primary px-3 shadow">{cta}</a>
+            </Link>
           </p>
         </div>
       </div>
     </div>
-    {/* <div className="container text-center text-lg-left mb-3 mb-lg-5">
-      <h2 className="h1">Pricing</h2>
-      <h4>Work in progress...</h4>
-    </div> */}
-  </Page>
-);
+  );
+});
+
+const Home = () => {
+  const [swiper, setSwiper] = useState();
+  const { width } = useViewport();
+
+  const useSwiper = width <= 991;
+
+  const slideNext = swiper ? () => swiper.slideNext() : () => {};
+
+  return (
+    <Page title="Make your QR menu">
+      {useSwiper ? (
+        <Swiper
+          className="h-100 pb-4"
+          spaceBetween={0}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          onSwiper={setSwiper}
+        >
+          {/* Hero */}
+          <SwiperSlide className="d-flex align-items-center">
+            <HomeHero
+              hero={hero}
+              slideNext={slideNext}
+              className="d-flex h-100 align-items-center justify-content-center"
+            />
+          </SwiperSlide>
+
+          {/* Section 1 */}
+          {sections.map((section, idx) => (
+            <SwiperSlide key={idx} className="d-flex align-items-center">
+              <div>
+                <HomeSection section={section} slideNext={slideNext} />
+              </div>
+            </SwiperSlide>
+          ))}
+          {/* Footer */}
+          <SwiperSlide className="d-flex align-items-center">
+            <HomeFooter footer={footer} />
+          </SwiperSlide>
+          <div className="swiper-pagination position-relative mt-2" />
+        </Swiper>
+      ) : (
+        <>
+          <HomeHero hero={hero} />
+          {sections.map((section, idx) => (
+            <HomeSection key={idx} section={section} idx={idx} />
+          ))}
+          <HomeFooter footer={footer} />
+        </>
+      )}
+    </Page>
+  );
+};
 
 export default Home;
