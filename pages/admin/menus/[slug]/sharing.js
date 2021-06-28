@@ -70,14 +70,25 @@ const AdminMenuPage = () => {
 
         <div className="container my-4">
           {process.env.NEXT_PUBLIC_DEVELOPMENT &&
-            currentUser?.email ===
-              process.env.NEXT_PUBLIC_DEVELOPER_ACCOUNT && (
+            currentUser?.uid === "cPK4bcvTdHYKHEiNtDfAm6A2uCE2" && (
               <Alert info className="text-start small mb-4">
                 <h6 className="alert-heading">This account is sandboxed.</h6>
                 Every time someone signs in to this account, the data will be
                 restored.
               </Alert>
             )}
+
+          {currentUser?.signInProvider === "anonymous" && (
+            <Alert warning className="text-start small mb-4">
+              <h6 className="alert-heading">Sign up to save your data.</h6>
+              Ensure you{" "}
+              <Link href="/signin">
+                <a className="alert-link">sign up</a>
+              </Link>{" "}
+              to activate your account and avoid losing your data.
+            </Alert>
+          )}
+
           {isLoading && <Loading />}
           {isError && <Alert danger>{error?.message}</Alert>}
           {isSuccess && <MenuQrCode menu={data} />}

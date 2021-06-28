@@ -80,6 +80,7 @@ const AdminMenuPage = () => {
                 restored.
               </Alert>
             )}
+
           {currentUser?.signInProvider === "anonymous" && (
             <Alert warning className="text-start small mb-4">
               <h6 className="alert-heading">Sign up to save your data.</h6>
@@ -90,6 +91,7 @@ const AdminMenuPage = () => {
               to activate your account and avoid losing your data.
             </Alert>
           )}
+          
           {isLoading && <Loading />}
           {isError && <Alert danger>{error?.message}</Alert>}
           {isSuccess && <MenuInfo menu={data} onEdit={handleEdit} />}
