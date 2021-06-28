@@ -1,8 +1,18 @@
+/**
+ * Handle menu deletion side effects.
+ * 
+ * Current side effects:
+ * 
+ *  - Delete all menu images from storage.
+ */
+
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
-admin.initializeApp();
 
-const db = admin.firestore();
+if (admin.apps.length === 0) {
+  admin.initializeApp();
+}
+
 const storage = admin.storage().bucket();
 
 const menuPath = "menus";

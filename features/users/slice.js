@@ -1,9 +1,9 @@
 import {
   createAsyncThunk,
   createEntityAdapter,
-  createSlice,
+  createSlice
 } from "@reduxjs/toolkit";
-import { getUser, updateUser } from "../../services/userService";
+import { getUser, mergeAnonymousToExistingUser as merge, updateUser } from "../../services/userService";
 
 export const getUserAction = createAsyncThunk("users/get", async (args) => {
   const user = await getUser(args);
@@ -16,6 +16,11 @@ export const updateUserAction = createAsyncThunk(
     await updateUser(args);
     return args;
   }
+);
+
+export const mergeAnonymousToExistingUser = createAsyncThunk(
+  "users/mergeAnonymousToExistingUser",
+  async (jsonAuthCredential) => merge(jsonAuthCredential)
 );
 
 const adapter = createEntityAdapter({

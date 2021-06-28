@@ -42,7 +42,7 @@ const MenuQrCode = ({ menu, className }) => {
             <hr className="mt-1" />
             <div className="container-fluid">
               <div className="row mb-3">
-                <label for="input-menu-url" className="col-3 col-form-label fw-bold">
+                <label htmlFor="input-menu-url" className="col-3 col-form-label fw-bold">
                   Menu URL:
                 </label>
                 <div className="col-9">

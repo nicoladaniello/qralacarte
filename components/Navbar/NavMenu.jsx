@@ -1,7 +1,8 @@
 import {
   faCaretDown,
+  faSignInAlt,
   faSignOutAlt,
-  faUserCircle
+  faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -11,6 +12,9 @@ import Dropdown from "../Dropdown";
 
 const NavMenu = ({ className }) => {
   const { currentUser, signOut } = useAuth();
+
+  const isLoggedIn = !!currentUser;
+  const isUserAnonymous = currentUser?.signInProvider === "anonymous";
 
   return (
     <ul className={className}>
@@ -45,23 +49,25 @@ const NavMenu = ({ className }) => {
           <a className="nav-link">Contact us</a>
         </Link>
       </li> */}
-      {!currentUser && (
+      {!isLoggedIn && (
         <li className="nav-item">
           <Link href="/signin" passHref>
             <a className="nav-link">Sign in</a>
           </Link>
         </li>
       )}
-      {!!currentUser && (
+      {isLoggedIn && (
         <Dropdown as="li" className="nav-item">
-          <Dropdown.Toggle
-            className="nav-link text-truncate"
-            style={{ width: "250px" }}
-          >
-            <strong>
-              {currentUser.displayName || currentUser.email}{" "}
-              <FontAwesomeIcon icon={faCaretDown} />
+          <Dropdown.Toggle className="nav-link d-flex align-items-center">
+            <strong
+              className="d-inline-block text-truncate"
+              style={{ maxWidth: "250px" }}
+            >
+              {isUserAnonymous
+                ? "Anonymous"
+                : currentUser.displayName || currentUser.email}{" "}
             </strong>
+            <FontAwesomeIcon className="ms-1" icon={faCaretDown} />
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <Dropdown.Link href="/admin">
@@ -70,12 +76,22 @@ const NavMenu = ({ className }) => {
               </span>{" "}
               Admin page
             </Dropdown.Link>
-            <Dropdown.Item onClick={() => signOut()}>
-              <span className="me-1">
-                <FontAwesomeIcon icon={faSignOutAlt} />
-              </span>{" "}
-              Sign out
-            </Dropdown.Item>
+            {!isUserAnonymous && (
+              <Dropdown.Item onClick={() => signOut()}>
+                <span className="me-1">
+                  <FontAwesomeIcon icon={faSignOutAlt} />
+                </span>{" "}
+                Sign out
+              </Dropdown.Item>
+            )}
+            {isUserAnonymous && (
+              <Dropdown.Link href="/signin">
+                <span className="me-1">
+                  <FontAwesomeIcon icon={faSignInAlt} />
+                </span>{" "}
+                Sign in
+              </Dropdown.Link>
+            )}
           </Dropdown.Menu>
         </Dropdown>
       )}

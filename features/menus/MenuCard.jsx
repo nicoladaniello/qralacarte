@@ -18,7 +18,7 @@ const MenuCard = ({ menu, className }) => {
         </a>
       </Link>
       <div className="card-body d-flex flex-row align-items-center">
-        <h5 className="card-title mb-0 me-auto">{title}</h5>
+        <h5 className="card-title text-truncate mb-0 me-auto">{title}</h5>
         <Link href="/admin/menus/[slug]" as={`/admin/menus/${_key}`}>
           <a className="btn btn-outline-dark btn-sm">
             <FontAwesomeIcon icon={faPencilAlt} /> Edit

@@ -17,7 +17,7 @@ import { useModal } from "../../../../features/modals";
 const AdminMenuPage = () => {
   const { currentUser } = useAuth();
   const router = useRouter();
-  const { slug, showCongratsModal } = router.query;
+  const { slug } = router.query;
   const { data, error, isLoading, isSuccess, isError } =
     useGetFullMenuQuery(slug);
   const updateMenuModal = useModal(UpdateMenuModal);
@@ -80,6 +80,16 @@ const AdminMenuPage = () => {
                 restored.
               </Alert>
             )}
+          {currentUser?.signInProvider === "anonymous" && (
+            <Alert warning className="text-start small mb-4">
+              <h6 className="alert-heading">Sign up to save your data.</h6>
+              Ensure you{" "}
+              <Link href="/signin">
+                <a className="alert-link">sign up</a>
+              </Link>{" "}
+              to activate your account and avoid losing your data.
+            </Alert>
+          )}
           {isLoading && <Loading />}
           {isError && <Alert danger>{error?.message}</Alert>}
           {isSuccess && <MenuInfo menu={data} onEdit={handleEdit} />}

@@ -10,6 +10,7 @@ import useAuth from "../../features/auth/useAuth";
 import { useCreateMenuMutation } from "../../features/menus/api";
 import QRCodeModal from "../../features/menus/QRCodeModal";
 import { useModal } from "../../features/modals";
+import { useSignInAnonymouslyMutation } from "../../features/users/api";
 import { slugify } from "../../utils/utils";
 
 const NewMenuPage = () => {
@@ -17,6 +18,7 @@ const NewMenuPage = () => {
   const router = useRouter();
   const [createMenu, { data, error, isLoading, isSuccess, isError }] =
     useCreateMenuMutation();
+  const [signInAnonymously] = useSignInAnonymouslyMutation();
   const {
     register,
     handleSubmit,
@@ -29,8 +31,17 @@ const NewMenuPage = () => {
   const watchTitle = watch("title");
 
   // Handle form submit.
-  const onSubmit = (data) => {
-    createMenu({ userId: currentUser.uid, ...data });
+  const onSubmit = async (data) => {
+    let userId;
+
+    // Let anonymous user create menus
+    if (!currentUser) {
+      const action = signInAnonymously();
+      const data = await action.unwrap();
+      userId = data.uid;
+    } else userId = currentUser.uid;
+
+    createMenu({ userId, ...data });
   };
 
   useEffect(() => {
@@ -39,6 +50,7 @@ const NewMenuPage = () => {
 
   useEffect(() => {
     if (!isSuccess) return;
+    console.log("Success!");
     qrCodeModal.open({ slug: data._key });
     router.push("/admin/menus/[slug]", `/admin/menus/${data._key}`);
   }, [isSuccess, data, router]);

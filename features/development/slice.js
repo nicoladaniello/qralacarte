@@ -20,12 +20,12 @@ export const restoreDeveloperAccount = createAsyncThunk(
         }
       );
 
-      const restoreDeveloperAccount = firebase
+      const restore = firebase
         .functions()
         .httpsCallable("restoreDeveloperAccount");
 
       // Restore account
-      const result = await restoreDeveloperAccount();
+      const result = await restore();
       console.log(result);
 
       // Invalidate menu cache

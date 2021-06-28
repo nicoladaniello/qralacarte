@@ -1,6 +1,10 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 
+if (admin.apps.length === 0) {
+  admin.initializeApp();
+}
+
 const db = admin.firestore();
 const storage = admin.storage().bucket();
 const auth = admin.auth();
@@ -27,6 +31,7 @@ exports.restoreDeveloperAccount = functions.https.onCall(
       );
 
     try {
+      functions.logger.info("Restoring menu data...");
       await restoreMenuDataFromBackup(menuId);
     } catch (error) {
       throw new functions.https.HttpsError(
@@ -36,6 +41,7 @@ exports.restoreDeveloperAccount = functions.https.onCall(
     }
 
     try {
+      functions.logger.info("Restoring images...");
       await restoreImagesFromBackup(menuId);
     } catch (error) {
       throw new functions.https.HttpsError(
@@ -45,6 +51,7 @@ exports.restoreDeveloperAccount = functions.https.onCall(
     }
 
     try {
+      functions.logger.info("Deleting user menus...");
       await deleteUserMenusExcept(devAccountId, menuId);
     } catch (error) {
       throw new functions.https.HttpsError(
@@ -152,7 +159,17 @@ async function deleteUserMenusExcept(uid, menuId) {
     .where("userId", "==", uid)
     .get();
 
+  functions.logger.info(
+    "User menus:",
+    userMenus.docs.map((doc) => doc.id)
+  );
+
   const menusToDelete = userMenus.docs.filter((doc) => doc.id !== menuId);
+
+  functions.logger.info(
+    "Menus to delete:",
+    menusToDelete.map((menu) => menu.id)
+  );
 
   const batch = db.batch();
 

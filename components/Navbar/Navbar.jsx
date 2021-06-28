@@ -14,7 +14,7 @@ const Navbar = ({ className, children }) => {
       {process.env.NEXT_PUBLIC_DEVELOPMENT && (
         <div className="py-1 small bg-dark text-white text-center">
           <small className=" text-center">
-            Welcome to the development instance
+            Development instance
           </small>
         </div>
       )}
