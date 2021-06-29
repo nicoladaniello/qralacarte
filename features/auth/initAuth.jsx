@@ -16,7 +16,7 @@ function initAuth() {
 
       const appUser = { uid, email, displayName, signInProvider };
 
-      // console.log("user changed.", user);
+      console.log("user changed.", user);
       store.dispatch(setUserCredentials(appUser));
     },
     (err) => {

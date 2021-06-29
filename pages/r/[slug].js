@@ -156,8 +156,6 @@ export async function getServerSideProps({ params }) {
       ...doc.data(),
     }));
 
-    // console.log(menu, sections, products);
-
     // Pass data to the page via props
     return {
       props: {

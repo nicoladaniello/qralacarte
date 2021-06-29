@@ -30,8 +30,6 @@ export async function getUserMenus(userId) {
 
   const data = await Promise.all(results);
 
-  console.log(data);
-
   return { data };
 }
 
@@ -127,7 +125,6 @@ export async function getMenuSectionsAndProducts(menuId) {
  * @throws an AppError in case of invalid parameter.
  */
 export async function createMenu(data) {
-  console.log("creating menu");
   if (!data || !data.userId || !data.slug)
     throw new AppError(AppError.codes.INTERNAL, "Invalid data parameter.");
 

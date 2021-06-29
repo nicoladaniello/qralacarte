@@ -50,7 +50,6 @@ const NewMenuPage = () => {
 
   useEffect(() => {
     if (!isSuccess) return;
-    console.log("Success!");
     qrCodeModal.open({ slug: data._key });
     router.push("/admin/menus/[slug]", `/admin/menus/${data._key}`);
   }, [isSuccess, data, router]);

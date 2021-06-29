@@ -9,17 +9,6 @@ const SectionView = forwardRef(
 
     const { _key, title, description, productIds = [] } = section;
 
-    // useEffect(() => {
-    //   if (active && ref.current) {
-    //     setTimeout(() => {
-    //       console.log(`Scrolling section "${title}" into view.`);
-    //       setTimeout(() => {
-    //         ref.current.scrollIntoView({ behavior: "smooth" });
-    //       }, 100);
-    //     }, 100);
-    //   }
-    // }, [active]);
-
     useEffect(() => {
       if (isOnScreen) setActive(_key);
     }, [isOnScreen, section]);

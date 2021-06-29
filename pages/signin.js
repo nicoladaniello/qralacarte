@@ -6,6 +6,7 @@ import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import { useDispatch } from "react-redux";
 import Alert from "../components/Alert";
 import Page from "../components/Page";
+import { setUserCredentials } from "../features/auth/slice";
 import { restoreDeveloperAccount } from "../features/development/slice";
 import { useMergeAnonymousToExistingUserMutation } from "../features/users/api";
 
@@ -26,7 +27,15 @@ const SignInPage = () => {
     ],
     callbacks: {
       signInSuccessWithAuthResult: function (authResult) {
-        console.log(authResult.user.email);
+        const appUser = {
+          uid: authResult.user.uid,
+          displayName: authResult.user.displayName,
+          email: authResult.user.email,
+          signInProvider: authResult.providerId,
+        };
+
+        // Bugfix: firebase onAuthStateChanged not called for anonymous user upgrade
+        dispatch(setUserCredentials(appUser));
 
         if (
           process.env.NEXT_PUBLIC_DEVELOPMENT &&
@@ -79,7 +88,7 @@ const SignInPage = () => {
               />
             </div>
             <Alert developmentOnly info className="text-start small">
-              <h6 className="alert-heading">Development instance notice</h6>
+              <h6 className="alert-heading">Development instance sign-in</h6>
               Sign in by email and password using{" "}
               <strong>
                 {process.env.NEXT_PUBLIC_DEVELOPER_ACCOUNT}

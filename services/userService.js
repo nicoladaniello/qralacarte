@@ -22,7 +22,6 @@ export async function getUser(uid) {
  * @returns
  */
 export function updateUser(user) {
-  console.log("updating user...", user);
   const { uid, ...rest } = user;
   return db.collection("users").doc(uid).set(rest, { merge: true });
 }
@@ -77,22 +76,14 @@ export async function mergeAnonymousToExistingUser(authCredential) {
     process.env.NEXT_PUBLIC_DEVELOPMENT &&
     userCredential.user.email === process.env.NEXT_PUBLIC_DEVELOPER_ACCOUNT
   ) {
-    console.log("restoring dev account");
     await store.dispatch(restoreDeveloperAccount());
-    console.log("dev account restored");
   }
-
-  console.log("Merging account");
 
   const merge = firebase
     .functions()
     .httpsCallable("mergeAnonymousToExistingUser");
 
   await merge(anonymousUserIdToken);
-
-  console.log("account merged, invalidating menus");
-
-  
 
   return { data: {} };
 }
