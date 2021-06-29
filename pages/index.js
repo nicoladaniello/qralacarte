@@ -75,14 +75,12 @@ const HomeHero = React.memo(({ hero, className, slideNext }) => {
             />
             <p>
               <Link href="/new">
-                <a className="btn btn-primary px-3 shadow">{cta}</a>
+                <a className="btn btn-primary px-3 me-3 shadow">{cta}</a>
               </Link>
-              <button
-                className="d-lg-none btn btn-outline-dark px-3 ms-3"
-                onClick={slideNext}
-              >
-                Learn more
-              </button>
+              or{" "}
+              <Link href="/r/[slug]" as="/r/osteria-luigi">
+                <a className="text-reset px-3">See an example</a>
+              </Link>
             </p>
           </div>
         </div>
@@ -131,7 +129,7 @@ const HomeSection = React.memo(({ section, idx, className, slideNext }) => {
         </div>
         <div className="d-lg-none text-center mt-3">
           <button
-            className="btn btn-outline-dark"
+            className="btn btn-dark"
             style={{ minWidth: "160px" }}
             onClick={slideNext}
           >
@@ -147,7 +145,7 @@ const HomeFooter = React.memo(({ footer }) => {
   const { title, description, cta } = footer;
 
   return (
-    <div className="bg-light py-5">
+    <div className="bg-white py-5">
       <div className="container">
         <div className="card-body text-center">
           <h2
@@ -178,7 +176,7 @@ const Home = () => {
   const slideNext = swiper ? () => swiper.slideNext() : () => {};
 
   return (
-    <Page title="Make your QR menu">
+    <Page title="Make your QR menu" className="bg-light">
       {useSwiper ? (
         <Swiper
           className="h-100 pb-4"

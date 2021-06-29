@@ -22,7 +22,7 @@ const ProductCard = ({ product, className, onClick }) => {
           </div>
           {!!image && (
             <div className="col-3">
-              <AppImage squared alt={title} src={image} />
+              <AppImage className="rounded" squared alt={title} src={image} />
             </div>
           )}
         </div>

@@ -1,6 +1,4 @@
-import {
-  faPencilAlt
-} from "@fortawesome/free-solid-svg-icons";
+import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classnames from "classnames";
 import Link from "next/link";
@@ -11,7 +9,7 @@ const MenuCard = ({ menu, className }) => {
   const { _key, image, title } = menu || {};
 
   return (
-    <div className={classnames(className, "card shadow-sm")}>
+    <div className={classnames(className, "card")}>
       <Link href="/admin/menus/[slug]" as={`/admin/menus/${_key}`}>
         <a>
           <AppImage className="card-img-top" src={image} />

@@ -79,7 +79,7 @@ const MenuInfo = ({ menu, className, onEdit }) => {
                 </p>
               </Collapse>
             ) : (
-              <p className="card-text mb-4">"No description provided."</p>
+              <p className="card-text text-muted mb-4">No description provided.</p>
             )}
           </div>
         </div>

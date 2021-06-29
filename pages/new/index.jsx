@@ -56,76 +56,73 @@ const NewMenuPage = () => {
 
   return (
     <Page title="Create a contactless menu">
-      <div className="container h-100 g-lg-0">
-        <div className="row g-0 h-100 align-items-stretch">
-          <div className="col-12 col-lg-5 d-none d-lg-block">
-            <div className="position-relative h-100">
-              <Image
-                alt="Sign in"
-                src="/images/illustrations/qr-code.svg"
-                layout="fill"
-                objectFit="cover"
-              />
+      <div className="row g-0 h-100 align-items-center">
+        <div className="col-lg-6 d-none d-lg-block">
+          <Image
+            alt="Sign in"
+            src="/images/illustrations/qr-code.svg"
+            layout="responsive"
+            width="500"
+            height="500"
+          />
+        </div>
+        <div className="col-12 col-lg-6 d-flex">
+          <div className="my-auto">
+            <div className="text-center text-lg-start">
+              <h1 className="fw-bold mb-0">Create your digital menu</h1>
+              <p className="lead">Fill in the form below to get started.</p>
             </div>
-          </div>
-          <div className="col-12 col-lg-7 p-lg-4 d-flex">
-            <div className="m-auto">
-              <div className="text-center text-lg-start">
-                <h1 className="fw-bold mb-0">Create your digital menu</h1>
-                <p className="lead">Fill in the form below to get started.</p>
-              </div>
-              <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="d-grid gap-2">
-                  {isError && <Alert danger>{error?.message}</Alert>}
-                  <div>
-                    <label className="form-label">Business name</label>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="d-grid gap-2">
+                {isError && <Alert danger>{error?.message}</Alert>}
+                <div>
+                  <label className="form-label">Business name</label>
+                  <input
+                    type="text"
+                    className={classnames("form-control", {
+                      "is-invalid": errors.title,
+                    })}
+                    placeholder="E.g.: Restaurant Bellavista"
+                    {...register("title", {
+                      required: "Inserisci un titolo.",
+                    })}
+                  />
+                  <div className="invalid-feedback">
+                    {errors?.title?.message}
+                  </div>
+                </div>
+                <div>
+                  <label className="form-label">Page URL</label>
+                  <div className="input-group">
+                    <span
+                      className="input-group-text bg-transparent border-end-0"
+                      style={{ boxShadow: "inset 0 1px 2px rgb(0 0 0 / 8%)" }}
+                    >
+                      {process.env.NEXT_PUBLIC_MENU_BASE_URL}
+                    </span>
                     <input
                       type="text"
-                      className={classnames("form-control", {
-                        "is-invalid": errors.title,
+                      className={classnames("form-control fw-bold", {
+                        "is-invalid": errors.slug,
                       })}
-                      placeholder="E.g.: Restaurant Bellavista"
-                      {...register("title", {
-                        required: "Inserisci un titolo.",
+                      {...register("slug", {
+                        required: "Inserisci un indirizzo.",
                       })}
                     />
                     <div className="invalid-feedback">
-                      {errors?.title?.message}
+                      {errors?.slug?.message}
                     </div>
                   </div>
-                  <div>
-                    <label className="form-label">Page URL</label>
-                    <div className="input-group">
-                      <span
-                        className="input-group-text bg-transparent border-end-0"
-                        style={{ boxShadow: "inset 0 1px 2px rgb(0 0 0 / 8%)" }}
-                      >
-                        {process.env.NEXT_PUBLIC_MENU_BASE_URL}
-                      </span>
-                      <input
-                        type="text"
-                        className={classnames("form-control fw-bold", {
-                          "is-invalid": errors.slug,
-                        })}
-                        {...register("slug", {
-                          required: "Inserisci un indirizzo.",
-                        })}
-                      />
-                      <div className="invalid-feedback">
-                        {errors?.slug?.message}
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    type="submit"
-                    className="btn btn-primary"
-                    disabled={isLoading}
-                  >
-                    {isLoading ? <Loading /> : "Create Menu"}
-                  </button>
                 </div>
-              </form>
-            </div>
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  disabled={isLoading}
+                >
+                  {isLoading ? <Loading /> : "Create Menu"}
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@ const AdminProductsPage = () => {
   return (
     <Authenticated>
       <Page>
-        <div className="card border-0 border-bottom">
+        <div className="card border-0 rounded-0">
           <div className="container pt-lg-2">
             <Breadcrumb>
               <Breadcrumb.Item href="/admin/menus">Menus</Breadcrumb.Item>
@@ -30,7 +30,7 @@ const AdminProductsPage = () => {
               <h1 className="h2 pb-lg-2 me-auto">{data?.title || slug}</h1>
               <div>
                 <Link href="/r/[slug]" as={`/r/${slug}`}>
-                  <a className="btn btn-primary">Visit menu</a>
+                  <a className="btn btn-primary">preview menu</a>
                 </Link>
               </div>
             </div>
@@ -50,18 +50,18 @@ const AdminProductsPage = () => {
               >
                 Sharing
               </Nav.Item>
-              <Nav.Item
+              {/* <Nav.Item
                 href="/admin/menus/[slug]/settings"
                 as={`/admin/menus/${slug}/settings`}
                 className="disabled"
               >
                 Settings
-              </Nav.Item>
+              </Nav.Item> */}
             </Nav>
           </div>
         </div>
 
-        <div className="container my-4">
+        <div className="container h-100 my-4">
           {process.env.NEXT_PUBLIC_DEVELOPMENT &&
             currentUser?.uid === "cPK4bcvTdHYKHEiNtDfAm6A2uCE2" && (
               <Alert info className="text-start small mb-4">

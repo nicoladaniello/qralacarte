@@ -29,7 +29,7 @@ const AdminMenuPage = () => {
   return (
     <Authenticated>
       <Page>
-        <div className="card border-0 border-bottom">
+        <div className="card border-0 rounded-0">
           <div className="container pt-lg-2">
             <Breadcrumb>
               <Breadcrumb.Item href="/admin/menus">Menus</Breadcrumb.Item>
@@ -39,7 +39,7 @@ const AdminMenuPage = () => {
               <h1 className="h2 pb-lg-2 me-auto">{data?.title || slug}</h1>
               <div>
                 <Link href="/r/[slug]" as={`/r/${slug}`}>
-                  <a className="btn btn-primary">Visit menu</a>
+                  <a className="btn btn-primary">preview menu</a>
                 </Link>
               </div>
             </div>
@@ -59,13 +59,13 @@ const AdminMenuPage = () => {
               >
                 Sharing
               </Nav.Item>
-              <Nav.Item
+              {/* <Nav.Item
                 href="/admin/menus/[slug]/settings"
                 as={`/admin/menus/${slug}/settings`}
                 className="disabled"
               >
                 Settings
-              </Nav.Item>
+              </Nav.Item> */}
             </Nav>
           </div>
         </div>
@@ -94,7 +94,7 @@ const AdminMenuPage = () => {
           
           {isLoading && <Loading />}
           {isError && <Alert danger>{error?.message}</Alert>}
-          {isSuccess && <MenuInfo menu={data} onEdit={handleEdit} />}
+          {isSuccess && <MenuInfo className="border-0 shadow-sm" menu={data} onEdit={handleEdit} />}
         </div>
 
         <UpdateMenuModal />

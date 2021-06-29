@@ -52,7 +52,7 @@ const NavMenu = ({ className }) => {
       {!isLoggedIn && (
         <li className="nav-item">
           <Link href="/signin" passHref>
-            <a className="nav-link">Sign in</a>
+            <a className="nav-link">Sign in or register</a>
           </Link>
         </li>
       )}
@@ -89,7 +89,7 @@ const NavMenu = ({ className }) => {
                 <span className="me-1">
                   <FontAwesomeIcon icon={faSignInAlt} />
                 </span>{" "}
-                Sign in
+                Sign up
               </Dropdown.Link>
             )}
           </Dropdown.Menu>

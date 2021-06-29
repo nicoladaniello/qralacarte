@@ -51,6 +51,7 @@ const UpdateMenuModal = () => {
       const action = deleteImage(values);
       await action.unwrap();
       setImg(null);
+      close();
     } catch (error) {
       console.log(error);
     }
@@ -61,6 +62,7 @@ const UpdateMenuModal = () => {
       const action = uploadImage({ menu: values, fileUrl });
       const result = await action.unwrap();
       setImg(result.image);
+      close();
     } catch (error) {
       console.log(error);
     }

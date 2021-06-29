@@ -18,11 +18,11 @@ const QRCodeModal = () => {
       <Modal.Header closable as="h2" className="fw-bold text-center ms-auto">
         Congrats! <Emoji symbol="🎉" label="Party popper" />
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body className="bg-light">
         <div className="text-center">
           {props?.slug && (
             <div className="row justify-content-center mb-4">
-              <div className="col-6 img-thumbnail">
+              <div className="bg-white col-6 shadow border-0 rounded">
                 <Image
                   alt={`QR code for ${menuUrl}`}
                   src={qrCode}

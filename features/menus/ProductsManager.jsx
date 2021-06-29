@@ -1,7 +1,6 @@
-import { faBars, faEllipsisV, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import Dropdown from "../../components/Dropdown";
 import useModal from "../modals/useModal";
 import DeleteProductModal from "./products/DeleteProductModal";
 import EditProductCard from "./products/EditProductCard";
@@ -111,13 +110,28 @@ const ProductsManager = ({ menu }) => {
             )
           );
         })}
-        <UpsertProductModal />
-        <UpsertSectionModal />
-        <DeleteSectionModal />
-        <DeleteProductModal />
-        <ReorderProductsModal />
-        <ReorderSectionsModal />
       </div>
+      {!sectionIds.length && (
+        <p className="card-text text-muted text-center">
+          There are no sections in this menu yet.{" "}
+          <a
+            href="#"
+            className="p-0"
+            onClick={(e) => {
+              e.preventDefault();
+              addSection();
+            }}
+          >
+            Add a section
+          </a>
+        </p>
+      )}
+      <UpsertProductModal />
+      <UpsertSectionModal />
+      <DeleteSectionModal />
+      <DeleteProductModal />
+      <ReorderProductsModal />
+      <ReorderSectionsModal />
     </>
   );
 };

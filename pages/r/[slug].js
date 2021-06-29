@@ -39,8 +39,8 @@ const Restaurant = ({ menu }) => {
 
   return (
     <>
-      <Navbar className="border-bottom mb-lg-4" />
-      <div className="bg-white pb-4">
+      <Navbar className="border-bottom" />
+      <div className="bg-white py-4">
         <div className="container g-xl-5">
           <div className="card border-0">
             <div className="row no-gutters">

@@ -20,7 +20,7 @@ const AdminVenueListings = () => {
   return (
     <Authenticated>
       <Page>
-        <div className="card border-0 border-bottom">
+        <div className="card border-0 rounded-0">
           <div className="container pt-lg-2">
             <Breadcrumb>
               <Breadcrumb.Item>Admin</Breadcrumb.Item>
@@ -36,9 +36,9 @@ const AdminVenueListings = () => {
             </div>
             <Nav className="mb-1">
               <Nav.Item href="/admin/menus">Menus</Nav.Item>
-              <Nav.Item href="/admin/settings" className="disabled">
+              {/* <Nav.Item href="/admin/settings" className="disabled">
                 Settings
-              </Nav.Item>
+              </Nav.Item> */}
             </Nav>
           </div>
         </div>
@@ -70,7 +70,7 @@ const AdminVenueListings = () => {
               {!!data?.length ? (
                 data.map((menu) => (
                   <div key={menu._key} className="col-lg-4 mb-4">
-                    <MenuCard className="mb-4" menu={menu} />
+                    <MenuCard className="shadow-sm mb-4" menu={menu} />
                   </div>
                 ))
               ) : (
